@@ -1,0 +1,55 @@
+{
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "figures": [
+    {
+      "file": "HB_flow_hebing.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 10,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "connectivity_preservation.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 4,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "exp_2.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 1,
+      "nativeAxesCount": 1,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "inter_agent_avoidance.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 4,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "my_trajectory.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 25,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "my_trajectory_2.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 25,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    },
+    {
+      "file": "static_obstacle_avoidance.fig",
+      "storedVisible": "on",
+      "nativeLineCount": 4,
+      "nativeAxesCount": 2,
+      "editSaveReopenPass": true
+    }
+  ],
+  "allPassed": true
+}

@@ -1,0 +1,108 @@
+{
+  "status": "RELEASE_VALIDATION_PASS",
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "products": [
+    {
+      "Name": "MATLAB",
+      "Version": "24.1",
+      "ProductNumber": 1,
+      "Certain": true
+    },
+    {
+      "Name": "Optimization Toolbox",
+      "Version": "24.1",
+      "ProductNumber": 6,
+      "Certain": true
+    }
+  ],
+  "sourceFileCount": 1,
+  "externalUserFilesRequired": false,
+  "syntaxCheckPassed": true,
+  "checkedReferenceParameters": [
+    "c",
+    "gamma",
+    "epsilon",
+    "xi",
+    "K1",
+    "K2",
+    "DeltaInt",
+    "DeltaObs",
+    "DeltaC",
+    "barrierScale",
+    "connScale",
+    "nu",
+    "theta",
+    "deltaP",
+    "dc",
+    "dsafe",
+    "lambdaLower",
+    "T",
+    "outputDt",
+    "maxStep",
+    "RelTol",
+    "AbsTol",
+    "y0",
+    "v0",
+    "ystar",
+    "obs",
+    "rObs",
+    "B",
+    "p"
+  ],
+  "trajectoryComparison": {
+    "proposed": {
+      "timeGridIdentical": true,
+      "savedSamples": 12001,
+      "maxPositionComponentDifference": 0,
+      "maxVelocityComponentDifference": 0,
+      "maxFullStateComponentDifference": 0
+    },
+    "untightened": {
+      "timeGridIdentical": true,
+      "savedSamples": 12001,
+      "maxPositionComponentDifference": 0,
+      "maxVelocityComponentDifference": 0,
+      "maxFullStateComponentDifference": 0
+    }
+  },
+  "safetyMinimumComparisonMaxAbsoluteDifference": 0,
+  "safetyMinimaTightenedUntightened": [
+    [
+      0.08209999396450589,
+      -0.00018601556003673692
+    ],
+    [
+      0.12398039083157436,
+      -0.0003600580687320165
+    ],
+    [
+      0.1716691868816303,
+      -0.002217331331535788
+    ]
+  ],
+  "localTailPhysicalSeconds": [
+    850,
+    1050
+  ],
+  "figureCount": 7,
+  "formatsPerFigure": [
+    ".fig",
+    ".png",
+    ".pdf",
+    ".eps"
+  ],
+  "all28FigureFilesPresent": true,
+  "nativeFigureEditSaveReopenPass": true,
+  "wallSeconds": 270.347121,
+  "singleTightenedTrajectory": true,
+  "continuousTimeRegionalCertificate": false,
+  "originalMATLABFilesUnchanged": true,
+  "originalMATLABFilesHashChecked": 21,
+  "manuscriptUpdatedDuringAudit": true,
+  "latestManuscriptNumericalSectionRechecked": true,
+  "latestManuscriptHashes": {
+    "generic-color.tex": "065fcdc8f0c9585944d4fd01bdba869bd9a766bb75bdb3861a75b5cd5e4d3416",
+    "generic-color.pdf": "bbcfb49213c74d8806c4dcdec72f1d5b765f47304e1a71566861ed745a19e859"
+  },
+  "allSevenFigurePNGsVisuallyInspected": true
+}

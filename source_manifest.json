@@ -1,0 +1,13 @@
+{
+  "entrypoint": "reproduce_paper.m",
+  "embedded_sources": {
+    "simulation_with_c.m": "2726e25488bb8b384c0806f713ded54ec6f5cce47b227247b2c47a0218807008",
+    "regional_bounds.m": "c9097aaa362be306bd4e5f15c40f297791f134cd14407d7734c3bc31d799c89a",
+    "plot_with_c.m": "8507e95bb164181323ccbd64789b6d884aa7b69690668b16885d29b2fe9a3a40",
+    "write_numerical_audit.m": "d5ac6bcfa37361c798e87d8b22512718aba4a3a5b8515a4ec4c2bdb79677d17e",
+    "verify_editable_figures.m": "fe4adc94c289871af701040108a3218b1a0e7913eb28f1f1b39cb1c967e42be1"
+  },
+  "standalone_sha256": "9c75a0c14c854efbd277ac542a263bb728bb3717f25e200215b43164441d6123",
+  "changes_to_equations_parameters_solver_settings": false,
+  "packaging_changes": "Adds a no-argument entrypoint, environment check, initial checks, figure roundtrip check, manuscript tail-window assertion, and runtime metadata; embeds the five original function files verbatim apart from line-ending normalization."
+}

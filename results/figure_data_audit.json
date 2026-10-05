@@ -1,0 +1,88 @@
+{
+  "singleRegionalRun": true,
+  "independentLocalExperiment": false,
+  "controllerSwitch": false,
+  "stateReset": false,
+  "figureCount": 7,
+  "insetsPerFigure": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "positionComponentTimeWindow": [
+    0,
+    450
+  ],
+  "trajectoryZooms": [
+    {
+      "method": "Tightened",
+      "agent": 1,
+      "obstacle": 1,
+      "physicalTime": 65.9,
+      "signedClearanceMeters": 0.092383075543063686,
+      "trajectoryPoint": [
+        -0.47675193531883825,
+        0.03008554955996218
+      ],
+      "boundaryPoint": [
+        -0.38445013667928774,
+        0.026211196104315698
+      ],
+      "file": "my_trajectory.fig"
+    },
+    {
+      "method": "Untightened",
+      "agent": 1,
+      "obstacle": 1,
+      "physicalTime": 78.100000000000009,
+      "signedClearanceMeters": -0.00028811286220276067,
+      "trajectoryPoint": [
+        -0.3750202548676001,
+        0.10961308331517854
+      ],
+      "boundaryPoint": [
+        -0.37530389801509068,
+        0.10966363612171068
+      ],
+      "file": "my_trajectory_2.fig"
+    }
+  ],
+  "safetyMinimaTightenedUntightened": [
+    [
+      0.082099993964505888,
+      -0.00018601556003673692
+    ],
+    [
+      0.12398039083157436,
+      -0.00036005806873201651
+    ],
+    [
+      0.1716691868816303,
+      -0.0022173313315357879
+    ]
+  ],
+  "obstaclePenetrationMeters": 0.00028811286220276067,
+  "obstacleMinimum": -0.00036005806873201651,
+  "entry": {
+    "firstAdmissibleSavedTime": 834.09999999999991,
+    "tailStart": 850,
+    "tailEnd": 1050,
+    "theta1Radius": 2.3412564451709294E-6,
+    "fastInitializationRadius": 1.8464733027817355E-5,
+    "slowNormAtTailStart": 1.6913402374570581E-6,
+    "fastNormAtTailStart": 3.0931717752778012E-13,
+    "dualMaxAtTailStart": 0,
+    "initialError": 1.6913402374570865E-6,
+    "finalError": 2.8468975286362656E-8,
+    "relativeFinalError": 0.016832198901130316,
+    "fittedDecayRate": 0.020422109433501423,
+    "certifiedNormRate": 0.00058709815716083576,
+    "allLaterSavedSamplesAdmissible": true
+  },
+  "corollary1Claimed": false,
+  "regionalUniformCertificate": false
+}

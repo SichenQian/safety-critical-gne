@@ -1,0 +1,30 @@
+{
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "release": "2024a",
+  "platform": "PCWIN64",
+  "optimizationToolbox": {
+    "Name": "Optimization Toolbox",
+    "Version": "24.1",
+    "Release": "(R2024a)",
+    "Date": "19-Nov-2023"
+  },
+  "implementation": {
+    "maxGradientDirectionalError": 5.18120546466605E-10,
+    "maxHessianDirectionalError": 5.2343930023734941E-8,
+    "maxPolynomialDetError": 1.7763568394002505E-15,
+    "consensusGainEquationError": 8.08242361927114E-14,
+    "pass": true
+  },
+  "initialExtendedSafety": {
+    "hC": 0.31786060049899206,
+    "psiC": 0.69784998969410073,
+    "lambda2": 3.120571184921749,
+    "minPair": 0.18127900000000008,
+    "minObs": 10.106979000000003
+  },
+  "figureCount": 7,
+  "wallSeconds": 135.4220747,
+  "fromScratch": true,
+  "externalUserFilesRequired": false,
+  "status": "REPRODUCTION_PASS"
+}
