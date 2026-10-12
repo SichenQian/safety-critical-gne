@@ -117,6 +117,78 @@ generated in four formats and passed native FIG edit-save-reopen checks.
 `validation_summary.json` records the release validation. These files document
 the release and are optional for running the MATLAB program.
 
+## Full-precision verification and fixed version
+
+The authoritative repository is
+[`SichenQian/safety-critical-gne`](https://github.com/SichenQian/safety-critical-gne).
+The annotated tag
+[`TCNS-reproducibility-v1`](https://github.com/SichenQian/safety-critical-gne/releases/tag/TCNS-reproducibility-v1)
+fixes the verified source and reference outputs:
+
+```sh
+git checkout TCNS-reproducibility-v1
+git rev-parse HEAD
+```
+
+From MATLAB in that checkout, run:
+
+```matlab
+summary = verify_reproduction;
+figures = verify_figure_data;
+```
+
+This entry recomputes both trajectories, runs the original checks, exports all
+seven figures, and compares the numeric/logical arrays with the archived
+`results/experiment_data.mat`. The default output is `reproduced_results/`,
+preserving the archived reference. An alternative folder can be supplied as
+`verify_reproduction(fullfile(pwd,'local_run'))`. This entry additionally uses
+`compare_numeric_records.m` and `write_full_precision.m`; the original
+`reproduce_paper.m` remains self-contained.
+
+| Verification item | Published record in `verification/` |
+| --- | --- |
+| Actual command, environment, progress and completion | `reproduction_log.txt` |
+| Full-precision parameters, gain thresholds and local bounds | `numerical_certificate.txt` |
+| Complete 140-component initial states and state order | `initial_states.json` |
+| Recomputed arrays versus the archived reference | `reference_comparison.json` |
+| Fresh native figure data versus the archived figures | `figure_reference_comparison.json` |
+| Actual environment and verification outcome | `verification_summary.json` |
+| Manuscript parameters and figure-data correspondence | `paper_correspondence.json`, `paper_correspondence.md` |
+
+Fresh runs write these numerical verification files into `reproduced_results/`.
+The certificate uses 17 significant digits and records actual initial states,
+selected gains, thresholds, and local-entry quantities. A failed assertion or
+reference comparison terminates verification; success ends with
+`VERIFICATION_PASS`. Elapsed runtime metadata is explicitly excluded from
+array comparisons. The comparison records both its absolute/relative
+tolerances and whether all numerical arrays are exactly identical.
+
+`verification_manifest.json` associates the release with SHA-256 hashes of the
+inspected manuscript TEX/PDF and figure sources, and Git blob hashes of the
+released code and evidence. Manuscript files are not needed to run the code.
+`source_manifest.json` retains the original single-file assembly provenance;
+the current release evidence is in `verification/`.
+
+### Scope of the numerical evidence
+
+Both flows cover 0--1200 seconds at 0.1-second output spacing. They share the
+physical initialization and controller settings, except for the stated
+tightening margins; fast states start at their respective QP solutions.
+The local error panel uses 850--1050 seconds from that same tightened run,
+without a state reset or controller switch.
+
+Safety, QP feasibility and tracking budgets are evaluated at saved samples.
+Analytical local bounds are recorded separately. The records retain
+`regionalUniformCertificate = false` and
+`continuousTimeRegionalCertificate = false`: sampled maxima do not establish
+a uniform regional certificate, and Corollary 1 is not invoked by this
+experiment. A negative matrix-tree margin denotes loss of its sufficient
+connectivity certificate; the physical graph's `lambda2` is saved separately.
+
+Figure verification concerns numerical data and panel definitions. Fonts,
+colors, crops and export metadata can differ from manuscript assembly; these
+presentation differences are excluded from the numerical comparison.
+
 ## Citation
 
 If you use this code in your research, please cite the accompanying paper:

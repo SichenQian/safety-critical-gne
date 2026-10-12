@@ -1,0 +1,2225 @@
+{
+  "numericLeaves": 276,
+  "numericValues": 3.648948E+6,
+  "absoluteTolerance": 1E-11,
+  "relativeTolerance": 1E-9,
+  "maxAbsoluteDifference": 0,
+  "maxRelativeDifference": 0,
+  "numericallyIdentical": true,
+  "pass": true,
+  "excludedMetadata": [
+    "root(1).proposed(1).wallSeconds",
+    "root(1).untightened(1).wallSeconds"
+  ],
+  "missingFields": [],
+  "leaves": [
+    {
+      "path": "root(1).P(1).N",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).n",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).edges",
+      "count": 20,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).m",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).y0",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).v0",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).ystar",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).obs",
+      "count": 6,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).rObs",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).dsafe",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).dc",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).lambdaLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).alpha",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).B",
+      "count": 25,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).p",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).c",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).gamma",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).lambdaProof",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).lambdaLocal",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).xi",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).epsilon",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).K1",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).K2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).alpha1",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).alpha2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).DeltaInt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).DeltaObs",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).DeltaC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).barrierScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).connScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).nu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).theta",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).deltaP",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).localRadius",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).T",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).outputDt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).maxStep",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).tailStart",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).tailDuration",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).RelTol",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).AbsTol",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).auditDt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).regionDiameter",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).regionBox",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).regionSpeedMax",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).auditInputRadius",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).trackingBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).connMismatchBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).nU",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).nZ",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).nLambda",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).dim",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).iX",
+      "count": 50,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).iV",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).iU",
+      "count": 10,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).iZ",
+      "count": 25,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).iL",
+      "count": 45,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).treeScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).P(1).k",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).mu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).l",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).tildeL",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).cLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).kappaY",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).kProof",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).gammaLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).nominalCoefficients",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).M",
+      "count": 9,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).alphaNom",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).mUnder",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).mBar",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).nominalDisplayedGainConditions",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).exactGameAlpha",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Lz",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Lu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).cf",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).sigma",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).epsUpper",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Q",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).minEigQ",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).targetMinReducedSlack",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).targetU",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).targetTreeMargin",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).targetLambda2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).GhLoose",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Gh",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Hh",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).rTheta",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localGraphPerturbationBound",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localGraphLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).etaI",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localBarrierLower",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localExtendedLower",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).Bbar",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).rFast",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localNominalSlackLower",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localRowNormUpper",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).fastTubeSlackLower",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).kappa",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).cfRecomputed",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).mUnderComposite",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).mBarComposite",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).rhoComposite",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).rateBound",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).localAnalyticConditions",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).C(1).regionalUniformCertificate",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).integrationSettings(1).RelTol",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).integrationSettings(1).AbsTol",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).integrationSettings(1).maxStep",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).integrationSettings(1).outputDt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).integrationSettings(1).auditDt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).t",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).z",
+      "count": 1.68014E+6,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).tight",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).initialQPExit",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).completed",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).faceEvents",
+      "count": 80,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).minDualNumerical",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).c",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).gamma",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).epsilon",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).xi",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).K1",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).K2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).DeltaInt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).DeltaObs",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).DeltaC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).nu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).theta",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).deltaP",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).dc",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).dsafe",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).lambdaLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).barrierScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).proposed(1).controller(1).connScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).samplePeriod",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).allQPFeasible",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxTrackingSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxDistortionSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).deltaCSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).minInterSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).minObstacleSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).minTreeSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).minLambda2Sampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxTrueECBFResidualSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxLocalRowResidualSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxQPResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxActiveMultipliers",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).finalError",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).regionalUniformCertificate",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxQPStationarityResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxQPComplementarityResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).deltaCForInputBallOverSampledStates",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).inputBallRadius",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxInputNormSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxOptimizerInputNormSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).regionDiameter",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).regionBox",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).barAIntBox",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).barAObsBox",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).barAC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).lhsIntWithSampledRu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).lhsObsWithSampledRu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).lhsConnWithSampledBounds",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).sampledTighteningCheck",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).trackingDesignBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).connMismatchDesignBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).designLHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).designRHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).designMarginInequalities",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).sampledBudgetCheck",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).safeActivationRelativeSpeedBound",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).safeActivationLHS",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).safeActivationRHS",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxPairDistanceSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).maxAgentSpeedSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).positionMinSampled",
+      "count": 2,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).positionMaxSampled",
+      "count": 2,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).regionContainmentSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).t",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).ru",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).distortion",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).deltaC",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).Vnom",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).Vc",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).error",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).hInt",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).hObs",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).hTree",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).lambda2",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).corollary1Claimed",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).t",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).z",
+      "count": 1.68014E+6,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).tight",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).initialQPExit",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).completed",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).faceEvents",
+      "count": 48,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).minDualNumerical",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).c",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).gamma",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).epsilon",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).xi",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).K1",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).K2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).DeltaInt",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).DeltaObs",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).DeltaC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).nu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).theta",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).deltaP",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).dc",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).dsafe",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).lambdaLower",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).barrierScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).untightened(1).controller(1).connScale",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).samplePeriod",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).allQPFeasible",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxTrackingSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxDistortionSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).deltaCSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).minInterSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).minObstacleSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).minTreeSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).minLambda2Sampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxTrueECBFResidualSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxLocalRowResidualSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxQPResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxActiveMultipliers",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).finalError",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).regionalUniformCertificate",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxQPStationarityResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxQPComplementarityResidual",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).deltaCForInputBallOverSampledStates",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).inputBallRadius",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxInputNormSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxOptimizerInputNormSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).regionDiameter",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).regionBox",
+      "count": 4,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).barAIntBox",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).barAObsBox",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).barAC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).lhsIntWithSampledRu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).lhsObsWithSampledRu",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).lhsConnWithSampledBounds",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).sampledTighteningCheck",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).trackingDesignBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).connMismatchDesignBudget",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).designLHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).designRHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).designMarginInequalities",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).sampledBudgetCheck",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).safeActivationRelativeSpeedBound",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).safeActivationLHS",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).safeActivationRHS",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxPairDistanceSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).maxAgentSpeedSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).positionMinSampled",
+      "count": 2,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).positionMaxSampled",
+      "count": 2,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).regionContainmentSampled",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).t",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).ru",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).distortion",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).deltaC",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).Vnom",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).Vc",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).error",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).hInt",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).hObs",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).hTree",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).lambda2",
+      "count": 12001,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).corollary1Claimed",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).initialExtendedSafety(1).hC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).initialExtendedSafety(1).psiC",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).initialExtendedSafety(1).lambda2",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).initialExtendedSafety(1).minPair",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).initialExtendedSafety(1).minObs",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    }
+  ]
+}
