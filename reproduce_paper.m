@@ -1,4 +1,4 @@
-function result = reproduce_paper(outDir)
+function result = reproduce_paper(outDir, mode)
 %REPRODUCE_PAPER Standalone reproduction of the manuscript simulations.
 %   REPRODUCE_PAPER runs the tightened and untightened flows from scratch
 %   and writes seven figures and numerical data to results/ beside this file.
@@ -19,6 +19,13 @@ function result = reproduce_paper(outDir)
 %       result = reproduce_paper;
 %   Or open this file in the MATLAB Editor and click Run.
 
+% Read-only access for the independent tightening diagnostic. Returning the
+% original functions prevents a second implementation of the QP or ECBF rows.
+if nargin >= 2
+    assert(strcmp(mode,'diagnostic_helpers'),'Unsupported mode.');
+    result = struct('rows',@rows,'solveQP',@solveScaledQP);
+    return;
+end
 if nargin < 1 || isempty(outDir)
     outDir = fullfile(fileparts(mfilename('fullpath')), 'results');
 end
@@ -391,6 +398,8 @@ end
 function audit=audit(P,res,tight,C)
 stride=max(1,round(P.auditDt/P.outputDt));ind=unique([1:stride:numel(res.t),numel(res.t)]);ns=numel(ind);
 ru=zeros(ns,1);distort=ru;deltaC=ru;deltaCBall=ru;uNorm=ru;uStarNorm=ru;minG=ru;feas=ru;Vnom=ru;Vc=ru;err=ru;hI=ru;hO=ru;hC=ru;lam2=ru;resQP=ru;active=ru;maxTrueQ=ru;stationarity=ru;complementarity=ru;
+% Retain QPs already solved here so the independent diagnostic can reuse them.
+wStar=nan(ns,P.nU+P.nZ);lambdaStar=nan(ns,P.nLambda);
 H=diag([ones(10,1);P.xi*ones(25,1)]);opt=optimoptions('quadprog','Display','off','ConstraintTolerance',1e-9,'OptimalityTolerance',1e-9);
 fprintf('Offline diagnostic QPs: tight=%d, %d samples\n',tight,ns);
 for a=1:ns
@@ -398,6 +407,7 @@ for a=1:ns
     z=res.z(ind(a),:).';X=reshape(z(P.iX),10,5).';V=reshape(z(P.iV),2,5).';
     [A,b,un,aux]=rows(P,X,V,tight);u=z(P.iU);w=z([P.iU P.iZ]);la=z(P.iL);
     [ws,exitflag,lm]=solveScaledQP(P,A,b,un);feas(a)=exitflag;
+    wStar(a,:)=ws.';lambdaStar(a,:)=lm.ineqlin.';
     stationarity(a)=norm(H*ws-[un;zeros(25,1)]+A.'*lm.ineqlin,inf);
     complementarity(a)=norm(lm.ineqlin.*(A*ws+b),inf);
     if exitflag>0,ru(a)=norm(u-ws(1:10));distort(a)=norm(ws(1:10)-un);resQP(a)=max(A*ws+b);uStarNorm(a)=norm(ws(1:10));else,ru(a)=NaN;distort(a)=NaN;resQP(a)=NaN;end
@@ -424,9 +434,10 @@ audit.deltaCForInputBallOverSampledStates=max(deltaCBall);audit.inputBallRadius=
 audit=regional_bounds(P,res,C,audit);
 audit.t=res.t(ind);audit.ru=ru;audit.distortion=distort;audit.deltaC=deltaC;audit.Vnom=Vnom;audit.Vc=Vc;audit.error=err;
 audit.hInt=hI;audit.hObs=hO;audit.hTree=hC;audit.lambda2=lam2;
+audit.qpReference=struct('wStar',wStar,'lambdaStar',lambdaStar,'exitflag',feas);
 audit.corollary1Claimed=false;
 audit.certificateScope='Pointwise sampled diagnostics; these maxima are not uniform regional certificates.';
-disp(rmfield(audit,{'t','ru','distortion','deltaC','Vnom','Vc','error','hInt','hObs','hTree','lambda2'}));
+disp(rmfield(audit,{'t','ru','distortion','deltaC','Vnom','Vc','error','hInt','hObs','hTree','lambda2','qpReference'}));
 end
 
 function makeFigures(R,outDir)
@@ -739,7 +750,7 @@ function S=write_numerical_audit(R,outDir)
 if nargin<2,outDir=fullfile(fileparts(mfilename('fullpath')),'results');end
 S=struct('parameters',R.P,'certificates',R.C,'sharedController',R.proposed.controller,'corollary1Claimed',false);
 if isfield(R,'integrationSettings'),S.integrationSettings=R.integrationSettings;end
-drop={'t','ru','distortion','deltaC','Vnom','Vc','error','hInt','hObs','hTree','lambda2'};
+drop={'t','ru','distortion','deltaC','Vnom','Vc','error','hInt','hObs','hTree','lambda2','qpReference'};
 if isfield(R,'auditProposed'),S.experimentA=rmfield(R.auditProposed,intersect(fieldnames(R.auditProposed),drop));end
 if isfield(R,'auditUntightened'),S.experimentAAblation=rmfield(R.auditUntightened,intersect(fieldnames(R.auditUntightened),drop));end
 S.singleRegionalRun=true;S.independentLocalExperiment=false;

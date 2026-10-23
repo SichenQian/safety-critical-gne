@@ -1,0 +1,15 @@
+
+Theorem 2: trajectory-based numerical diagnostics
+Samples: 12001; t = [0, 1200] s; physical/unscaled row units
+r_u (sampled)                 = 0.15915799197842689
+delta_c (sampled input ball)  = 0.051054354215450876   [||u|| <= 15]
+delta_c (actual input only)   = 0.009725975511371665
+Condition             bar_a        Delta          LHS       margin     >= 0
+inter-agent               5          1.2     1.125417  0.074583046        1
+obstacle          10.768918          1.8    1.7139594  0.086040598        1
+connectivity      1.8512978          2.5   0.70990917    1.7900908        1
+QP feasibility/KKT numerical checks: 1 (tolerance 1e-08)
+Max original ECBF residuals (q <= 0): -1.18461590812  -1.78390278192  -2.4855712502
+All sampled checks pass: 1; uniform regional certificate: 0
+Finite saved samples do not certify Theorem 2 on the full compact region or between samples.
+

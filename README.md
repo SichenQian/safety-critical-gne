@@ -167,7 +167,9 @@ tolerances and whether all numerical arrays are exactly identical.
 inspected manuscript TEX/PDF and figure sources, and Git blob hashes of the
 released code and evidence. Manuscript files are not needed to run the code.
 `source_manifest.json` retains the original single-file assembly provenance;
-the current release evidence is in `verification/`.
+the tagged v1 release evidence is in `verification/`. The later tightening
+diagnostic update has its own source hashes and evidence in
+`verification/tightening/validation.json`.
 
 ### Scope of the numerical evidence
 
@@ -188,6 +190,111 @@ connectivity certificate; the physical graph's `lambda2` is saved separately.
 Figure verification concerns numerical data and panel definitions. Fonts,
 colors, crops and export metadata can differ from manuscript assembly; these
 presentation differences are excluded from the numerical comparison.
+
+## Theorem 2 tightening diagnostics
+
+`diagnose_tightening_margins.m` adds **trajectory-based numerical diagnostics**
+for Theorem 2 in `TCNS_QIAN_v1.pdf` (Section IV-A, p. 6). It reads the tightened
+trajectory and produces a Command Window table, a text/JSON summary, and a MAT
+record containing the optimizer inputs and diagnostic time series. It does
+not integrate the system, change parameters or initial conditions, or create
+or modify figures.
+
+To diagnose the archived trajectory:
+
+```matlab
+D = diagnose_tightening_margins;
+```
+
+The default output is `reproduced_results/tightening_diagnostics/`. To reuse
+the QPs from a new reproduction without solving them a second time:
+
+```matlab
+R = reproduce_paper(fullfile(pwd,'reproduced_results'));
+D = diagnose_tightening_margins(R);
+```
+
+A saved MAT file and a separate output folder can also be supplied:
+
+```matlab
+D = diagnose_tightening_margins( ...
+    fullfile(pwd,'reproduced_results','experiment_data.mat'), ...
+    fullfile(pwd,'reproduced_results','tightening_diagnostics'));
+```
+
+Fresh `reproduce_paper` runs now retain the primal/dual solutions of the
+offline QPs they already solve. For older data without these solutions, the
+diagnostic calls the **original** `rows` and `solveScaledQP` functions through
+a read-only helper interface in `reproduce_paper`. In either case it checks
+the QP constraint and KKT residuals and computes
+`norm(u - uStar)` for the regularized decomposable QP (9), including all
+mismatch variables, the original `xi = 1.4`, and dissipativity rows. The
+nominal input is never substituted for this optimizer.
+
+The table uses physical, unscaled row units, matching the reported
+`DeltaInt = 1.2`, `DeltaObs = 1.8`, and `DeltaC = 2.5`. The corresponding row
+scales are 0.06, 0.06, and 0.1; the diagnostic also saves the scaled margins
+and verifies the pairwise `1/2` and connectivity `1/N` tightening factors.
+The matrix-tree barrier retains its existing normalization by 512.
+
+| Theorem 2 quantity/condition | Diagnostic construction | Scope |
+| --- | --- | --- |
+| `r_u` | Maximum of `norm(u - uStar)` over all saved times | Sampled tracking error, not a continuous-time bound |
+| `bar_a_int`, `bar_a_obs` | `2*regionDiameter` and twice the largest obstacle-to-box-corner distance | Analytical coefficient bounds on the existing declared physical region |
+| `bar_a_c` | Existing `C.Gh`, bounding the full matrix-tree gradient and hence each local input block | Analytical global derivative bound for the implemented normalized barrier |
+| `delta_c` | At each saved state, write `q_c - sum(qhat_c) = da*u + db` and compute `abs(db) + 15*norm(da)` | Exact supremum over the existing input ball at sampled states; not over all of `Theta_R` |
+| QP feasibility and original ECBFs | Check the regularized QP/KKT residuals and the actual un-tightened physical ECBF rows at `u(t)` | Saved times only; collision rows are checked where their graph weight is positive |
+
+The actual-input discrepancy is saved separately and is **not** used in place
+of the stronger input-ball value. The original dynamic local-row residual is
+also reported separately: a positive local-row residual during finite-speed
+filter tracking is distinct from a violation of an original physical ECBF.
+
+All three reported margins subtract the independently maximized sampled
+tracking and input-ball discrepancy values, using the coefficient bounds
+above. Passing these checks supports the margin mechanism along this run.
+It does not establish uniform QP feasibility on `Theta_R`, a continuous-time
+tracking/containment bound, the discrepancy bound on
+`Theta_R x U_R^u`, or the a priori boundary-speed condition in Assumption 2.
+Both regional-certificate flags remain `false`.
+
+### Verified numerical values
+
+MATLAB R2024a, 12,001 saved samples on `0:0.1:1200` seconds:
+
+| Quantity (physical row units) | Value | Check |
+| --- | ---: | --- |
+| Sampled `r_u` | 0.15915799197842689 | From the regularized QP optimizer |
+| Sampled-state/input-ball `delta_c` | 0.051054354215450876 | Input radius 15; used in `m_c` |
+| Actual-input discrepancy maximum | 0.009725975511371665 | Reported separately |
+| `m_int` | 0.074583045920201929 | Nonnegative |
+| `m_obs` | 0.086040597583683320 | Nonnegative |
+| `m_c` | 1.7900908262239106 | Nonnegative |
+
+The coefficient bounds are `(5, 10.768918237223273, 1.8512977520357721)`.
+The scaled margins are `(0.004474982755212116, 0.005162435855020999,
+0.1790090826223911)`, so scaling does not change any sign. All 12,001 QPs
+passed numerical feasibility/KKT checks. Their maximum constraint residual
+was `3.776446132398208e-12` (numerical checking tolerance `1e-8`). The maximum
+original collision, obstacle, and connectivity ECBF residuals, with the
+convention `q <= 0`, were respectively
+`(-1.1846159081172911, -1.7839027819218451, -2.4855712502043819)`.
+
+The modified reproduction was run from scratch: all 3,648,948 original
+numeric/logical entries matched the archived reference exactly, with maximum
+absolute difference zero. The archived `results/` files are retained.
+The new evidence, manuscript hash, and validation commands are recorded in
+[`verification/tightening/`](verification/tightening/).
+
+Suggested minimal text for Section V:
+
+> Over the 12,001 saved samples, the regularized-QP tracking error was at most
+> 0.15916, and the connectivity discrepancy maximized over the input ball of
+> radius 15 at each sampled state was at most 0.05105. The resulting
+> tightening margins were 0.07458, 0.08604, and 1.79009; all sampled QPs were
+> numerically feasible, and the original ECBF residuals were nonpositive.
+> These trajectory-based numerical diagnostics support the tightening
+> mechanism but do not establish a uniform regional certificate for Theorem 2.
 
 ## Citation
 

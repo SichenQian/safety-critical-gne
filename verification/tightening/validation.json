@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-24",
+  "baselineCommit": "b82002ba010751ff96ff28a44f7e16686f040d8f",
+  "manuscript": {
+    "filename": "TCNS_QIAN_v1.pdf",
+    "sha256": "f2e382baa7e1b97e1d406f2aef32e890ba5468b32a2a306897053f71adcf0893",
+    "theorem2Page": 6,
+    "qpDefinitionPage": 5,
+    "scalingAndParametersPage": 8
+  },
+  "sourceSha256LF": {
+    "reproduce_paper.m": "d6aede915f519a4224d662787e1a498e9d84290849ebcb558f16a20a6013e314",
+    "diagnose_tightening_margins.m": "3d9f6b6f45512572010f8429eed7d5d09b270a8af01b89151f570ac6089ce95d",
+    "README.md": "bde2ef1da2ac2ae8490d6a430f66f959724ca2a1921823688eb0f9c649be6469"
+  },
+  "commands": [
+    "summary = verify_reproduction(fullfile(pwd,'..','verification_run'));",
+    "D = diagnose_tightening_margins(fullfile(pwd,'..','verification_run','experiment_data.mat'),fullfile(pwd,'..','tightening_run'));",
+    "figures = verify_figure_data(fullfile(pwd,'..','verification_run'));",
+    "D = diagnose_tightening_margins('results/experiment_data.mat',fullfile(pwd,'..','archived_tightening_run'));",
+    "fresh = load(fullfile(pwd,'..','tightening_run','tightening_diagnostics.mat'),'D');",
+    "comparison = compare_numeric_records(rmfield(fresh.D,'summary'),rmfield(D,'summary'));",
+    "issues = checkcode('diagnose_tightening_margins.m','-id'); assert(isempty(issues));"
+  ],
+  "originalReproduction": {
+    "matlabVersion": "24.1.0.2537033 (R2024a)",
+    "release": "2024a",
+    "platform": "PCWIN64",
+    "optimizationToolbox": {
+      "Name": "Optimization Toolbox",
+      "Version": "24.1",
+      "Release": "(R2024a)",
+      "Date": "19-Nov-2023"
+    },
+    "fromScratch": true,
+    "samplesPerVariant": 12001,
+    "stateDimension": 140,
+    "figureCount": 7,
+    "referenceNumericLeaves": 276,
+    "referenceNumericValues": 3648948.0,
+    "referenceNumericallyIdentical": true,
+    "referenceMaxAbsoluteDifference": 0,
+    "sampledSafetyMinima": [
+      [
+        0.08209999396450589,
+        -0.00018601556003673692
+      ],
+      [
+        0.12398039083157436,
+        -0.0003600580687320165
+      ],
+      [
+        0.1716691868816303,
+        -0.002217331331535788
+      ]
+    ],
+    "localErrorInterval": [
+      850,
+      1050
+    ],
+    "continuousTimeRegionalCertificate": false,
+    "wallSeconds": 165.6823678,
+    "status": "VERIFICATION_PASS"
+  },
+  "figureDataComparison": {
+    "figureCount": 7,
+    "allReferenceObjectsExact": true,
+    "allGraphicsDataExact": true
+  },
+  "freshOptimizerReuse": {
+    "qpSolveCount": 0,
+    "samples": 12001
+  },
+  "archivedDataFallback": {
+    "qpSolveCount": 12001,
+    "sameOriginalQPSolver": true
+  },
+  "diagnosticPathComparison": {
+    "numericLeaves": 14,
+    "numericValues": 1260105.0,
+    "maxAbsoluteDifference": 0,
+    "numericallyIdentical": true,
+    "pass": true
+  },
+  "preservedSources": {
+    "parameters_and_analytical_bounds": {
+      "unchanged": true,
+      "sha256_lf": "f2690696eb8e99e0e731df04e4522da80e6f3a1b3f338a3354ed858a811b33b9"
+    },
+    "integration_dynamics_and_initial_conditions": {
+      "unchanged": true,
+      "sha256_lf": "e9ced85a1f10e2fc85b1e4d7a111aa344c28bd3bf7f5c73052d659feb1130fd3"
+    },
+    "ecbf_rows_and_graph_and_tree_derivatives": {
+      "unchanged": true,
+      "sha256_lf": "3e4a8f05d208be2480f42d54b2d13d082cb1485a9195bae66f5832f1d41c2be3"
+    },
+    "regularized_qp_solver": {
+      "unchanged": true,
+      "sha256_lf": "e1831fec5ddeddf853b314b1044d50452c939afaa9aba7184c03926ee60f75b5"
+    },
+    "plotting_functions": {
+      "unchanged": true,
+      "sha256_lf": "2300db4f7b3b42e71b80ed47c59647623735c797e5bddde982f530884e4b537c"
+    },
+    "archived_result_files_unchanged": true
+  },
+  "matlabCodeAnalyzerIssues": 0,
+  "numericalResidualTolerance": 1e-08,
+  "scope": "trajectory-based numerical diagnostics; no uniform regional or continuous-time certificate",
+  "status": "TIGHTENING_VALIDATION_PASS"
+}

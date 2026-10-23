@@ -1,0 +1,95 @@
+{
+  "scope": "trajectory-based numerical diagnostics",
+  "source": "results/experiment_data.mat",
+  "samples": 12001,
+  "timeInterval": [
+    0,
+    1200
+  ],
+  "sampleSpacing": 0.1,
+  "qpOptimizersReused": false,
+  "qpSolveCount": 12001,
+  "regularizationXi": 1.4,
+  "inputBallRadius": 15,
+  "coefficientBoundsPhysical": [
+    5,
+    10.768918237223273,
+    1.8512977520357721
+  ],
+  "rowScales": [
+    0.06,
+    0.06,
+    0.1
+  ],
+  "coefficientMaxSampled": [
+    4.6191745523900947,
+    10.457705293227573,
+    0.543349726576939
+  ],
+  "r_u_sampled": 0.15915799197842689,
+  "delta_c_actual_input_sampled": 0.009725975511371665,
+  "delta_c_input_ball_sampled_states": 0.051054354215450876,
+  "tighteningPhysical": [
+    1.2,
+    1.8,
+    2.5
+  ],
+  "lhsPhysical": [
+    1.125416954079798,
+    1.7139594024163167,
+    0.70990917377608942
+  ],
+  "marginsPhysical": [
+    0.074583045920201929,
+    0.08604059758368332,
+    1.7900908262239106
+  ],
+  "marginsScaled": [
+    0.0044749827552121157,
+    0.0051624358550209993,
+    0.17900908262239107
+  ],
+  "nonnegativeMargins": [
+    true,
+    true,
+    true
+  ],
+  "allQPExitFlagsPositive": true,
+  "allQPNumericalChecksPass": true,
+  "numericalResidualTolerance": 1E-8,
+  "maxQPResidual": 3.776446132398208E-12,
+  "maxQPStationarityResidual": 1.2336576205029814E-11,
+  "maxQPComplementarityResidual": 1.4316057025238123E-9,
+  "maxQPDualViolation": 9.9406940285581276E-11,
+  "maxActualECBFResidualPhysical": [
+    -1.1846159081172911,
+    -1.7839027819218451,
+    -2.4855712502043819
+  ],
+  "maxActualECBFResidualScaled": [
+    -0.071076954487037464,
+    -0.1070341669153107,
+    -0.2485571250204382
+  ],
+  "allActualECBFResidualsNonpositive": true,
+  "maxDynamicLocalRowResidual": 0.00096583308468931039,
+  "maxInputNorm": 13.487194112636294,
+  "maxOptimizerInputNorm": 13.487194112636294,
+  "maxOptimizerNominalDifference": 4.838102530673221,
+  "physicalRegionContainmentSampled": true,
+  "inputBallContainmentSampled": true,
+  "coefficientBoundsContainSamples": true,
+  "maxRowAssemblyError": 7.1054273576010019E-15,
+  "maxTighteningScalingError": 5.4123372450476381E-16,
+  "maxInputBallEndpointError": 1.3877787807814457E-17,
+  "trackingDifferenceFromOriginalAudit": 0,
+  "regionalUniformCertificate": false,
+  "continuousTimeRegionalCertificate": false,
+  "sampledChecksPass": true,
+  "unverifiedConditions": [
+    "QP feasibility for every theta in the compact regional set Theta_R",
+    "A continuous-time tracking bound and containment in Theta_R and U_R^u",
+    "Connectivity discrepancy over all Theta_R times U_R^u",
+    "The a priori sensing-boundary relative-speed bound in Assumption 2"
+  ]
+}
