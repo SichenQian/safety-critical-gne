@@ -1,53 +1,53 @@
 {
   "scope": "trajectory-based numerical diagnostics",
-  "source": "results/experiment_data.mat",
-  "samples": 12001,
+  "source": "in-memory reproduction result",
+  "samples": 30001,
   "timeInterval": [
     0,
     1200
   ],
-  "sampleSpacing": 0.1,
-  "qpOptimizersReused": false,
-  "qpSolveCount": 12001,
+  "sampleSpacing": null,
+  "qpOptimizersReused": true,
+  "qpSolveCount": 0,
   "regularizationXi": 1.4,
-  "inputBallRadius": 15,
+  "inputBallRadius": 35,
   "coefficientBoundsPhysical": [
-    5,
-    10.768918237223273,
+    6.44,
+    11.148524566058057,
     1.8512977520357721
   ],
   "rowScales": [
     0.06,
     0.06,
-    0.1
+    1
   ],
   "coefficientMaxSampled": [
-    4.6191745523900947,
-    10.457705293227573,
-    0.543349726576939
+    6.42,
+    10.880335472769211,
+    0.55189229608597079
   ],
-  "r_u_sampled": 0.15915799197842689,
-  "delta_c_actual_input_sampled": 0.009725975511371665,
-  "delta_c_input_ball_sampled_states": 0.051054354215450876,
+  "r_u_sampled": 0.020762318857474694,
+  "delta_c_actual_input_sampled": 0.2327189922752666,
+  "delta_c_input_ball_sampled_states": 0.90388111748024846,
   "tighteningPhysical": [
     1.2,
     1.8,
     2.5
   ],
   "lhsPhysical": [
-    1.125416954079798,
-    1.7139594024163167,
-    0.70990917377608942
+    0.18909355276973666,
+    0.23146922183088708,
+    0.98982938608089843
   ],
   "marginsPhysical": [
-    0.074583045920201929,
-    0.08604059758368332,
-    1.7900908262239106
+    1.0109064472302633,
+    1.5685307781691129,
+    1.5101706139191016
   ],
   "marginsScaled": [
-    0.0044749827552121157,
-    0.0051624358550209993,
-    0.17900908262239107
+    0.0606543868338158,
+    0.094111846690146772,
+    1.5101706139191016
   ],
   "nonnegativeMargins": [
     true,
@@ -57,34 +57,38 @@
   "allQPExitFlagsPositive": true,
   "allQPNumericalChecksPass": true,
   "numericalResidualTolerance": 1E-8,
-  "maxQPResidual": 3.776446132398208E-12,
-  "maxQPStationarityResidual": 1.2336576205029814E-11,
-  "maxQPComplementarityResidual": 1.4316057025238123E-9,
-  "maxQPDualViolation": 9.9406940285581276E-11,
+  "maxQPResidual": 4.4342537837632023E-11,
+  "maxQPStationarityResidual": 1.0093326336053508E-10,
+  "maxQPComplementarityResidual": 9.1682556954301764E-9,
+  "maxQPDualViolation": 3.751289496425246E-9,
   "maxActualECBFResidualPhysical": [
-    -1.1846159081172911,
-    -1.7839027819218451,
-    -2.4855712502043819
+    -1.19493346187332,
+    -1.7998369727091306,
+    -2.4980145913613923
   ],
   "maxActualECBFResidualScaled": [
-    -0.071076954487037464,
-    -0.1070341669153107,
-    -0.2485571250204382
+    -0.0716960077123992,
+    -0.10799021836254782,
+    -2.4980145913613923
   ],
   "allActualECBFResidualsNonpositive": true,
-  "maxDynamicLocalRowResidual": 0.00096583308468931039,
-  "maxInputNorm": 13.487194112636294,
-  "maxOptimizerInputNorm": 13.487194112636294,
-  "maxOptimizerNominalDifference": 4.838102530673221,
+  "maxDynamicLocalRowResidual": 0.00017268250668966978,
+  "maxInputNorm": 32.77858570506482,
+  "maxOptimizerInputNorm": 32.778557694425764,
+  "maxOptimizerNominalDifference": 28.767695593251815,
   "physicalRegionContainmentSampled": true,
   "inputBallContainmentSampled": true,
   "coefficientBoundsContainSamples": true,
-  "maxRowAssemblyError": 7.1054273576010019E-15,
-  "maxTighteningScalingError": 5.4123372450476381E-16,
-  "maxInputBallEndpointError": 1.3877787807814457E-17,
+  "maxRowAssemblyError": 1.4210854715202004E-14,
+  "maxTighteningScalingError": 4.0939474033052647E-15,
+  "maxInputBallEndpointError": 2.2204460492503131E-16,
   "trackingDifferenceFromOriginalAudit": 0,
   "regionalUniformCertificate": false,
   "continuousTimeRegionalCertificate": false,
+  "sampleSpacingRange": [
+    9.9999999999995925E-6,
+    0.10000000000013642
+  ],
   "sampledChecksPass": true,
   "unverifiedConditions": [
     "QP feasibility for every theta in the compact regional set Theta_R",

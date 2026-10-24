@@ -2,14 +2,14 @@ Command: summary = verify_reproduction
 MATLAB 24.1.0.2537033 (R2024a)
 Platform PCWIN64
 Standalone paper reproduction: 24.1.0.2537033 (R2024a)
-Output directory: D:\Codex\2026-10-12\https-github-com-sichenqian-distributed-bregman\work\safety-critical-gne\reproduced_results
+Output directory: D:\Codex\2026-10-24\tcns-tcns-qian-v1-pdf-matlab\work\topology_release\reproduced_results
     maxGradientDirectionalError: 5.1812e-10
      maxHessianDirectionalError: 5.2344e-08
           maxPolynomialDetError: 1.7764e-15
      consensusGainEquationError: 8.0824e-14
                            pass: 1
 
-Shared controller: c=40, gamma=45, epsilon=2e-05, xi=1.4, K1=14.5, K2=8.8, DeltaC=2.5
+Shared controller: c=40, gamma=45, epsilon=2e-07, xi=1.4, K1=14.5, K2=8.8, DeltaC=2.5
                                 mu: 1
                                  l: 1.1500
                             tildeL: 1.1216
@@ -30,7 +30,7 @@ Shared controller: c=40, gamma=45, epsilon=2e-05, xi=1.4, K1=14.5, K2=8.8, Delta
                              sigma: 0.0252
                           epsUpper: 4.2452e-05
                                  Q: [2x2 double]
-                           minEigQ: 0.3379
+                           minEigQ: 0.6362
              targetMinReducedSlack: 1.0000e-03
                            targetU: 1.0053e-15
                   targetTreeMargin: 0.3179
@@ -44,182 +44,233 @@ Shared controller: c=40, gamma=45, epsilon=2e-05, xi=1.4, K1=14.5, K2=8.8, Delta
                               etaI: 1.0000e-03
                  localBarrierLower: [0.1822 1.5405 0.3175]
                 localExtendedLower: [0.3987 3.3809 0.6967]
-                              Bbar: 19.0690
+                              Bbar: 19.5088
                              rFast: 1.0000e-03
-            localNominalSlackLower: [0.0077 1.2053 0.0196 1.0000e-03]
-                 localRowNormUpper: [1.4409 0.3588 8.0021 0]
-                fastTubeSlackLower: [0.0063 1.2050 0.0116 1.0000e-03]
-                             kappa: 366.6266
+            localNominalSlackLower: [0.0077 1.2053 0.1961 1.0000e-03]
+                 localRowNormUpper: [1.4409 0.3588 8.2114 0]
+                fastTubeSlackLower: [0.0063 1.2050 0.1879 1.0000e-03]
+                             kappa: 383.5917
                       cfRecomputed: 0.5000
                    mUnderComposite: 0.0126
                      mBarComposite: 287.7826
                       rhoComposite: 3.1550e-09
-                         rateBound: 5.8710e-04
+                         rateBound: 0.0011
            localAnalyticConditions: 1
         regionalUniformCertificate: 0
                              notes: 'Nominal gains and Lyapunov coefficients use the revised manuscript with consensus gain c and lambdaProof=0.2. Local strict-inactivity bounds use lambdaLocal=3. Regional uniform feasibility/tracking are not established by sampled maxima. Corollary 1 is not invoked.'
 
 Integrating projected flow by smooth faces: tight=1
-Initial filter distortion 2.56253611e-11, active multipliers 0
+Initial filter distortion 5.63670604, active multipliers 9
   tight=1 t=0.000 / 1200, wall=0.1 s
-  event 20 at t=62.6437546, active=8
-  internal t=63.5027403, active=9, maxLambda=42.65
-  internal t=63.805815, active=9, maxLambda=42.69
-  internal t=64.0131408, active=9, maxLambda=42.71
-  internal t=64.1970615, active=12, maxLambda=42.72
-  tight=1 t=100.064 / 1200, wall=124.3 s
-  event 40 at t=165.853814, active=0
-  tight=1 t=200.186 / 1200, wall=127.8 s
-  tight=1 t=300.186 / 1200, wall=128.5 s
-  tight=1 t=400.186 / 1200, wall=129.0 s
-  tight=1 t=500.186 / 1200, wall=129.5 s
-  tight=1 t=600.186 / 1200, wall=130.0 s
-  tight=1 t=700.186 / 1200, wall=130.5 s
-  tight=1 t=800.186 / 1200, wall=130.9 s
-  tight=1 t=900.186 / 1200, wall=131.4 s
-  tight=1 t=1000.186 / 1200, wall=131.9 s
-  tight=1 t=1100.186 / 1200, wall=132.3 s
-Finished tight=1, t=1200, events=40, wall=133.1 s
-Offline diagnostic QPs: tight=1, 12001 samples
-  audit sample 1 / 12001
-  audit sample 2001 / 12001
-  audit sample 4001 / 12001
-  audit sample 6001 / 12001
-  audit sample 8001 / 12001
-  audit sample 10001 / 12001
-  audit sample 12001 / 12001
-                           samplePeriod: 0.1000
+  event 20 at t=15.0865677, active=3
+  internal t=31.1554199, active=5, maxLambda=40.8
+  internal t=90.5120099, active=12, maxLambda=38.02
+  event 40 at t=95.1922303, active=9
+  tight=1 t=100.007 / 1200, wall=62.9 s
+  tight=1 t=200.028 / 1200, wall=69.2 s
+  tight=1 t=300.040 / 1200, wall=70.0 s
+  tight=1 t=400.089 / 1200, wall=70.8 s
+  tight=1 t=500.132 / 1200, wall=71.5 s
+  tight=1 t=600.200 / 1200, wall=72.0 s
+  tight=1 t=700.200 / 1200, wall=72.3 s
+  tight=1 t=800.200 / 1200, wall=72.6 s
+  tight=1 t=900.200 / 1200, wall=73.0 s
+  tight=1 t=1000.200 / 1200, wall=73.3 s
+  tight=1 t=1100.200 / 1200, wall=73.6 s
+Finished tight=1, t=1200, events=49, wall=74.3 s
+Offline diagnostic QPs: tight=1, 30001 samples
+  audit sample 1 / 30001
+  audit sample 2001 / 30001
+  audit sample 4001 / 30001
+  audit sample 6001 / 30001
+  audit sample 8001 / 30001
+  audit sample 10001 / 30001
+  audit sample 12001 / 30001
+  audit sample 14001 / 30001
+  audit sample 16001 / 30001
+  audit sample 18001 / 30001
+  audit sample 20001 / 30001
+  audit sample 22001 / 30001
+  audit sample 24001 / 30001
+  audit sample 26001 / 30001
+  audit sample 28001 / 30001
+  audit sample 30001 / 30001
+                           samplePeriod: NaN
                           allQPFeasible: 1
-                     maxTrackingSampled: 0.1592
-                   maxDistortionSampled: 4.8381
-                          deltaCSampled: 0.0097
-                        minInterSampled: 0.0821
-                     minObstacleSampled: 0.1240
-                         minTreeSampled: 0.1717
-                      minLambda2Sampled: 2.5414
-             maxTrueECBFResidualSampled: -1.1846
-             maxLocalRowResidualSampled: 9.6583e-04
-                          maxQPResidual: 3.7764e-12
-                   maxActiveMultipliers: 12
-                             finalError: 1.3315e-09
+                     maxTrackingSampled: 0.0208
+                   maxDistortionSampled: 28.7677
+                          deltaCSampled: 0.2327
+                        minInterSampled: 0.0828
+                     minObstacleSampled: 0.1241
+                         minTreeSampled: 0.0287
+                      minLambda2Sampled: 1.9398
+             maxTrueECBFResidualSampled: -1.1949
+             maxLocalRowResidualSampled: 1.7268e-04
+                          maxQPResidual: 4.4343e-11
+                   maxActiveMultipliers: 13
+                             finalError: 1.3505e-09
              regionalUniformCertificate: 0
-              maxQPStationarityResidual: 1.2337e-11
-           maxQPComplementarityResidual: 1.4316e-09
-    deltaCForInputBallOverSampledStates: 0.0511
-                        inputBallRadius: 15
-                    maxInputNormSampled: 13.4872
-           maxOptimizerInputNormSampled: 13.4872
-                         regionDiameter: 2.5000
+              maxQPStationarityResidual: 1.0093e-10
+           maxQPComplementarityResidual: 9.1683e-09
+    deltaCForInputBallOverSampledStates: 0.9039
+                        inputBallRadius: 35
+                    maxInputNormSampled: 32.7786
+           maxOptimizerInputNormSampled: 32.7786
+                         regionDiameter: 3.2200
                               regionBox: [2x2 double]
-                             barAIntBox: 5
-                             barAObsBox: 10.7689
+                             barAIntBox: 6.4400
+                             barAObsBox: 11.1485
                                   barAC: 1.8513
-                    lhsIntWithSampledRu: 1.1254
-                    lhsObsWithSampledRu: 1.7140
-               lhsConnWithSampledBounds: 0.7099
+                    lhsIntWithSampledRu: 0.1891
+                    lhsObsWithSampledRu: 0.2315
+               lhsConnWithSampledBounds: 0.9898
                  sampledTighteningCheck: 1
-                   trackingDesignBudget: 0.1650
-               connMismatchDesignBudget: 0.0550
-                              designLHS: [1.1667 1.7769 0.7380]
-                              designRHS: [1.2000 1.8000 2.5000]
-               designMarginInequalities: 1
-                     sampledBudgetCheck: 1
+           legacyDesignBudgetComparison: [1x1 struct]
        safeActivationRelativeSpeedBound: 1
                       safeActivationLHS: 22.2202
                       safeActivationRHS: 6.4000
-                 maxPairDistanceSampled: 2.3096
-                   maxAgentSpeedSampled: 0.1243
-                     positionMinSampled: [-3 -1.1548]
-                     positionMaxSampled: [3.0000 1.1548]
+                 maxPairDistanceSampled: 3.2100
+                   maxAgentSpeedSampled: 0.4339
+                     positionMinSampled: [-3 -1.6050]
+                     positionMaxSampled: [3.0000 1.6050]
                regionContainmentSampled: 1
+                     sampleSpacingRange: [1.0000e-05 0.1000]
                       corollary1Claimed: 0
                        certificateScope: 'Pointwise sampled diagnostics; these maxima are not uniform regional certificates.'
 
 Integrating projected flow by smooth faces: tight=0
-Initial filter distortion 4.05564334e-14, active multipliers 0
-  tight=0 t=0.000 / 1200, wall=0.1 s
-  tight=0 t=100.054 / 1200, wall=6.8 s
-  event 20 at t=101.739487, active=4
-  tight=0 t=200.294 / 1200, wall=8.3 s
-  tight=0 t=300.294 / 1200, wall=8.6 s
-  tight=0 t=400.294 / 1200, wall=8.9 s
-  tight=0 t=500.294 / 1200, wall=9.3 s
-  tight=0 t=600.294 / 1200, wall=9.5 s
-  tight=0 t=700.294 / 1200, wall=9.9 s
-  tight=0 t=800.294 / 1200, wall=10.1 s
-  tight=0 t=900.294 / 1200, wall=10.4 s
-  tight=0 t=1000.294 / 1200, wall=10.8 s
-  tight=0 t=1100.294 / 1200, wall=11.1 s
-Finished tight=0, t=1200, events=24, wall=11.7 s
-Offline diagnostic QPs: tight=0, 12001 samples
-  audit sample 1 / 12001
-  audit sample 2001 / 12001
-  audit sample 4001 / 12001
-  audit sample 6001 / 12001
-  audit sample 8001 / 12001
-  audit sample 10001 / 12001
-  audit sample 12001 / 12001
-                           samplePeriod: 0.1000
+Initial filter distortion 1.4668954e-12, active multipliers 0
+  tight=0 t=0.000 / 1200, wall=0.0 s
+  internal t=93.1488237, active=8, maxLambda=28.88
+  tight=0 t=100.003 / 1200, wall=31.7 s
+  event 20 at t=101.218469, active=4
+  tight=0 t=200.061 / 1200, wall=34.4 s
+  tight=0 t=300.109 / 1200, wall=35.1 s
+  tight=0 t=400.162 / 1200, wall=35.9 s
+  tight=0 t=500.224 / 1200, wall=36.6 s
+  tight=0 t=600.329 / 1200, wall=37.2 s
+  tight=0 t=700.434 / 1200, wall=37.6 s
+  tight=0 t=800.434 / 1200, wall=37.9 s
+  tight=0 t=900.434 / 1200, wall=38.2 s
+  tight=0 t=1000.434 / 1200, wall=38.5 s
+  tight=0 t=1100.434 / 1200, wall=38.9 s
+Finished tight=0, t=1200, events=24, wall=39.5 s
+Offline diagnostic QPs: tight=0, 30001 samples
+  audit sample 1 / 30001
+  audit sample 2001 / 30001
+  audit sample 4001 / 30001
+  audit sample 6001 / 30001
+  audit sample 8001 / 30001
+  audit sample 10001 / 30001
+  audit sample 12001 / 30001
+  audit sample 14001 / 30001
+  audit sample 16001 / 30001
+  audit sample 18001 / 30001
+  audit sample 20001 / 30001
+  audit sample 22001 / 30001
+  audit sample 24001 / 30001
+  audit sample 26001 / 30001
+  audit sample 28001 / 30001
+  audit sample 30001 / 30001
+                           samplePeriod: NaN
                           allQPFeasible: 1
-                     maxTrackingSampled: 0.1863
-                   maxDistortionSampled: 4.2673
-                          deltaCSampled: 0.0097
-                        minInterSampled: -1.8602e-04
-                     minObstacleSampled: -3.6006e-04
-                         minTreeSampled: -0.0022
-                      minLambda2Sampled: 1.9171
-             maxTrueECBFResidualSampled: 0.0370
-             maxLocalRowResidualSampled: 0.0011
-                          maxQPResidual: 1.0828e-11
+                     maxTrackingSampled: 3.5303e-04
+                   maxDistortionSampled: 4.2666
+                          deltaCSampled: 0.0094
+                        minInterSampled: -4.2407e-07
+                     minObstacleSampled: -9.7271e-07
+                         minTreeSampled: 8.3290e-06
+                      minLambda2Sampled: 1.9398
+             maxTrueECBFResidualSampled: 9.4886e-04
+             maxLocalRowResidualSampled: 1.0869e-05
+                          maxQPResidual: 2.1056e-11
                    maxActiveMultipliers: 12
-                             finalError: 1.1692e-09
+                             finalError: 1.1646e-09
              regionalUniformCertificate: 0
-              maxQPStationarityResidual: 1.6128e-11
-           maxQPComplementarityResidual: 1.2924e-09
-    deltaCForInputBallOverSampledStates: 0.0511
-                        inputBallRadius: 15
-                    maxInputNormSampled: 13.4872
-           maxOptimizerInputNormSampled: 13.4872
-                         regionDiameter: 2.5000
+              maxQPStationarityResidual: 1.3711e-10
+           maxQPComplementarityResidual: 9.9735e-09
+    deltaCForInputBallOverSampledStates: 0.0680
+                        inputBallRadius: 35
+                    maxInputNormSampled: 13.5608
+           maxOptimizerInputNormSampled: 13.5608
+                         regionDiameter: 3.2200
                               regionBox: [2x2 double]
-                             barAIntBox: 5
-                             barAObsBox: 10.7689
+                             barAIntBox: 6.4400
+                             barAObsBox: 11.1485
                                   barAC: 1.8513
-                    lhsIntWithSampledRu: 1.3173
-                    lhsObsWithSampledRu: 2.0062
-               lhsConnWithSampledBounds: 0.8222
+                    lhsIntWithSampledRu: 0.0032
+                    lhsObsWithSampledRu: 0.0039
+               lhsConnWithSampledBounds: 0.0695
                  sampledTighteningCheck: 0
-                   trackingDesignBudget: 0.1650
-               connMismatchDesignBudget: 0.0550
-                              designLHS: [1.1667 1.7769 0.7380]
-                              designRHS: [1.2000 1.8000 2.5000]
-               designMarginInequalities: 1
-                     sampledBudgetCheck: 0
+           legacyDesignBudgetComparison: [1x1 struct]
        safeActivationRelativeSpeedBound: 1
                       safeActivationLHS: 22.2202
                       safeActivationRHS: 6.4000
-                 maxPairDistanceSampled: 2.5124
-                   maxAgentSpeedSampled: 0.1243
-                     positionMinSampled: [-3 -1.1500]
-                     positionMaxSampled: [3.0000 1.1500]
-               regionContainmentSampled: 0
+                 maxPairDistanceSampled: 3.2100
+                   maxAgentSpeedSampled: 0.1272
+                     positionMinSampled: [-3 -1.6050]
+                     positionMaxSampled: [3.0000 1.6050]
+               regionContainmentSampled: 1
+                     sampleSpacingRange: [1.0000e-05 0.1000]
                       corollary1Claimed: 0
                        certificateScope: 'Pointwise sampled diagnostics; these maxima are not uniform regional certificates.'
 
-          firstAdmissibleSavedTime: 834.1000
+          firstAdmissibleSavedTime: 834.7000
                          tailStart: 850
                            tailEnd: 1050
                       theta1Radius: 2.3413e-06
-          fastInitializationRadius: 1.8465e-05
-               slowNormAtTailStart: 1.6913e-06
-               fastNormAtTailStart: 3.0932e-13
+          fastInitializationRadius: 1.8052e-05
+               slowNormAtTailStart: 1.7099e-06
+               fastNormAtTailStart: 3.6759e-15
                 dualMaxAtTailStart: 0
-                      initialError: 1.6913e-06
-                        finalError: 2.8469e-08
+                      initialError: 1.7099e-06
+                        finalError: 2.8776e-08
                 relativeFinalError: 0.0168
                    fittedDecayRate: 0.0204
-                 certifiedNormRate: 5.8710e-04
+                 certifiedNormRate: 0.0011
     allLaterSavedSamplesAdmissible: 1
 
-REPRODUCTION_PASS: seven figures; tail=[850,1050]; elapsed=237.9 s
-VERIFICATION_PASS: 3648948 values checked; maximum absolute difference 0
+REPRODUCTION_PASS: seven figures; tail=[850,1050]; elapsed=240.8 s
+Theorem 2 diagnostic: 30001 saved states; reuse QP optimizers = 1
+  tightening diagnostic 1 / 30001
+  tightening diagnostic 2001 / 30001
+  tightening diagnostic 4001 / 30001
+  tightening diagnostic 6001 / 30001
+  tightening diagnostic 8001 / 30001
+  tightening diagnostic 10001 / 30001
+  tightening diagnostic 12001 / 30001
+  tightening diagnostic 14001 / 30001
+  tightening diagnostic 16001 / 30001
+  tightening diagnostic 18001 / 30001
+  tightening diagnostic 20001 / 30001
+  tightening diagnostic 22001 / 30001
+  tightening diagnostic 24001 / 30001
+  tightening diagnostic 26001 / 30001
+  tightening diagnostic 28001 / 30001
+  tightening diagnostic 30001 / 30001
+
+Theorem 2: trajectory-based numerical diagnostics
+Samples: 30001; t = [0, 1200] s; physical/unscaled row units
+r_u (sampled)                 = 0.020762318857474694
+delta_c (sampled input ball)  = 0.90388111748024846   [||u|| <= 35]
+delta_c (actual input only)   = 0.2327189922752666
+Condition             bar_a        Delta          LHS       margin     >= 0
+inter-agent            6.44          1.2   0.18909355    1.0109064        1
+obstacle          11.148525          1.8   0.23146922    1.5685308        1
+connectivity      1.8512978          2.5   0.98982939    1.5101706        1
+QP feasibility/KKT numerical checks: 1 (tolerance 1e-08)
+Max original ECBF residuals (q <= 0): -1.19493346187  -1.79983697271  -2.49801459136
+All sampled checks pass: 1; uniform regional certificate: 0
+Finite saved samples do not certify Theorem 2 on the full compact region or between samples.
+
+Topology switching: trajectory-based numerical diagnostics
+Variant          Edges   min lambda2       min h_c   final error
+tightened      9 -> 10      1.939817    0.02872499   1.35048e-09
+  Geometric edge (2,5): t=0.0497658976656 s, radial speed -0.3743795, root residual 0
+  Floating support (2,5): 0 -> 1 in (0.0552, 0.0553] s
+untightened    9 -> 10      1.939817  8.329032e-06  1.164562e-09
+  Geometric edge (2,5): t=0.218548545026 s, radial speed -0.04944821, root residual 0
+  Floating support (2,5): 0 -> 1 in (0.261, 0.262] s
+All numerical checks: 1. Uniform regional certificate: 0.
+Positive sampled margins and event localization do not certify all states or all times.
+VERIFICATION_PASS: 14000650 values checked; maximum absolute difference 0

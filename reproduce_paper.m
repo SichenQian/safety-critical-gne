@@ -6,10 +6,13 @@ function result = reproduce_paper(outDir, mode)
 %
 %   Tested environment: MATLAB R2024a with Optimization Toolbox.
 %   No other user-supplied .m, .mat, data, or figure files are required.
-%   Model parameters and numerical equations are preserved from:
+%   Dynamics and row assembly originate from the standalone sources:
 %     simulation_with_c.m, regional_bounds.m, plot_with_c.m,
 %     write_numerical_audit.m, verify_editable_figures.m.
-%   Physical time is 0:0.1:1200 s. The local error tail is selected from
+%   Current topology-switching parameters and numerical settings are listed
+%   in README.md; the original case is preserved at commit de46af7.
+%   Physical time spans 0--1200 s; extra saved samples resolve the initial
+%   transient and active-filter interval. The local error tail is selected from
 %   the same tightened trajectory after the original local-entry checks.
 %   quadprog initializes the filter and performs offline diagnostics;
 %   the integrated online controller uses the primal-dual differential flow.
@@ -23,7 +26,11 @@ function result = reproduce_paper(outDir, mode)
 % original functions prevents a second implementation of the QP or ECBF rows.
 if nargin >= 2
     assert(strcmp(mode,'diagnostic_helpers'),'Unsupported mode.');
-    result = struct('rows',@rows,'solveQP',@solveScaledQP);
+    result = struct('rows',@rows,'solveQP',@solveScaledQP, ...
+        'parameters',@parameters,'certificates',@certificates, ...
+        'simulate',@simulate,'audit',@audit,'graph',@graph, ...
+        'treeBarrier',@treeBarrier,'verifyImplementation',@verifyImplementation, ...
+        'makeFigures',@makeFigures,'writeAudit',@writeAudit,'localEntry',@entryAndError);
     return;
 end
 if nargin < 1 || isempty(outDir)
@@ -100,7 +107,9 @@ if any(strcmp(mode,{'full','regional','regional_refine','probe'}))
     PA=P;
     if strcmp(mode,'probe'),PA.T=450;end
     if strcmp(mode,'regional_refine'),PA.RelTol=P.RelTol/10;PA.AbsTol=P.AbsTol/10;PA.maxStep=P.maxStep/2;end
-    result.integrationSettings=struct('RelTol',PA.RelTol,'AbsTol',PA.AbsTol,'maxStep',PA.maxStep,'outputDt',PA.outputDt,'auditDt',PA.auditDt);
+    result.integrationSettings=struct('RelTol',PA.RelTol,'AbsTol',PA.AbsTol,'maxStep',PA.maxStep, ...
+        'outputDt',PA.outputDt,'auditDt',PA.auditDt,'ode15sBDF',true,'maximumBDFOrder',2, ...
+        'extraDiagnosticSchedule','0:1e-5:.02; .0201:1e-4:.1; .101:.001:2; 2.01:.01:150');
     result.proposed=simulate(PA,true);result.auditProposed=audit(PA,result.proposed,true,C);
     save(dataFile,'result','-v7');
     if true
@@ -112,7 +121,15 @@ writeAudit(result,outDir);
 if strcmp(mode,'full') && isfield(result,'proposed') && isfield(result,'untightened')
     assert(result.auditProposed.allQPFeasible && result.auditUntightened.allQPFeasible,'A sampled QP failed.');
     assert(result.auditProposed.sampledTighteningCheck && result.auditProposed.regionContainmentSampled,'The tightened trajectory diagnostics failed.');
-    assert(result.auditProposed.designMarginInequalities && result.auditProposed.sampledBudgetCheck,'Regional design budgets failed their sampled check.');
+    % Check the computed Theorem 2 quantities, not budgets from the old case.
+    tol=1e-8;
+    for name={'auditProposed','auditUntightened'}
+        q=result.(name{1});
+        assert(max([q.maxQPResidual,q.maxQPStationarityResidual,q.maxQPComplementarityResidual, ...
+            max(0,-min(q.qpReference.lambdaStar,[],'all'))])<=tol,'Original-unit QP/KKT validation failed.');
+    end
+    assert(result.auditProposed.maxInputNormSampled<=P.auditInputRadius && ...
+        result.auditProposed.maxOptimizerInputNormSampled<=P.auditInputRadius,'Diagnostic input ball does not contain the saved inputs.');
     makeFigures(result,outDir);
 end
 end
@@ -145,19 +162,21 @@ end
 
 function P=parameters()
 P.N=5;P.n=2;P.edges=nchoosek(1:5,2);P.m=10;
-P.y0=[-3 .002;-3 -1.15;-3 -.55;-3 .55;-3 1.15];P.v0=zeros(5,2);
+P.y0=[-3 .002;-3 -1.605;-3 -.55;-3 .55;-3 1.605];P.v0=zeros(5,2);
 P.ystar=[3 0;3 -.55;3 -1.15;3 1.15;3 .55];
 P.obs=[.24 0;1.72 1.1;1.72 -1.1];P.rObs=[.625;.315;.315];
 P.dsafe=.345;P.dc=3.2;P.lambdaLower=.2;
 P.alpha=.03;P.B=1.15*eye(5)-.03*ones(5);P.p=P.B*P.ystar;
-P.c=40;P.gamma=45;P.lambdaProof=.2;P.lambdaLocal=3;P.xi=1.4;P.epsilon=2e-5;
+P.c=40;P.gamma=45;P.lambdaProof=.2;P.lambdaLocal=3;P.xi=1.4;P.epsilon=2e-7;
 P.K1=14.5;P.K2=8.8;P.alpha1=(P.K2-sqrt(P.K2^2-4*P.K1))/2;P.alpha2=P.K2-P.alpha1;
-P.DeltaInt=1.2;P.DeltaObs=1.8;P.DeltaC=2.5;P.barrierScale=.06;P.connScale=.1; % physical margin equivalents
-P.nu=.02;P.theta=50;P.deltaP=.001;P.localRadius=2e-4;
-P.T=1200;P.outputDt=.1;P.maxStep=.25;P.tailStart=800;P.tailDuration=200;
-P.RelTol=2e-8;P.AbsTol=1e-11;
-P.auditDt=.1;P.regionDiameter=2.5;P.regionBox=[-3.1 3.1;-1.3 1.3];P.regionSpeedMax=.5;P.auditInputRadius=15;
-P.trackingBudget=.165;P.connMismatchBudget=.055; % design budgets, not proven uniform bounds
+P.DeltaInt=1.2;P.DeltaObs=1.8;P.DeltaC=2.5;P.barrierScale=.06;P.connScale=1; % physical margins unchanged
+P.nu=.1;P.theta=50;P.deltaP=.001;P.localRadius=2e-4;
+P.T=1200;P.outputDt=.1;P.maxStep=.125;P.tailStart=850;P.tailDuration=200;
+P.RelTol=2e-9;P.AbsTol=1e-12;P.odeBDF2=true;
+P.auditDt=.1;P.regionDiameter=3.22;P.regionBox=[-3.1 3.1;-1.7 1.7];P.regionSpeedMax=.5;P.auditInputRadius=35;
+P.trackingBudget=.165;P.connMismatchBudget=.055; % historical budgets only; not acceptance criteria
+P.recordTopology=true;P.useComputedMargins=true;
+P.diagnosticTimes=[0:1e-5:.02,.0201:1e-4:.1,.101:.001:2,2.01:.01:150];
 P.nU=10;P.nZ=25;P.nLambda=45;P.dim=140;
 P.iX=1:50;P.iV=51:60;P.iU=61:70;P.iZ=71:95;P.iL=96:140;
 P.treeScale=512;
@@ -247,18 +266,36 @@ opt=optimoptions('quadprog','Display','off','ConstraintTolerance',1e-10,'Optimal
 [w,exitflag,lm]=solveScaledQP(P,A,b,nom);
 assert(exitflag>0,'Initial QP infeasible.');la=max(0,lm.ineqlin);la(A*w+b<-1e-7)=0;
 zz0=[reshape(X0.',50,1);reshape(V0.',10,1);w;la];active=la>1e-9;zz0(P.iL(~active))=0;
-gridT=(0:P.outputDt:P.T).';allZ=nan(numel(gridT),140);allZ(1,:)=zz0.';
+gridT=(0:P.outputDt:P.T).';
+if isfield(P,'diagnosticTimes')
+    extra=P.diagnosticTimes(:);extra=extra(extra>=0 & extra<=P.T);
+    gridT=unique(round([gridT;extra]*1e8)/1e8);
+end
+allZ=nan(numel(gridT),140);allZ(1,:)=zz0.';
 t0=0;start=tic;lastPrint=-100;lastRhs=0;nEvents=0;eventLog=zeros(0,2);
+observeTopology=isfield(P,'recordTopology') && P.recordTopology;
+topologyLog=zeros(0,5); % time, edge index, crossing direction, radial speed, root residual
 fprintf('Integrating projected flow by smooth faces: tight=%d\n',tight);
 fprintf('Initial filter distortion %.9g, active multipliers %d\n',norm(w(1:10)-nom),nnz(active));
 while t0<P.T
     opts=odeset('RelTol',P.RelTol,'AbsTol',P.AbsTol,'MaxStep',P.maxStep,...
         'Jacobian',@jacobian,'Events',@events,'OutputFcn',@progress);
+    if isfield(P,'odeBDF2') && P.odeBDF2,opts=odeset(opts,'BDF','on','MaxOrder',2);end
     sol=ode15s(@rhs,[t0 P.T],zz0,opts);tend=sol.x(end);
+    if observeTopology && isfield(sol,'ie')
+        crossings=find(sol.ie>P.nLambda);
+        for q=crossings(:).'
+            e=sol.ie(q)-P.nLambda;i=P.edges(e,1);j=P.edges(e,2);ze=sol.ye(:,q);
+            Xe=reshape(ze(P.iX),10,5).';Ve=reshape(ze(P.iV),2,5).';
+            d=Xe(i,2*i-1:2*i)-Xe(j,2*j-1:2*j);rate=d*(Ve(i,:)-Ve(j,:)).'/norm(d);
+            topologyLog(end+1,:)=[sol.xe(q),e,sign(rate),rate,norm(d)-P.dc];
+        end
+    end
     pick=find(gridT>=t0 & gridT<=tend);if ~isempty(pick),allZ(pick,:)=deval(sol,gridT(pick)).';end
     if tend>=P.T,break;end
     if isempty(sol.ie),error('Solver terminated without reaching horizon or a face event.');end
-    hit=unique(sol.ie(sol.xe==sol.xe(end)));zz0=sol.y(:,end);zz0(P.iL(hit))=0;
+    hit=unique(sol.ie(sol.xe==sol.xe(end) & sol.ie<=P.nLambda));zz0=sol.y(:,end);zz0(P.iL(hit))=0;
+    assert(~isempty(hit),'Integration stopped without a terminal dual-face event.');
     active(hit)=~active(hit);zz0(P.iL(~active))=0;
     nEvents=nEvents+numel(hit);eventLog=[eventLog;[repmat(tend,numel(hit),1),hit(:)]]; %#ok<AGROW>
     if mod(nEvents,20)==0,fprintf('  event %d at t=%.9g, active=%d\n',nEvents,tend,nnz(active));end
@@ -269,6 +306,7 @@ assert(all(isfinite(allZ),'all'),'Missing trajectory output samples.');
 res=struct('t',gridT,'z',allZ,'tight',tight,'wallSeconds',toc(start),'initialQPExit',exitflag,...
     'completed',true,'faceEvents',eventLog,'minDualNumerical',min(allZ(:,P.iL),[],'all'));
 res.controller=controller(P);if ~tight,res.controller.DeltaInt=0;res.controller.DeltaObs=0;res.controller.DeltaC=0;end
+if observeTopology,res.topologyEvents=topologyLog;end
 fprintf('Finished tight=%d, t=%.0f, events=%d, wall=%.1f s\n',tight,P.T,nEvents,toc(start));
     function dz=rhs(tt,zz)
         if toc(start)-lastRhs>30
@@ -296,6 +334,15 @@ fprintf('Finished tight=%d, t=%.0f, events=%d, wall=%.1f s\n',tight,P.T,nEvents,
         direction=ones(45,1);direction(active)=-1;isterminal=ones(45,1);
         if tt<=t0+4*eps(max(1,t0))
             value(active)=max(value(active),1e-12);value(~active)=min(value(~active),-1e-12);
+        end
+        % An exactly deactivated row is 0 <= 0; its inactive multiplier stays
+        % zero. It is not a dual-face crossing. No graph threshold is used.
+        inactiveZeroRow=~active & all(AA==0,2) & bb==0;
+        value(inactiveZeroRow)=-1;
+        if observeTopology
+            Y=zeros(P.N,P.n);for a=1:P.N,Y(a,:)=X(a,2*a-1:2*a);end
+            gap=sum((Y(P.edges(:,1),:)-Y(P.edges(:,2),:)).^2,2)-P.dc^2;
+            value=[value;gap];isterminal=[isterminal;zeros(P.m,1)];direction=[direction;zeros(P.m,1)];
         end
     end
     function stop=progress(tt,~,flag)
@@ -422,7 +469,13 @@ for a=1:ns
     err(a)=norm([eX(:);V(:);u-un;z(P.iZ);la]);
     hI(a)=min(aux.hInt);hO(a)=min(aux.hObs);hC(a)=aux.hC;lam2(a)=aux.lambda2;
     qobs=(A(21:35,1:10)*u+b(21:35))/P.barrierScale-tight*P.DeltaObs;
-    qpair=zeros(10,1);for e=1:10,rr=2*e-1:2*e;i=P.edges(e,1);j=P.edges(e,2);qpair(e)=(sum(A(rr,1:10)*u+b(rr))/(P.barrierScale*max(aux.W(i,j),realmin)))-tight*P.DeltaInt;end
+    % Physical residuals remain well defined when a communication weight is
+    % zero/subnormal. Do not divide a weighted row by a tiny graph weight.
+    acc=aux.f0+reshape(u,2,P.N).';qpair=zeros(P.m,1);
+    for e=1:P.m
+        i=P.edges(e,1);j=P.edges(e,2);d=aux.Y(i,:)-aux.Y(j,:);dv=V(i,:)-V(j,:);
+        qpair(e)=-2*d*(acc(i,:)-acc(j,:)).'-2*sum(dv.^2)-2*P.K2*d*dv.'-P.K1*aux.hInt(e);
+    end
     maxTrueQ(a)=max([qobs;qpair;trueConn]);
 end
 audit=struct('samplePeriod',P.outputDt*stride,'allQPFeasible',all(feas>0),'maxTrackingSampled',max(ru),...
@@ -433,6 +486,8 @@ audit.maxQPStationarityResidual=max(stationarity);audit.maxQPComplementarityResi
 audit.deltaCForInputBallOverSampledStates=max(deltaCBall);audit.inputBallRadius=P.auditInputRadius;audit.maxInputNormSampled=max(uNorm);audit.maxOptimizerInputNormSampled=max(uStarNorm);
 audit=regional_bounds(P,res,C,audit);
 audit.t=res.t(ind);audit.ru=ru;audit.distortion=distort;audit.deltaC=deltaC;audit.Vnom=Vnom;audit.Vc=Vc;audit.error=err;
+audit.sampleSpacingRange=[min(diff(audit.t)),max(diff(audit.t))];
+if diff(audit.sampleSpacingRange)>1e-9,audit.samplePeriod=NaN;end
 audit.hInt=hI;audit.hObs=hO;audit.hTree=hC;audit.lambda2=lam2;
 audit.qpReference=struct('wStar',wStar,'lambdaStar',lambdaStar,'exitflag',feas);
 audit.corollary1Claimed=false;
@@ -464,6 +519,36 @@ opt=optimoptions('quadprog','Display','off','Algorithm','interior-point-convex',
     'ConstraintTolerance',1e-10,'OptimalityTolerance',1e-10,'MaxIterations',2000);
 [x,~,flag,~,ll]=quadprog(Ht,[-nom;zeros(25,1)],At,-bt,[],[],[],[],[nom;zeros(25,1)],opt);
 w=T.*x;lm=struct('ineqlin',row.*ll.ineqlin);
+% Near a sensing boundary, exact positive weights can be extremely small.
+% Recover failed numerical solves by an equivalent positive row scaling;
+% accept only after checking the original-unit KKT system at the SAME 1e-8
+% diagnostic tolerance. The objective and online differential equation stay
+% unchanged. This also checks positive exits with inaccurate multipliers.
+H=diag([ones(P.nU,1);P.xi*ones(P.nZ,1)]);f=[-nom;zeros(P.nZ,1)];
+bad=flag<=0||numel(w)~=P.nU+P.nZ||numel(lm.ineqlin)~=P.nLambda;
+if ~bad
+    rr=[max(A*w+b),norm(H*w+f+A.'*lm.ineqlin,inf), ...
+        norm(lm.ineqlin.*(A*w+b),inf),-min(lm.ineqlin)];
+    bad=any(~isfinite(rr))||any(rr>1e-8);
+end
+if bad
+    den=max([max(abs(A),[],2),abs(b)],[],2);zero=den==0;den(zero)=1;
+    [wr,~,fr,~,lr]=quadprog(H,f,A./den,-b./den,[],[],[],[],[],opt);
+    lr=lr.ineqlin;
+    if numel(wr)==P.nU+P.nZ
+        % Strictly inactive constraints have zero exact KKT multipliers. Set
+        % these to zero BEFORE undoing very small row scales; then validate
+        % stationarity/complementarity in the original units below.
+        lr(zero | ((A*wr+b)./den < -1e-7))=0;
+    else
+        lr(zero)=0;
+    end
+    lr=lr./den;
+    if numel(wr)==P.nU+P.nZ && all(isfinite([wr;lr]))
+        rr=[max(A*wr+b),norm(H*wr+f+A.'*lr,inf),norm(lr.*(A*wr+b),inf),-min(lr)];
+        if fr>0&&all(rr<=1e-8),w=wr;flag=fr;lm.ineqlin=lr;end
+    end
+end
 end
 
 function S=screenMetrics(P,R)
@@ -494,11 +579,10 @@ A.lhsIntWithSampledRu=sqrt(2)*A.barAIntBox*A.maxTrackingSampled;
 A.lhsObsWithSampledRu=A.barAObsBox*A.maxTrackingSampled;
 A.lhsConnWithSampledBounds=sqrt(P.N)*C.Gh*A.maxTrackingSampled+A.deltaCForInputBallOverSampledStates;
 A.sampledTighteningCheck=S.tight && A.lhsIntWithSampledRu<=P.DeltaInt && A.lhsObsWithSampledRu<=P.DeltaObs && A.lhsConnWithSampledBounds<=P.DeltaC;
-A.trackingDesignBudget=P.trackingBudget;A.connMismatchDesignBudget=P.connMismatchBudget;
-A.designLHS=[sqrt(2)*A.barAIntBox*P.trackingBudget,A.barAObsBox*P.trackingBudget,sqrt(P.N)*C.Gh*P.trackingBudget+P.connMismatchBudget];
-A.designRHS=[P.DeltaInt,P.DeltaObs,P.DeltaC];
-A.designMarginInequalities=all(A.designLHS<A.designRHS);
-A.sampledBudgetCheck=S.tight && A.maxTrackingSampled<P.trackingBudget && A.deltaCForInputBallOverSampledStates<P.connMismatchBudget;
+legacyLHS=[sqrt(2)*A.barAIntBox*P.trackingBudget,A.barAObsBox*P.trackingBudget,sqrt(P.N)*C.Gh*P.trackingBudget+P.connMismatchBudget];
+A.legacyDesignBudgetComparison=struct('scope','Historical reference only; current acceptance uses the computed inequalities above.', ...
+    'trackingBudget',P.trackingBudget,'connectivityBudget',P.connMismatchBudget,'lhs',legacyLHS, ...
+    'inequalitiesHold',all(legacyLHS<[P.DeltaInt,P.DeltaObs,P.DeltaC]));
 A.safeActivationRelativeSpeedBound=2*P.regionSpeedMax;
 A.safeActivationLHS=P.alpha1*(P.dc^2-P.dsafe^2);
 A.safeActivationRHS=2*P.dc*A.safeActivationRelativeSpeedBound;
@@ -579,7 +663,11 @@ for mode=1:2
         statusLabel='No contact';statusColor=[0 .35 .15];
     else
         assert(clearance<0,'The untightened inset must show actual obstacle penetration.');
-        distanceLabel=sprintf('Penetration: %.2f mm',-1000*clearance);
+        if -1000*clearance<.01
+            distanceLabel=sprintf('Penetration: %.3g \\mum',-1e6*clearance);
+        else
+            distanceLabel=sprintf('Penetration: %.3g mm',-1000*clearance);
+        end
         statusLabel='Obstacle penetration';statusColor=[.55 .08 .05];
     end
     % Equal spatial aspect ratio keeps the circular obstacle geometrically true.
@@ -603,7 +691,7 @@ for mode=1:2
 end
 penetration=-zoomDetails(2).signedClearanceMeters;mn=min(U.obsAll(:));
 
-% Figures 3--5: one inset each, restricted to the untightened violation.
+% Figures 3--5: one inset each around the untightened minimum (either sign).
 fields={'hInt','hObs','hTree'};
 names={'inter_agent_avoidance','static_obstacle_avoidance','connectivity_preservation'};
 labels={'$\min_{i<j} h_{ij}^{\mathrm{int}}(y)$','$\min_{i,o} h_{i,o}^{\mathrm{obs}}(y)$','$h^{\mathrm{c}}(y)$'};
@@ -623,7 +711,7 @@ for j=1:3
     patch(az,[win(1) win(2) win(2) win(1)],[-1.65*small -1.65*small 0 0],[1 .92 .92],'EdgeColor','none');
     plot(az,U.t,yu,'--','Color',[.08 .34 .72],'LineWidth',1.4);
     yline(az,0,'k-','LineWidth',.9);plot(az,tc,low,'o','Color',[.08 .34 .72],'MarkerFaceColor',[.08 .34 .72],'MarkerSize',3.5);
-    xlim(az,win);ylim(az,[-1.65*small,1.0*small]);styleAxes(az);set(az,'FontSize',8.5);
+    xlim(az,win);ylim(az,[-1.65*small,1.35*small]);styleAxes(az);set(az,'FontSize',8.5);
     title(az,'Untightened (\times10^{-3})','FontSize',9,'FontWeight','normal');
     xlabel(az,'t (s)','FontSize',9);az.YAxis.Exponent=0;
     yticklabels(az,compose('%g',az.YTick*1e3));

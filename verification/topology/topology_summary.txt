@@ -1,0 +1,11 @@
+
+Topology switching: trajectory-based numerical diagnostics
+Variant          Edges   min lambda2       min h_c   final error
+tightened      9 -> 10      1.939817    0.02872499   1.35048e-09
+  Geometric edge (2,5): t=0.0497658976656 s, radial speed -0.3743795, root residual 0
+  Floating support (2,5): 0 -> 1 in (0.0552, 0.0553] s
+untightened    9 -> 10      1.939817  8.329032e-06  1.164562e-09
+  Geometric edge (2,5): t=0.218548545026 s, radial speed -0.04944821, root residual 0
+  Floating support (2,5): 0 -> 1 in (0.261, 0.262] s
+All numerical checks: 1. Uniform regional certificate: 0.
+Positive sampled margins and event localization do not certify all states or all times.

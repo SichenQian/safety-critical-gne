@@ -1,13 +1,51 @@
 {
+  "schema_version": 2,
   "entrypoint": "reproduce_paper.m",
-  "embedded_sources": {
-    "simulation_with_c.m": "2726e25488bb8b384c0806f713ded54ec6f5cce47b227247b2c47a0218807008",
-    "regional_bounds.m": "c9097aaa362be306bd4e5f15c40f297791f134cd14407d7734c3bc31d799c89a",
-    "plot_with_c.m": "8507e95bb164181323ccbd64789b6d884aa7b69690668b16885d29b2fe9a3a40",
-    "write_numerical_audit.m": "d5ac6bcfa37361c798e87d8b22512718aba4a3a5b8515a4ec4c2bdb79677d17e",
-    "verify_editable_figures.m": "fe4adc94c289871af701040108a3218b1a0e7913eb28f1f1b39cb1c967e42be1"
+  "baseline_commit": "de46af77d4ecf07194040a6be1ba254b9ceab329",
+  "historical_assembly_provenance": {
+    "entrypoint": "reproduce_paper.m",
+    "embedded_sources": {
+      "simulation_with_c.m": "2726e25488bb8b384c0806f713ded54ec6f5cce47b227247b2c47a0218807008",
+      "regional_bounds.m": "c9097aaa362be306bd4e5f15c40f297791f134cd14407d7734c3bc31d799c89a",
+      "plot_with_c.m": "8507e95bb164181323ccbd64789b6d884aa7b69690668b16885d29b2fe9a3a40",
+      "write_numerical_audit.m": "d5ac6bcfa37361c798e87d8b22512718aba4a3a5b8515a4ec4c2bdb79677d17e",
+      "verify_editable_figures.m": "fe4adc94c289871af701040108a3218b1a0e7913eb28f1f1b39cb1c967e42be1"
+    },
+    "standalone_sha256": "9c75a0c14c854efbd277ac542a263bb728bb3717f25e200215b43164441d6123",
+    "changes_to_equations_parameters_solver_settings": false,
+    "packaging_changes": "Adds a no-argument entrypoint, environment check, initial checks, figure roundtrip check, manuscript tail-window assertion, and runtime metadata; embeds the five original function files verbatim apart from line-ending normalization."
   },
-  "standalone_sha256": "9c75a0c14c854efbd277ac542a263bb728bb3717f25e200215b43164441d6123",
-  "changes_to_equations_parameters_solver_settings": false,
-  "packaging_changes": "Adds a no-argument entrypoint, environment check, initial checks, figure roundtrip check, manuscript tail-window assertion, and runtime metadata; embeds the five original function files verbatim apart from line-ending normalization."
+  "current_source_sha256": {
+    "compare_numeric_records.m": "3ccbc7de028a3bcf0449fe262e7a7200f734d6bcdca3c49d5f33a03bb38ca041",
+    "diagnose_tightening_margins.m": "d030ad28b9bb11a0a296058cbff7b92efe42560c3429f666f17d702a62f8d9c8",
+    "diagnose_topology_switch.m": "d077cc5a90c0411934f115e057ec153ad00d5cac1671b02cafb72cf08585daf6",
+    "reproduce_paper.m": "9810ed5ed898816f6adcfc9d1c2702a8b6dd6a084e0ba57270586fa9da0ec419",
+    "verify_figure_data.m": "d90f69b08cb79c68dca24009ec0cae03e40acb2ddc749ba6888a2fdf64ff387d",
+    "verify_reproduction.m": "71827392ff3707030cb0b14386c0e4a8c92fb0e9974d54f5a4b6458bff18a915",
+    "write_full_precision.m": "0c1d247183c5456389419e1ffdd3b769b4b5398f4713a4f5d9ab3fa369c1de69"
+  },
+  "unchanged_function_blocks": {
+    "ecbf_rows_graph_tree_derivatives": {
+      "unchanged": true,
+      "sha256_lf": "0e6dc9f6fb20a26c6ba53ff96f3e2c3526956eb4a89a44ac71bda2c61f0563cd"
+    },
+    "online_rhs_and_jacobian": {
+      "unchanged": true,
+      "sha256_lf": "833e629e82b63411cc320c70c6f901f0ca4f374f9008f10f4cf97e880b88913c"
+    },
+    "analytical_local_bounds_formulas": {
+      "unchanged": true,
+      "sha256_lf": "f9ca50e262e9588bc74b1e42d03fadc989dccde3fb8cc63477fd9f5dcb793598"
+    }
+  },
+  "current_changes": [
+    "selected initial positions, epsilon, nu and connectivity barrier normalization",
+    "BDF2 with refined tolerances and dense observations",
+    "nonterminal geometric event observer and identically zero inactive-row event handling",
+    "equivalent offline QP row rescaling with original-unit KKT validation",
+    "physical pair residual evaluation without division by tiny weights",
+    "independent topology diagnostic and revised reproducibility gates",
+    "small-penetration unit and positive-connectivity inset range"
+  ],
+  "original_local_checkout_unchanged": true
 }

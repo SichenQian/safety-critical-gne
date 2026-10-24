@@ -1,105 +1,64 @@
 {
-  "audited_on": "2026-10-13",
-  "manuscript": {
-    "tex": "generic-color.tex",
-    "pdf": "generic-color.pdf",
-    "tex_sha256": "4e41682a7211187fe83991387f8e17297653aef7a82b9e7790d270ab2e0b2220",
-    "pdf_sha256": "8ac0ad48f5a1d6c3b494f5d51b1fa4d1c052e58162a03d59e3e72f8b5634068b",
-    "pages": 12
-  },
-  "reference_base_commit": "86b38d1e3f78f79da8f1413a9571c50c2050d718",
-  "manuscript_mat_to_repository_mat": [
+  "verified_on": "2026-10-24",
+  "scope": "Revised Section V copy; the supplied PDF and live manuscript remain unchanged",
+  "source_tex_sha256": "391a285407c817af533085017961a23d128f11ab0c2d015ee76e7c103eaafd5e",
+  "source_pdf_sha256": "87810dde08973ec92d88c7c098a9270049f0c4499bee208fac65ea51b98b8b07",
+  "supplied_pdf_sha256": "f2e382baa7e1b97e1d406f2aef32e890ba5468b32a2a306897053f71adcf0893",
+  "source_differs_from_supplied_pdf": true,
+  "revised_tex_sha256": "97bc11cd33b258a4d3bede2845da936b6776a44dae0b6405847ce8392eca2900",
+  "revised_pdf_sha256": "bb1e8627f74e66bc6306750c0c40325739f2703435fef558f60d8f065bec9044",
+  "outside_section_v_byte_identical": true,
+  "revised_pdf_pages": 13,
+  "figure_panels": [
     {
-      "numericLeaves": 271,
-      "numericValues": 3648943.0,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "numericallyIdentical": true,
-      "excludedMetadata": [
-        "root(1).proposed(1).wallSeconds",
-        "root(1).untightened(1).wallSeconds"
-      ]
+      "panel": "1(a)",
+      "repository_stem": "my_trajectory",
+      "manuscript_include": "figures/my_trajectory.pdf",
+      "pdf_sha256": "d73f37f64abc5cedac2497cb5c06638be60e46900c39be68b2d4fe4cfde858bf",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "1(b)",
+      "repository_stem": "my_trajectory_2",
+      "manuscript_include": "figures/my_trajectory_2.pdf",
+      "pdf_sha256": "703b7572aed309c6ccc150e1ba7f47b7b5c6e0508e1d573df59310476f955e04",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "2(a)",
+      "repository_stem": "inter_agent_avoidance",
+      "manuscript_include": "figures/inter_agent_avoidance.pdf",
+      "pdf_sha256": "58fee1b9d4344deb23cce86c71dd0b5b30867b1066f1817acd8998977d37d118",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "2(b)",
+      "repository_stem": "static_obstacle_avoidance",
+      "manuscript_include": "figures/static_obstacle_avoidance.pdf",
+      "pdf_sha256": "eac95309e9f5a5260e16fce3cdff24e5e66185e17399cae03f4c31fe895e68a3",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "2(c)",
+      "repository_stem": "connectivity_preservation",
+      "manuscript_include": "figures/connectivity_preservation.pdf",
+      "pdf_sha256": "24088ccc456e234c393e91163708218c04bb9547a7bb7a895a8844992887ec4b",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "3(a)",
+      "repository_stem": "HB_flow_hebing",
+      "manuscript_include": "figures/HB_flow_hebing.pdf",
+      "pdf_sha256": "97769d3aa406dd8bdc320cd8f26947d1e8ea8b828d7b78fcc6a3c6bb33ab706b",
+      "copied_pdf_identical": true
+    },
+    {
+      "panel": "3(b)",
+      "repository_stem": "exp_2",
+      "manuscript_include": "figures/exp_2.pdf",
+      "pdf_sha256": "16d1d705194c779bc5fae6373b27d3e949855a5e7d56c1543af2905890e2dbb7",
+      "copied_pdf_identical": true
     }
   ],
-  "figures": [
-    {
-      "figure": "1(a)",
-      "manuscript_include": "consensus_gain_c_20260925/my_trajectory_1.eps",
-      "eps_sha256": "4e1948fc43db8705fe4c2daf8d134dd8da34f959f5482dcaecd9e6a2ce55a6be",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/my_trajectory.fig",
-      "numerical_figure_reference_sha256": "874f63707d93f001b27846f9b898b8536ba5290518e41b539974fd919fa83a88",
-      "repository_figure": "results/my_trajectory.fig",
-      "reference_objects": 22,
-      "exactly_matched_objects": 22,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "1(b)",
-      "manuscript_include": "consensus_gain_c_20260925/my_trajectory_2.eps",
-      "eps_sha256": "a6070e401ce9eb5ebd8e9bf0bfdd8d5031d9b59aba1c5932d90066705b999d76",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/my_trajectory_2.fig",
-      "numerical_figure_reference_sha256": "160200cc6f22b9d64b6d8d717966ddab963deb14a57bef71df6fb75854beab4e",
-      "repository_figure": "results/my_trajectory_2.fig",
-      "reference_objects": 24,
-      "exactly_matched_objects": 24,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "2(a)",
-      "manuscript_include": "consensus_gain_c_20260925/inter_agent_avoidance.eps",
-      "eps_sha256": "2858622793fa41d7690a749f85b9ba5ec582be90cc8ba6de316afb41024761e0",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/inter_agent_avoidance.fig",
-      "numerical_figure_reference_sha256": "e104e294ac65e99864aa2c361e9be3c353802c9ba13ea99a7da56ca365336b7e",
-      "repository_figure": "results/inter_agent_avoidance.fig",
-      "reference_objects": 5,
-      "exactly_matched_objects": 5,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "2(b)",
-      "manuscript_include": "consensus_gain_c_20260925/static_obstacle_avoidance.eps",
-      "eps_sha256": "5946d41ac0fd38efff274a40948467db72fe154be146f92da936f14b5bb4695c",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/static_obstacle_avoidance.fig",
-      "numerical_figure_reference_sha256": "195d764aed9ed8ce2980cc3c3c5b196367a1b88e776c58b0df595d62b27c92da",
-      "repository_figure": "results/static_obstacle_avoidance.fig",
-      "reference_objects": 5,
-      "exactly_matched_objects": 5,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "2(c)",
-      "manuscript_include": "consensus_gain_c_20260925/connectivity_preservation.eps",
-      "eps_sha256": "02b651ced041ed560b097b8b8041aa5a0efb9977c0fe9f7916c7a6d31ac44ea6",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/connectivity_preservation.fig",
-      "numerical_figure_reference_sha256": "1dea18f58ba1c72103aa1a58cb2e00097db92187ed52d46fb3b77c4698020997",
-      "repository_figure": "results/connectivity_preservation.fig",
-      "reference_objects": 5,
-      "exactly_matched_objects": 5,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "3(a)",
-      "manuscript_include": "consensus_gain_c_20260925/HB_flow_hebing.eps",
-      "eps_sha256": "d0ad1cee857feb0d24bef72b0d8f4960a8f17ab5d1674618e06ed3bd81949495",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/HB_flow_hebing.fig",
-      "numerical_figure_reference_sha256": "8fa69f0acb3a729831489240b896fdd35fe41a2f95c677625204242f1381bf0f",
-      "repository_figure": "results/HB_flow_hebing.fig",
-      "reference_objects": 10,
-      "exactly_matched_objects": 10,
-      "scientific_data_exact": true
-    },
-    {
-      "figure": "3(b)",
-      "manuscript_include": "consensus_gain_c_20260925/exp_2.eps",
-      "eps_sha256": "4c302c9332a5c78c4be677f1e31ae79369d5704854533c6eebe83ac08ce5345f",
-      "numerical_figure_reference": "consensus_gain_c_20260925/results/exp_2.fig",
-      "numerical_figure_reference_sha256": "29b5fbd9481ada7b8cc7977efa0bee6a0678823edd5f8af86ad4fc6b3d8e6643",
-      "repository_figure": "results/exp_2.fig",
-      "reference_objects": 1,
-      "exactly_matched_objects": 1,
-      "scientific_data_exact": true
-    }
-  ],
-  "all_scientific_figure_data_exact": true,
-  "scope": "MAT numerical values and native graphics arrays; manuscript EPS/PDF assembly was visually inspected. Byte-identical rendering is not claimed."
+  "regionalUniformCertificate": false
 }
