@@ -9,25 +9,25 @@
     "Date": "19-Nov-2023"
   },
   "fromScratch": true,
-  "samplesPerVariant": 30001,
+  "samplesPerVariant": 12001,
   "stateDimension": 140,
   "figureCount": 7,
-  "referenceNumericLeaves": 288,
-  "referenceNumericValues": 1.400065E+7,
+  "referenceNumericLeaves": 276,
+  "referenceNumericValues": 3.648948E+6,
   "referenceNumericallyIdentical": true,
   "referenceMaxAbsoluteDifference": 0,
   "sampledSafetyMinima": [
     [
-      0.08275279419656946,
-      -4.2406795855431945E-7
+      0.082099993964505888,
+      -0.00018601556003673692
     ],
     [
-      0.12413701936448951,
-      -9.7271262894382815E-7
+      0.12398039083157436,
+      -0.00036005806873201651
     ],
     [
-      0.028724994035563944,
-      8.3290316377770957E-6
+      0.1716691868816303,
+      -0.0022173313315357879
     ]
   ],
   "localErrorInterval": [
@@ -35,6 +35,6 @@
     1050
   ],
   "continuousTimeRegionalCertificate": false,
-  "wallSeconds": 251.9009155,
+  "wallSeconds": 238.2649758,
   "status": "VERIFICATION_PASS"
 }

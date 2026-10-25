@@ -1,6 +1,6 @@
 {
-  "numericLeaves": 288,
-  "numericValues": 1.400065E+7,
+  "numericLeaves": 276,
+  "numericValues": 3.648948E+6,
   "absoluteTolerance": 1E-11,
   "relativeTolerance": 1E-9,
   "maxAbsoluteDifference": 0,
@@ -342,14 +342,6 @@
       "pass": true
     },
     {
-      "path": "root(1).P(1).odeBDF2",
-      "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
       "path": "root(1).P(1).auditDt",
       "count": 1,
       "maxAbsoluteDifference": 0,
@@ -400,30 +392,6 @@
     {
       "path": "root(1).P(1).connMismatchBudget",
       "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).P(1).recordTopology",
-      "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).P(1).useComputedMargins",
-      "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).P(1).diagnosticTimes",
-      "count": 19501,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -934,24 +902,8 @@
       "pass": true
     },
     {
-      "path": "root(1).integrationSettings(1).ode15sBDF",
-      "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).integrationSettings(1).maximumBDFOrder",
-      "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
       "path": "root(1).proposed(1).t",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -959,7 +911,7 @@
     },
     {
       "path": "root(1).proposed(1).z",
-      "count": 4.20014E+6,
+      "count": 1.68014E+6,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -991,7 +943,7 @@
     },
     {
       "path": "root(1).proposed(1).faceEvents",
-      "count": 98,
+      "count": 80,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1136,14 +1088,6 @@
     {
       "path": "root(1).proposed(1).controller(1).connScale",
       "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).proposed(1).topologyEvents",
-      "count": 10,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1390,7 +1334,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditProposed(1).legacyDesignBudgetComparison(1).trackingBudget",
+      "path": "root(1).auditProposed(1).trackingDesignBudget",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -1398,7 +1342,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditProposed(1).legacyDesignBudgetComparison(1).connectivityBudget",
+      "path": "root(1).auditProposed(1).connMismatchDesignBudget",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -1406,7 +1350,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditProposed(1).legacyDesignBudgetComparison(1).lhs",
+      "path": "root(1).auditProposed(1).designLHS",
       "count": 3,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -1414,7 +1358,23 @@
       "pass": true
     },
     {
-      "path": "root(1).auditProposed(1).legacyDesignBudgetComparison(1).inequalitiesHold",
+      "path": "root(1).auditProposed(1).designRHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).designMarginInequalities",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditProposed(1).sampledBudgetCheck",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -1487,7 +1447,7 @@
     },
     {
       "path": "root(1).auditProposed(1).t",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1495,7 +1455,7 @@
     },
     {
       "path": "root(1).auditProposed(1).ru",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1503,7 +1463,7 @@
     },
     {
       "path": "root(1).auditProposed(1).distortion",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1511,7 +1471,7 @@
     },
     {
       "path": "root(1).auditProposed(1).deltaC",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1519,7 +1479,7 @@
     },
     {
       "path": "root(1).auditProposed(1).Vnom",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1527,7 +1487,7 @@
     },
     {
       "path": "root(1).auditProposed(1).Vc",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1535,15 +1495,7 @@
     },
     {
       "path": "root(1).auditProposed(1).error",
-      "count": 30001,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditProposed(1).sampleSpacingRange",
-      "count": 2,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1551,7 +1503,7 @@
     },
     {
       "path": "root(1).auditProposed(1).hInt",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1559,7 +1511,7 @@
     },
     {
       "path": "root(1).auditProposed(1).hObs",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1567,7 +1519,7 @@
     },
     {
       "path": "root(1).auditProposed(1).hTree",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1575,31 +1527,7 @@
     },
     {
       "path": "root(1).auditProposed(1).lambda2",
-      "count": 30001,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditProposed(1).qpReference(1).wStar",
-      "count": 1.050035E+6,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditProposed(1).qpReference(1).lambdaStar",
-      "count": 1.350045E+6,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditProposed(1).qpReference(1).exitflag",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1615,7 +1543,7 @@
     },
     {
       "path": "root(1).untightened(1).t",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1623,7 +1551,7 @@
     },
     {
       "path": "root(1).untightened(1).z",
-      "count": 4.20014E+6,
+      "count": 1.68014E+6,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -1800,14 +1728,6 @@
     {
       "path": "root(1).untightened(1).controller(1).connScale",
       "count": 1,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).untightened(1).topologyEvents",
-      "count": 10,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2054,7 +1974,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditUntightened(1).legacyDesignBudgetComparison(1).trackingBudget",
+      "path": "root(1).auditUntightened(1).trackingDesignBudget",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -2062,7 +1982,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditUntightened(1).legacyDesignBudgetComparison(1).connectivityBudget",
+      "path": "root(1).auditUntightened(1).connMismatchDesignBudget",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -2070,7 +1990,7 @@
       "pass": true
     },
     {
-      "path": "root(1).auditUntightened(1).legacyDesignBudgetComparison(1).lhs",
+      "path": "root(1).auditUntightened(1).designLHS",
       "count": 3,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -2078,7 +1998,23 @@
       "pass": true
     },
     {
-      "path": "root(1).auditUntightened(1).legacyDesignBudgetComparison(1).inequalitiesHold",
+      "path": "root(1).auditUntightened(1).designRHS",
+      "count": 3,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).designMarginInequalities",
+      "count": 1,
+      "maxAbsoluteDifference": 0,
+      "maxRelativeDifference": 0,
+      "identical": true,
+      "pass": true
+    },
+    {
+      "path": "root(1).auditUntightened(1).sampledBudgetCheck",
       "count": 1,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
@@ -2151,7 +2087,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).t",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2159,7 +2095,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).ru",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2167,7 +2103,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).distortion",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2175,7 +2111,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).deltaC",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2183,7 +2119,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).Vnom",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2191,7 +2127,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).Vc",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2199,15 +2135,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).error",
-      "count": 30001,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditUntightened(1).sampleSpacingRange",
-      "count": 2,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2215,7 +2143,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).hInt",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2223,7 +2151,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).hObs",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2231,7 +2159,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).hTree",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,
@@ -2239,31 +2167,7 @@
     },
     {
       "path": "root(1).auditUntightened(1).lambda2",
-      "count": 30001,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditUntightened(1).qpReference(1).wStar",
-      "count": 1.050035E+6,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditUntightened(1).qpReference(1).lambdaStar",
-      "count": 1.350045E+6,
-      "maxAbsoluteDifference": 0,
-      "maxRelativeDifference": 0,
-      "identical": true,
-      "pass": true
-    },
-    {
-      "path": "root(1).auditUntightened(1).qpReference(1).exitflag",
-      "count": 30001,
+      "count": 12001,
       "maxAbsoluteDifference": 0,
       "maxRelativeDifference": 0,
       "identical": true,

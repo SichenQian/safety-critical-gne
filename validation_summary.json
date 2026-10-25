@@ -1,474 +1,108 @@
 {
-  "status": "TOPOLOGY_RELEASE_VALIDATION_PASS",
-  "verified_on": "2026-10-24",
-  "baseline_commit": "de46af77d4ecf07194040a6be1ba254b9ceab329",
-  "scope": "trajectory-based numerical diagnostics",
-  "reproduction": {
-    "matlabVersion": "24.1.0.2537033 (R2024a)",
-    "release": "2024a",
-    "platform": "PCWIN64",
-    "optimizationToolbox": {
+  "status": "RELEASE_VALIDATION_PASS",
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "products": [
+    {
+      "Name": "MATLAB",
+      "Version": "24.1",
+      "ProductNumber": 1,
+      "Certain": true
+    },
+    {
       "Name": "Optimization Toolbox",
       "Version": "24.1",
-      "Release": "(R2024a)",
-      "Date": "19-Nov-2023"
-    },
-    "fromScratch": true,
-    "samplesPerVariant": 30001,
-    "stateDimension": 140,
-    "figureCount": 7,
-    "referenceNumericLeaves": 288,
-    "referenceNumericValues": 14000650.0,
-    "referenceNumericallyIdentical": true,
-    "referenceMaxAbsoluteDifference": 0,
-    "sampledSafetyMinima": [
-      [
-        0.08275279419656946,
-        -4.2406795855431945e-07
-      ],
-      [
-        0.12413701936448951,
-        -9.727126289438282e-07
-      ],
-      [
-        0.028724994035563944,
-        8.329031637777096e-06
-      ]
-    ],
-    "localErrorInterval": [
-      850,
-      1050
-    ],
-    "continuousTimeRegionalCertificate": false,
-    "wallSeconds": 251.9009155,
-    "status": "VERIFICATION_PASS"
-  },
-  "figure_data_exact": true,
-  "topology_and_tightening": {
-    "scope": "trajectory-based numerical diagnostics",
-    "tightened": {
-      "samples": 30001,
-      "timeInterval": [
-        0,
-        1200
-      ],
-      "edgeCountInitial": 9,
-      "edgeCountRange": [
-        9,
-        10
-      ],
-      "floatingPointEdgeCountRange": [
-        9,
-        10
-      ],
-      "geometricBoundaryEvents": [
-        0.049765897665621804,
-        7,
-        -1,
-        -0.37437946279076484,
-        0
-      ],
-      "geometricEventColumns": [
-        "time",
-        "edgeIndex",
-        "outwardSign",
-        "radialSpeed",
-        "distanceRootResidual"
-      ],
-      "edgeIndexPairs": [
-        [
-          1,
-          2
-        ],
-        [
-          1,
-          3
-        ],
-        [
-          1,
-          4
-        ],
-        [
-          1,
-          5
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          2,
-          4
-        ],
-        [
-          2,
-          5
-        ],
-        [
-          3,
-          4
-        ],
-        [
-          3,
-          5
-        ],
-        [
-          4,
-          5
-        ]
-      ],
-      "floatingSupportChangeBrackets": [
-        0.0552,
-        0.0553,
-        2,
-        5,
-        0,
-        1
-      ],
-      "floatingChangeColumns": [
-        "timeLeft",
-        "timeRight",
-        "agentI",
-        "agentJ",
-        "oldSupport",
-        "newSupport"
-      ],
-      "underflowEdgeSampleCount": 55,
-      "minLambda2": 1.939816815633378,
-      "minMatrixTreeMargin": 0.028724994035563944,
-      "minimumSafety": [
-        0.08275279419656946,
-        0.12413701936448951,
-        0.028724994035563944
-      ],
-      "maxPairDistance": 3.21,
-      "finalError": 1.3504801523221172e-09,
-      "sampledPositionRegionContained": true,
-      "maxAgentSpeed": 0.4339368576610418,
-      "maxInputNorm": 32.77858570506482
-    },
-    "untightened": {
-      "samples": 30001,
-      "timeInterval": [
-        0,
-        1200
-      ],
-      "edgeCountInitial": 9,
-      "edgeCountRange": [
-        9,
-        10
-      ],
-      "floatingPointEdgeCountRange": [
-        9,
-        10
-      ],
-      "geometricBoundaryEvents": [
-        0.21854854502556578,
-        7,
-        -1,
-        -0.049448214919832305,
-        0
-      ],
-      "geometricEventColumns": [
-        "time",
-        "edgeIndex",
-        "outwardSign",
-        "radialSpeed",
-        "distanceRootResidual"
-      ],
-      "edgeIndexPairs": [
-        [
-          1,
-          2
-        ],
-        [
-          1,
-          3
-        ],
-        [
-          1,
-          4
-        ],
-        [
-          1,
-          5
-        ],
-        [
-          2,
-          3
-        ],
-        [
-          2,
-          4
-        ],
-        [
-          2,
-          5
-        ],
-        [
-          3,
-          4
-        ],
-        [
-          3,
-          5
-        ],
-        [
-          4,
-          5
-        ]
-      ],
-      "floatingSupportChangeBrackets": [
-        0.261,
-        0.262,
-        2,
-        5,
-        0,
-        1
-      ],
-      "floatingChangeColumns": [
-        "timeLeft",
-        "timeRight",
-        "agentI",
-        "agentJ",
-        "oldSupport",
-        "newSupport"
-      ],
-      "underflowEdgeSampleCount": 43,
-      "minLambda2": 1.939816815633378,
-      "minMatrixTreeMargin": 8.329031637721585e-06,
-      "minimumSafety": [
-        -4.2406795855431945e-07,
-        -9.727126289438282e-07,
-        8.329031637721585e-06
-      ],
-      "maxPairDistance": 3.21,
-      "finalError": 1.1645624516654745e-09,
-      "sampledPositionRegionContained": true,
-      "maxAgentSpeed": 0.127194905375986,
-      "maxInputNorm": 13.560831691197892
-    },
-    "tightening": {
-      "scope": "trajectory-based numerical diagnostics",
-      "source": "in-memory reproduction result",
-      "samples": 30001,
-      "timeInterval": [
-        0,
-        1200
-      ],
-      "sampleSpacing": null,
-      "qpOptimizersReused": true,
-      "qpSolveCount": 0,
-      "regularizationXi": 1.4,
-      "inputBallRadius": 35,
-      "coefficientBoundsPhysical": [
-        6.44,
-        11.148524566058057,
-        1.851297752035772
-      ],
-      "rowScales": [
-        0.06,
-        0.06,
-        1
-      ],
-      "coefficientMaxSampled": [
-        6.42,
-        10.880335472769211,
-        0.5518922960859708
-      ],
-      "r_u_sampled": 0.020762318857474694,
-      "delta_c_actual_input_sampled": 0.2327189922752666,
-      "delta_c_input_ball_sampled_states": 0.9038811174802485,
-      "tighteningPhysical": [
-        1.2,
-        1.8,
-        2.5
-      ],
-      "lhsPhysical": [
-        0.18909355276973666,
-        0.23146922183088708,
-        0.9898293860808984
-      ],
-      "marginsPhysical": [
-        1.0109064472302633,
-        1.568530778169113,
-        1.5101706139191016
-      ],
-      "marginsScaled": [
-        0.0606543868338158,
-        0.09411184669014677,
-        1.5101706139191016
-      ],
-      "nonnegativeMargins": [
-        true,
-        true,
-        true
-      ],
-      "allQPExitFlagsPositive": true,
-      "allQPNumericalChecksPass": true,
-      "numericalResidualTolerance": 1e-08,
-      "maxQPResidual": 4.434253783763202e-11,
-      "maxQPStationarityResidual": 1.0093326336053508e-10,
-      "maxQPComplementarityResidual": 9.168255695430176e-09,
-      "maxQPDualViolation": 3.751289496425246e-09,
-      "maxActualECBFResidualPhysical": [
-        -1.19493346187332,
-        -1.7998369727091306,
-        -2.4980145913613923
-      ],
-      "maxActualECBFResidualScaled": [
-        -0.0716960077123992,
-        -0.10799021836254782,
-        -2.4980145913613923
-      ],
-      "allActualECBFResidualsNonpositive": true,
-      "maxDynamicLocalRowResidual": 0.00017268250668966978,
-      "maxInputNorm": 32.77858570506482,
-      "maxOptimizerInputNorm": 32.778557694425764,
-      "maxOptimizerNominalDifference": 28.767695593251815,
-      "physicalRegionContainmentSampled": true,
-      "inputBallContainmentSampled": true,
-      "coefficientBoundsContainSamples": true,
-      "maxRowAssemblyError": 1.4210854715202004e-14,
-      "maxTighteningScalingError": 4.093947403305265e-15,
-      "maxInputBallEndpointError": 2.220446049250313e-16,
-      "trackingDifferenceFromOriginalAudit": 0,
-      "regionalUniformCertificate": false,
-      "continuousTimeRegionalCertificate": false,
-      "sampleSpacingRange": [
-        9.999999999999593e-06,
-        0.10000000000013642
-      ],
-      "sampledChecksPass": true,
-      "unverifiedConditions": [
-        "QP feasibility for every theta in the compact regional set Theta_R",
-        "A continuous-time tracking bound and containment in Theta_R and U_R^u",
-        "Connectivity discrepancy over all Theta_R times U_R^u",
-        "The a priori sensing-boundary relative-speed bound in Assumption 2"
-      ]
-    },
-    "localEntry": {
-      "firstAdmissibleSavedTime": 834.7,
-      "tailStart": 850,
-      "tailEnd": 1050,
-      "theta1Radius": 2.3412564451709294e-06,
-      "fastInitializationRadius": 1.8051794791031282e-05,
-      "slowNormAtTailStart": 1.7099340194813142e-06,
-      "fastNormAtTailStart": 3.6758719703283365e-15,
-      "dualMaxAtTailStart": 0,
-      "initialError": 1.7099340194813142e-06,
-      "finalError": 2.8775898380112146e-08,
-      "relativeFinalError": 0.01682866008411303,
-      "fittedDecayRate": 0.020423189845454704,
-      "certifiedNormRate": 0.001105330347027682,
-      "allLaterSavedSamplesAdmissible": true
-    },
-    "checks": {
-      "naturalGeometricSwitch": true,
-      "bothGraphsConnectedAtSamples": true,
-      "tightenedSafetyAtSamples": true,
-      "tighteningDiagnostics": true,
-      "untightenedQPKKT": true,
-      "targetStrictAndLocalAnalyticalConditions": true,
-      "bothFinalErrorsBelow1eMinus6": true,
-      "originalLocalWindowAdmissible": true,
-      "sensingBoundaryInequalityConditionalOnSpeedBound": true
-    },
-    "allNumericalChecksPass": true,
-    "untightenedMaxDualViolation": 5.611413172238819e-09,
-    "KKTtolerance": 1e-08,
-    "regionalUniformCertificate": false,
-    "continuousTimeRegionalCertificate": false,
-    "unverifiedConditions": [
-      "QP feasibility for every theta in the compact regional set Theta_R",
-      "A continuous-time tracking bound and containment in Theta_R and U_R^u",
-      "Connectivity discrepancy over all Theta_R times U_R^u",
-      "The a priori sensing-boundary relative-speed bound in Assumption 2"
-    ]
-  },
-  "precision_comparison": {
+      "ProductNumber": 6,
+      "Certain": true
+    }
+  ],
+  "sourceFileCount": 1,
+  "externalUserFilesRequired": false,
+  "syntaxCheckPassed": true,
+  "checkedReferenceParameters": [
+    "c",
+    "gamma",
+    "epsilon",
+    "xi",
+    "K1",
+    "K2",
+    "DeltaInt",
+    "DeltaObs",
+    "DeltaC",
+    "barrierScale",
+    "connScale",
+    "nu",
+    "theta",
+    "deltaP",
+    "dc",
+    "dsafe",
+    "lambdaLower",
+    "T",
+    "outputDt",
+    "maxStep",
+    "RelTol",
+    "AbsTol",
+    "y0",
+    "v0",
+    "ystar",
+    "obs",
+    "rObs",
+    "B",
+    "p"
+  ],
+  "trajectoryComparison": {
     "proposed": {
-      "maxDifferenceByStateBlock": [
-        2.4255752275603726e-06,
-        2.141724772371234e-06,
-        0.00010521918937422825,
-        1.018675820104939e-06,
-        0.0014818714742377281
-      ],
-      "stateBlocks": [
-        "estimates",
-        "velocities",
-        "inputs",
-        "auxiliaries",
-        "multipliers"
-      ],
-      "maxPhysicalPositionDifference": 2.422841792443231e-06,
-      "geometricSwitchTimeDifference": 1.6621421690399263e-08
+      "timeGridIdentical": true,
+      "savedSamples": 12001,
+      "maxPositionComponentDifference": 0,
+      "maxVelocityComponentDifference": 0,
+      "maxFullStateComponentDifference": 0
     },
     "untightened": {
-      "maxDifferenceByStateBlock": [
-        3.7031181476243624e-06,
-        3.0147981665076817e-06,
-        0.0001480014774810634,
-        1.7547840938129597e-06,
-        0.0018969216736426375
-      ],
-      "stateBlocks": [
-        "estimates",
-        "velocities",
-        "inputs",
-        "auxiliaries",
-        "multipliers"
-      ],
-      "maxPhysicalPositionDifference": 3.69504063238435e-06,
-      "geometricSwitchTimeDifference": 3.740300869026214e-08
-    },
-    "trackingMaximum": [
-      0.0207590480255343,
-      0.020762318857474694
-    ],
-    "trackingMaximumRelativeDifference": 0.00015753692845426887,
-    "connectivityBallDiscrepancy": [
-      0.9038823074288997,
-      0.9038811174802485
-    ],
-    "untightenedSafetyMinima": [
-      [
-        -4.2533574962089205e-07,
-        -9.727255594893514e-07,
-        8.328864528089897e-06
-      ],
-      [
-        -4.2406795855431945e-07,
-        -9.727126289438282e-07,
-        8.329031637721585e-06
-      ]
-    ],
-    "untightenedSafetySignsStable": true,
-    "refinement": {
-      "RelTol": [
-        2e-08,
-        2e-09
-      ],
-      "AbsTol": [
-        1e-11,
-        1e-12
-      ],
-      "maxStep": [
-        0.25,
-        0.125
-      ]
-    },
-    "pass": true,
-    "scope": "numerical refinement cross-check, not a validated continuous-time enclosure"
+      "timeGridIdentical": true,
+      "savedSamples": 12001,
+      "maxPositionComponentDifference": 0,
+      "maxVelocityComponentDifference": 0,
+      "maxFullStateComponentDifference": 0
+    }
   },
-  "code_analyzer_message_counts": {
-    "reproduce_paper": 15,
-    "diagnose_tightening_margins": 0,
-    "diagnose_topology_switch": 0,
-    "verify_reproduction": 2
+  "safetyMinimumComparisonMaxAbsoluteDifference": 0,
+  "safetyMinimaTightenedUntightened": [
+    [
+      0.08209999396450589,
+      -0.00018601556003673692
+    ],
+    [
+      0.12398039083157436,
+      -0.0003600580687320165
+    ],
+    [
+      0.1716691868816303,
+      -0.002217331331535788
+    ]
+  ],
+  "localTailPhysicalSeconds": [
+    850,
+    1050
+  ],
+  "figureCount": 7,
+  "formatsPerFigure": [
+    ".fig",
+    ".png",
+    ".pdf",
+    ".eps"
+  ],
+  "all28FigureFilesPresent": true,
+  "nativeFigureEditSaveReopenPass": true,
+  "wallSeconds": 270.347121,
+  "singleTightenedTrajectory": true,
+  "continuousTimeRegionalCertificate": false,
+  "originalMATLABFilesUnchanged": true,
+  "originalMATLABFilesHashChecked": 21,
+  "manuscriptUpdatedDuringAudit": true,
+  "latestManuscriptNumericalSectionRechecked": true,
+  "latestManuscriptHashes": {
+    "generic-color.tex": "065fcdc8f0c9585944d4fd01bdba869bd9a766bb75bdb3861a75b5cd5e4d3416",
+    "generic-color.pdf": "bbcfb49213c74d8806c4dcdec72f1d5b765f47304e1a71566861ed745a19e859"
   },
-  "code_analyzer_note": "No messages in either independent diagnostic; main/verification messages are style, unused-variable or export-API notices, recorded in verification/code_analyzer.json.",
-  "regionalUniformCertificate": false,
-  "continuousTimeRegionalCertificate": false
+  "allSevenFigurePNGsVisuallyInspected": true
 }

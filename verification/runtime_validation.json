@@ -16,14 +16,14 @@
     "pass": true
   },
   "initialExtendedSafety": {
-    "hC": 0.028724994035563944,
-    "psiC": 0.063064553330021686,
-    "lambda2": 1.9398168156333779,
+    "hC": 0.31786060049899206,
+    "psiC": 0.69784998969410073,
+    "lambda2": 3.120571184921749,
     "minPair": 0.18127900000000008,
     "minObs": 10.106979000000003
   },
   "figureCount": 7,
-  "wallSeconds": 240.8456057,
+  "wallSeconds": 237.8835285,
   "fromScratch": true,
   "externalUserFilesRequired": false,
   "status": "REPRODUCTION_PASS"

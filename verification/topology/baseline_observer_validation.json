@@ -1,9 +1,0 @@
-{
-  "proposedMaxStateDifference": 0,
-  "untightenedMaxStateDifference": 0,
-  "proposedBitwiseEqual": true,
-  "untightenedBitwiseEqual": true,
-  "proposedTopologyEvents": [],
-  "untightenedTopologyEvents": [],
-  "publishedFilesWritten": false
-}
