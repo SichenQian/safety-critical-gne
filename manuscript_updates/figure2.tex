@@ -1,0 +1,20 @@
+% Replace only the existing Fig. 2 environment. Original panels (a)--(c) are unchanged.
+\begin{figure}[htbp]
+	\centering
+	\subfloat[Inter-agent collision margin]{%
+\includegraphics[width=\linewidth]{consensus_gain_c_20260925/inter_agent_avoidance.eps}%
+\label{fig:inter_agent_avoidance}}
+\\
+	\subfloat[Obstacle-avoidance margin]{%
+\includegraphics[width=\linewidth]{consensus_gain_c_20260925/static_obstacle_avoidance.eps}%
+\label{fig:static_obstacle_avoidance}}\\
+	\subfloat[Matrix-tree connectivity certificate]{%
+\includegraphics[width=\linewidth]{consensus_gain_c_20260925/connectivity_preservation.eps}%
+\label{fig:connectivity_preservation}}
+\\
+    \subfloat[Algebraic connectivity of the actual communication graph]{%
+\includegraphics[width=\linewidth]{consensus_gain_c_20260925/algebraic_connectivity.eps}%
+\label{fig:algebraic-connectivity}}
+\caption{Safety quantities under the tightened and untightened flows.
+The horizontal reference in (d) is $\underline{\lambda}_{\chi}=0.2$.} \label{fig:safety-margins}
+\end{figure}

@@ -1,0 +1,300 @@
+{
+  "source_sha256": "41ef0aefd53568db340a4d15feabc6844c70ac900b2471ff3cf391c8056d3168",
+  "plot_data_sha256": "b4d50a0b5599fe6040a2b5e8fbb764844261d7e18c48ac7c8806f31b76b107ff",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "mpmath": "1.4.1",
+  "method": "Physical positions; symmetric full Laplacian eigenvalues; distance support and independent BFS.",
+  "thresholds": {
+    "edge_support": "squared distance < dc^2; diagonal excluded; no weight cutoff",
+    "spectral_warning": "100*N*binary64_epsilon*max(1,||L||_2); diagnostic only",
+    "distance_warning": "100*binary64_epsilon*max(1,dc); diagnostic only",
+    "tree_negative": "hTree < 0, no tolerance",
+    "spectral_margin_violation": "lambda2 < 0.2, no tolerance",
+    "disconnected": "distance-support component_count > 1",
+    "archive_agreement_assertion": 1e-12
+  },
+  "integration_settings": {
+    "RelTol": 2e-08,
+    "AbsTol": 1e-11,
+    "maxStep": 0.25,
+    "outputDt": 0.1,
+    "auditDt": 0.1
+  },
+  "scope": "Saved samples only. No continuous-time claim or reintegration; high precision does not improve ODE accuracy.",
+  "proposed": {
+    "sample_count": 12001,
+    "time_range": [
+      0.0,
+      1200.0
+    ],
+    "min_lambda2": 2.5414101556548925,
+    "min_lambda2_time": 91.10000000000001,
+    "min_lambda2_minus_02": 2.3414101556548923,
+    "below_02_sample_count": 0,
+    "below_02_intervals": [],
+    "disconnected_sample_count": 0,
+    "disconnected_intervals": [],
+    "component_counts": [
+      1
+    ],
+    "edge_counts": [
+      10
+    ],
+    "topology_intervals": [
+      {
+        "first_sample": 0.0,
+        "last_sample": 1200.0,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "component_count": 1
+      }
+    ],
+    "min_positive_weight": 0.33711795571135783,
+    "underflowed_positive_edge_count": 0,
+    "support_vs_represented_components_mismatches": 0,
+    "max_pair_distance": 2.3095872761950473,
+    "min_distance_to_radius": 0.8904127238049528,
+    "near_radius_pair_samples": 0,
+    "distance_warning_tolerance": 7.105427357601002e-14,
+    "spectral_warning_tolerance_range": [
+      4.593312790522048e-13,
+      5.151049560752918e-13
+    ],
+    "near_zero_lambda2_samples": 0,
+    "near_02_lambda2_samples": 0,
+    "max_eigenpair_residual": 6.854671959125871e-15,
+    "max_reduced_laplacian_difference": 8.881784197001252e-15,
+    "max_archived_lambda2_difference": 6.661338147750939e-15,
+    "max_archived_tree_difference": 8.881784197001252e-16,
+    "min_tree_certificate": 0.17166918688163013,
+    "min_tree_time": 65.9,
+    "lambda2_at_min_tree": 2.971067021197365,
+    "negative_tree_intervals": [],
+    "lambda2_when_tree_negative": null,
+    "high_precision_checks": [
+      {
+        "time": 0.0,
+        "lambda2_80digit": "3.12057118492174942681040502501079244530535972743004680877817239647956",
+        "double_value": 3.120571184921749,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 65.9,
+        "lambda2_80digit": "2.9710670211973652541532267894900890638950362202122127877446314621519",
+        "double_value": 2.971067021197365,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 91.10000000000001,
+        "lambda2_80digit": "2.541410155654892469170456200475749765026344826951573158242205671420783",
+        "double_value": 2.5414101556548925,
+        "abs_difference": 0.0
+      },
+      {
+        "time": 1200.0,
+        "lambda2_80digit": "3.120572389267158398827914579437442523832520694771863219075449598845407",
+        "double_value": 3.1205723892671577,
+        "abs_difference": 4.440892098500626e-16
+      }
+    ],
+    "figure_window": [
+      0,
+      400
+    ],
+    "min_lambda2_in_figure": 2.5414101556548925
+  },
+  "untightened": {
+    "sample_count": 12001,
+    "time_range": [
+      0.0,
+      1200.0
+    ],
+    "min_lambda2": 1.9171483438355643,
+    "min_lambda2_time": 89.4,
+    "min_lambda2_minus_02": 1.7171483438355644,
+    "below_02_sample_count": 0,
+    "below_02_intervals": [],
+    "disconnected_sample_count": 0,
+    "disconnected_intervals": [],
+    "component_counts": [
+      1
+    ],
+    "edge_counts": [
+      10
+    ],
+    "topology_intervals": [
+      {
+        "first_sample": 0.0,
+        "last_sample": 1200.0,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "component_count": 1
+      }
+    ],
+    "min_positive_weight": 0.20050014024220814,
+    "underflowed_positive_edge_count": 0,
+    "support_vs_represented_components_mismatches": 0,
+    "max_pair_distance": 2.512374104237084,
+    "min_distance_to_radius": 0.687625895762916,
+    "near_radius_pair_samples": 0,
+    "distance_warning_tolerance": 7.105427357601002e-14,
+    "spectral_warning_tolerance_range": [
+      4.2786256803142786e-13,
+      5.139440449238164e-13
+    ],
+    "near_zero_lambda2_samples": 0,
+    "near_02_lambda2_samples": 0,
+    "max_eigenpair_residual": 7.565825760292109e-15,
+    "max_reduced_laplacian_difference": 9.325873406851315e-15,
+    "max_archived_lambda2_difference": 7.105427357601002e-15,
+    "max_archived_tree_difference": 7.771561172376096e-16,
+    "min_tree_certificate": -0.002217331331535788,
+    "min_tree_time": 78.0,
+    "lambda2_at_min_tree": 2.1068988418334063,
+    "negative_tree_intervals": [
+      {
+        "first_sample": 76.9,
+        "last_sample": 79.5,
+        "sample_count": 27,
+        "entry_bracket": [
+          76.80000000000001,
+          76.9
+        ],
+        "exit_bracket": [
+          79.5,
+          79.60000000000001
+        ]
+      }
+    ],
+    "lambda2_when_tree_negative": [
+      2.0682397303501654,
+      2.1528359689189127
+    ],
+    "high_precision_checks": [
+      {
+        "time": 0.0,
+        "lambda2_80digit": "3.12057118492174942681040502501079244530535972743004680877817239647956",
+        "double_value": 3.120571184921749,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 76.9,
+        "lambda2_80digit": "2.152835968918912405477715308185560356708717143212453087807119812022608",
+        "double_value": 2.1528359689189127,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 78.0,
+        "lambda2_80digit": "2.106898841833406001444422712929033531550981693314303916539783494122207",
+        "double_value": 2.1068988418334063,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 79.5,
+        "lambda2_80digit": "2.068239730350164902220288684535821203470732808702333572241062705253683",
+        "double_value": 2.0682397303501654,
+        "abs_difference": 4.440892098500626e-16
+      },
+      {
+        "time": 89.4,
+        "lambda2_80digit": "1.917148343835563580000157190684948313345907633413576578038097899808067",
+        "double_value": 1.9171483438355643,
+        "abs_difference": 6.661338147750939e-16
+      },
+      {
+        "time": 1200.0,
+        "lambda2_80digit": "3.120572389256674761635483386515981914846401440236514093457739341034785",
+        "double_value": 3.1205723892566763,
+        "abs_difference": 1.7763568394002505e-15
+      }
+    ],
+    "figure_window": [
+      0,
+      400
+    ],
+    "min_lambda2_in_figure": 1.9171483438355643
+  }
+}

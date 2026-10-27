@@ -9,10 +9,11 @@ Sichen Qian, Hongzhe Liu, and Wenwu Yu.
 
 **Manuscript-aligned version:**
 [`TCNS-manuscript-baseline-20261025`](https://github.com/SichenQian/safety-critical-gne/tree/TCNS-manuscript-baseline-20261025).
-The MATLAB code, archived data, seven figure panels and verification records
-are restored to `de46af7`, matching the numerical setup in the supplied
-`generic-color.tex` and `generic-color.pdf`. The README reports the selected
-tightening budgets used in that manuscript.
+The archived simulation data and original seven figure panels retain this
+manuscript-aligned baseline. The connectivity update adds independent
+postprocessing and Fig. 2(d), with the original dynamics, parameters, and
+trajectories preserved. The README reports the selected tightening budgets
+used in the manuscript and the sampled connectivity results separately.
 
 ## Numerical example
 
@@ -26,7 +27,8 @@ primal–dual dynamics. It compares the proposed tightened flow with an untighte
 ablation that sets the collision, obstacle, and connectivity tightening margins
 to zero while retaining the other algorithm parameters.
 
-The MATLAB file is self-contained. The game, obstacle geometry, communication
+The default MATLAB simulation is self-contained; the optional connectivity
+check uses the additional files listed below. The game, obstacle geometry, communication
 weights, equilibrium target, controller parameters, and deterministic initial
 conditions are defined in the file. Both variants start from the same positions,
 zero velocities, and initial decision estimates; their fast variables are
@@ -96,7 +98,8 @@ algebraic connectivity.
 
 ## Figure correspondence
 
-All figures are exported to `results/` in `.fig`, `.png`, `.pdf`, and `.eps` formats:
+The original seven panels are exported to `results/` in `.fig`, `.png`,
+`.pdf`, and `.eps` formats. The added Fig. 2(d) is in `connectivity_check/`:
 
 | Figure | File stem | Content |
 | --- | --- | --- |
@@ -105,6 +108,7 @@ All figures are exported to `results/` in `.fig`, `.png`, `.pdf`, and `.eps` for
 | Fig. 2(a) | `inter_agent_avoidance` | Minimum inter-agent collision margin |
 | Fig. 2(b) | `static_obstacle_avoidance` | Minimum obstacle-avoidance margin |
 | Fig. 2(c) | `connectivity_preservation` | Matrix-tree connectivity certificate |
+| Fig. 2(d) | `connectivity_check/algebraic_connectivity` | Actual weighted-graph algebraic connectivity, with reference 0.2 |
 | Fig. 3(a) | `HB_flow_hebing` | Position-component convergence under the tightened flow |
 | Fig. 3(b) | `exp_2` | Aggregate closed-loop error over 850–1050 seconds along the same tightened trajectory |
 
@@ -149,8 +153,8 @@ seven figures, and compares the numeric/logical arrays with the archived
 `results/experiment_data.mat`. The default output is `reproduced_results/`,
 preserving the archived reference. An alternative folder can be supplied as
 `verify_reproduction(fullfile(pwd,'local_run'))`. This entry additionally uses
-`compare_numeric_records.m` and `write_full_precision.m`; the original
-`reproduce_paper.m` remains self-contained.
+`compare_numeric_records.m` and `write_full_precision.m`;
+the default simulation in `reproduce_paper.m` remains self-contained.
 
 | Verification item | Published record in `verification/` |
 | --- | --- |
@@ -201,7 +205,7 @@ presentation differences are excluded from the numerical comparison.
 ## Theorem 2 tightening diagnostics
 
 `diagnose_tightening_margins.m` adds **trajectory-based numerical diagnostics**
-for Theorem 2 in `TCNS_QIAN_v1.pdf` (Section IV-A, p. 6). It reads the tightened
+for Theorem 2 in Section IV-A of the manuscript. It reads the tightened
 trajectory and produces a Command Window table, a text/JSON summary, and a MAT
 record containing the optimizer inputs and diagnostic time series. It does
 not integrate the system, change parameters or initial conditions, or create
@@ -311,6 +315,127 @@ Numerical statement corresponding to Section V:
 > residuals remain nonpositive.
 > These trajectory-based numerical diagnostics support the tightening
 > mechanism but do not establish a uniform regional certificate for Theorem 2.
+
+## Physical-graph connectivity check (Fig. 2(d))
+
+The optional connectivity audit reuses both archived trajectories from
+`results/experiment_data.mat` at all 12,001 times on `0:0.1:1200` seconds.
+It does not rerun the solver or change the algorithm, model, initial states,
+gains, communication radius, or other simulation parameters. The MATLAB
+entry point keeps its existing default behavior and adds a postprocessing mode:
+
+```matlab
+D = reproduce_paper([], 'connectivity');
+% Or select a saved run and a separate diagnostic output folder:
+D = diagnose_connectivity('results/experiment_data.mat', 'connectivity_check');
+```
+
+Generate the vector EPS/PDF/SVG and PNG preview with Python:
+
+```sh
+python -m pip install -r requirements-connectivity.txt
+python audit_connectivity.py --out connectivity_check
+```
+
+Save or regenerate the native editable MATLAB figure from those same CSVs:
+
+```matlab
+file = export_connectivity_fig;
+openfig(file, 'new', 'visible');
+```
+
+The archived `.fig` contains editable curves, axes, legend, and reference
+line. Its two 4,001-point curves were checked against the CSVs exactly, and
+an edit/save/reopen check passed in MATLAB R2024a. Use Python after a new
+simulation to regenerate the CSVs, then call this MATLAB exporter. For a run
+saved outside `results/`, pass the matching `--source` and `--plot-data`
+arguments to Python and the output directory to `export_connectivity_fig`.
+
+![Fig. 2(d): actual communication-graph algebraic connectivity](connectivity_check/algebraic_connectivity.png)
+
+[Editable MATLAB FIG](connectivity_check/algebraic_connectivity.fig) ·
+[Vector EPS](connectivity_check/algebraic_connectivity.eps) ·
+[Vector PDF](connectivity_check/algebraic_connectivity.pdf) ·
+[Numerical summary](connectivity_check/connectivity_summary.json) ·
+[Fig. 2 and Section V replacement fragments](manuscript_updates/README.md)
+
+Fig. 2(d) is `connectivity_check/algebraic_connectivity.eps`. Its horizontal
+range is 0--400 seconds, matching the existing safety panels. Fig. 2(c),
+`connectivity_preservation.eps`, remains the matrix-tree certificate. The
+summary JSON and both CSV files cover the entire 0--1200 second run; the CSVs
+record all ten pairwise distances, weights, and support indicators at every
+sample, as well as the component count and raw algebraic connectivity.
+
+### Integrator and numerical precision
+
+The archived trajectories were produced by MATLAB R2024a `ode15s` with
+`RelTol = 2e-8`, `AbsTol = 1e-11`, and `MaxStep = 0.25` seconds. The projected
+primal-dual flow is integrated on smooth active faces with event-driven
+restarts. `deval` evaluates each face solution on the 0.1-second output
+grid. This output spacing is not a fixed integration step. The supplied
+Jacobian uses centered differences with `h = 1e-6*(1+abs(z_j))` for the first
+60 state columns and analytical fast-state blocks. Existing initial-dual
+cleanup/active-set thresholds (`1e-7`, `1e-9`) and the event-start guard
+(`1e-12`) are unchanged; none is a communication-edge threshold.
+ODE tolerances control local error estimates and are not rigorous global
+trajectory-error bounds.
+
+For each saved physical position, the audit computes exactly the Section II-A
+weight `exp(-r_ij^2/(dc^2-r_ij^2))` for `r_ij < dc = 3.2`, zero otherwise,
+and zero diagonal. It forms `L = diag(W*ones(N,1))-W` and uses a symmetric
+eigensolver. The second sorted eigenvalue is retained without clipping.
+Actual graph support is determined independently by `r_ij^2 < dc^2`, with
+zero edge-weight cutoff, and its connected components are counted directly.
+This distance rule retains mathematically positive edges even if floating
+point `exp` underflows; such occurrences are explicitly counted.
+
+The binary64 spectral warning tolerance is
+`100*N*eps*max(1,norm(L,2))`, approximately `4.28e-13`--`5.16e-13` here.
+It flags ambiguity only; it does not change eigenvalues or determine graph
+disconnection. A radius warning band of `100*eps*max(1,dc) = 7.11e-14`
+also leaves the strict support test unchanged. The tests for `lambda2 < 0.2`
+and matrix-tree certificate `< 0` use no tolerance. Archive agreement is
+checked to `1e-12`. Python checks the eigenpair residuals and an independent
+restriction of the Laplacian to the orthogonal complement of the all-one
+vector. MATLAB independently recomputes all samples. Additional 80-decimal-
+digit calculations at the minima, negative-certificate endpoints, and run
+endpoints use the exact saved binary64 coordinates. This validates spectral
+arithmetic on those coordinates, not the accuracy of the integrated solution.
+
+The verification records in
+[`verification/connectivity/`](verification/connectivity/) tie this update
+to the archived data and include cross-language agreement and native FIG
+editability checks. The original `results/` files remain unchanged.
+
+### Observed results and interpretation
+
+| Quantity over all 12,001 saved times | Tightened | Untightened |
+| --- | ---: | ---: |
+| Minimum algebraic connectivity | 2.541410155655 | 1.917148343836 |
+| Time of minimum (s) | 91.1 | 89.4 |
+| Minimum `lambda2 - 0.2` | 2.341410155655 | 1.717148343836 |
+| Samples with `lambda2 < 0.2` | 0 | 0 |
+| Disconnected samples | 0 | 0 |
+| Edges / connected components at every sample | 10 / 1 | 10 / 1 |
+| Smallest positive edge weight | 0.337117955711 | 0.200500140242 |
+| Largest pairwise distance | 2.309587276195 | 2.512374104237 |
+| Minimum normalized matrix-tree certificate | 0.171669186882 | -0.002217331332 |
+
+The untightened certificate is negative at 27 saved times from 76.9 to
+79.5 seconds. The sign transitions are bracketed by `[76.8,76.9]` and
+`[79.5,79.6]` seconds; these are sample brackets, not localized crossing
+times. During the negative samples, `lambda2` ranges from 2.068239730350
+to 2.152835968919. At the certificate minimum (78.0 seconds), `lambda2`
+is 2.106898841833. Both runs retain the complete five-node graph at every
+saved time, with no underflowed, near-zero, or near-radius edges.
+
+Thus, negative values of the matrix-tree certificate in this run show the
+conservatism of that sufficient certificate. They do not show violation of
+the 0.2 spectral margin or loss of graph connectivity. The collision,
+obstacle, QP-tracking, KKT, and convergence records are unchanged. These
+are observations on the saved simulation grid, not a new continuous-time
+or uniform regional safety proof.
+
 
 ## Citation
 

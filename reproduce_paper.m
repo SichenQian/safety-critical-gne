@@ -18,6 +18,18 @@ function result = reproduce_paper(outDir, mode)
 %   Usage: place this file in an empty folder, open MATLAB there, and type:
 %       result = reproduce_paper;
 %   Or open this file in the MATLAB Editor and click Run.
+%   To reuse the archived trajectories without integrating:
+%       D = reproduce_paper([], 'connectivity');
+%   This optional postprocessing mode requires diagnose_connectivity.m.
+
+if nargin >= 2 && strcmp(mode,'connectivity')
+    if nargin < 1 || isempty(outDir)
+        outDir = fullfile(fileparts(mfilename('fullpath')), 'connectivity_check');
+    end
+    source = fullfile(fileparts(mfilename('fullpath')), 'results', 'experiment_data.mat');
+    result = diagnose_connectivity(source, outDir);
+    return;
+end
 
 % Read-only access for the independent tightening diagnostic. Returning the
 % original functions prevents a second implementation of the QP or ECBF rows.

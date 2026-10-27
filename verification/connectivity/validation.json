@@ -1,0 +1,74 @@
+{
+  "baseline_commit": "09f5afa2f8675b03f16663910f88a853d01d5abd",
+  "scope": "Additive connectivity diagnostics, Fig. 2(d), replacement snippets, and README; no reintegration.",
+  "archived_inputs_sha256": {
+    "results/experiment_data.mat": "41ef0aefd53568db340a4d15feabc6844c70ac900b2471ff3cf391c8056d3168",
+    "results/plot_data.mat": "b4d50a0b5599fe6040a2b5e8fbb764844261d7e18c48ac7c8806f31b76b107ff"
+  },
+  "trajectory_correspondence": {
+    "proposed": {
+      "full_state_max_absolute_difference_to_manuscript": 0.0,
+      "time_grid_exact": true,
+      "state_shape": [
+        12001,
+        140
+      ],
+      "python_matlab_max_lambda2_difference": 1.0658141036401503e-14,
+      "python_matlab_max_tree_difference": 1.2212453270876722e-15,
+      "component_counts_match": true
+    },
+    "untightened": {
+      "full_state_max_absolute_difference_to_manuscript": 0.0,
+      "time_grid_exact": true,
+      "state_shape": [
+        12001,
+        140
+      ],
+      "python_matlab_max_lambda2_difference": 1.1102230246251565e-14,
+      "python_matlab_max_tree_difference": 1.1657341758564144e-15,
+      "component_counts_match": true
+    }
+  },
+  "original_solver_code_preserved": true,
+  "original_results_preserved": true,
+  "native_fig_editability": {
+    "file": "connectivity_check/algebraic_connectivity.fig",
+    "tightenedPoints": 4001,
+    "untightenedPoints": 4001,
+    "curveDataExact": true,
+    "referenceLine": 0.2,
+    "xLim": [
+      0,
+      400
+    ],
+    "nativeGraphics": true,
+    "editSaveReopenPassed": true,
+    "matlabVersion": "24.1.0.2537033 (R2024a)"
+  },
+  "readme_manuscript_filename_check_passed": true,
+  "artifact_hash_convention": "Git blob SHA-1 after repository clean filters; binary objects retain exact bytes.",
+  "artifact_git_blob_sha1": {
+    "README.md": "e1631afd2465a470858b88322022789d7219d0fb",
+    "reproduce_paper.m": "7e0636f13b2c115c5574ce9cdacb420d1030e75c",
+    "audit_connectivity.py": "5bf622867b4c640b841907468917cafbdc7efda7",
+    "diagnose_connectivity.m": "34f8833521573891720f970640be6c585056c8fe",
+    "export_connectivity_fig.m": "6d2d420b2c7e8090faa9a5956b96d6ec415ca3a3",
+    "requirements-connectivity.txt": "f9cec457724293453755932dce05801f1e0ebfed",
+    "connectivity_check/algebraic_connectivity.eps": "a227470e2d8551ce36d58bcf91b0b3b8dd9c11bb",
+    "connectivity_check/algebraic_connectivity.fig": "7a1ef1718ab3b30292aa7399ca216cde478245cf",
+    "connectivity_check/algebraic_connectivity.pdf": "c5506f4a8b5b172ece8962be1ff12419292f5540",
+    "connectivity_check/algebraic_connectivity.png": "44ce0126c36d1a0fcba66d8063b2ca987544b03d",
+    "connectivity_check/algebraic_connectivity.svg": "ba7b0718de7c9570ed801e3d85fc627d69ab58a8",
+    "connectivity_check/connectivity_matlab.mat": "a00a73e08dbbcb1216fb8582f8925b5e18056576",
+    "connectivity_check/connectivity_matlab_summary.json": "0617b03a998c51ed29874f70b654b38339fa47f2",
+    "connectivity_check/connectivity_summary.json": "a60ad00bface9c44e986bf0469734c4856456d04",
+    "connectivity_check/tightened_connectivity.csv": "8688efb8c8acebe0c9034bc2a5dae6564d800ce6",
+    "connectivity_check/tightened_connectivity_matlab.csv": "3f380d08e2078e7029f632189273d35b8331206e",
+    "connectivity_check/untightened_connectivity.csv": "ca2eb39955faad3828e22d20e31883d31a0116d1",
+    "connectivity_check/untightened_connectivity_matlab.csv": "c05cab53cdfb95ce92c32558f5b0ac38c4f06f07",
+    "manuscript_updates/figure2.tex": "884195816951924f67f329ed717181ee13d69895",
+    "manuscript_updates/README.md": "724584eb8aab8bdf2537359a2bea093aaf71d8fc",
+    "manuscript_updates/sectionV_replacement.tex": "36b58c14b42e1d6151e88da4823a89d4cc314d28"
+  },
+  "prepublication_python_recheck": "CONNECTIVITY_AUDIT_PASS: original CSVs and full JSON summary reproduced exactly"
+}

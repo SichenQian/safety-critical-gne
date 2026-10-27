@@ -1,0 +1,84 @@
+{
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "source": "D:\\Codex\\2026-10-26\\tcns-latex-fig-2-1-connectivity\\work\\safety-critical-gne\\results\\experiment_data.mat",
+  "scope": "Saved samples only; no reintegration or continuous-time conclusion.",
+  "edgeRule": "r^2 < dc^2, diagonal excluded; no edge weight cutoff",
+  "spectralWarningRule": "100*N*eps*max(1,norm(L,2)); not a disconnection rule",
+  "distanceWarningRule": "100*eps*max(1,dc); never changes edges",
+  "integrationSettings": {
+    "RelTol": 2E-8,
+    "AbsTol": 1E-11,
+    "maxStep": 0.25,
+    "outputDt": 0.1,
+    "auditDt": 0.1
+  },
+  "proposed": {
+    "minLambda2": 2.5414101556548934,
+    "minLambda2Time": 91.100000000000009,
+    "minSpectralMargin": 2.3414101556548932,
+    "below02Samples": 0,
+    "below02Intervals": [],
+    "disconnectedSamples": 0,
+    "disconnectedIntervals": [],
+    "componentCounts": 1,
+    "edgeCounts": 10,
+    "minPositiveWeight": 0.33711795571135783,
+    "maxPairDistance": 2.3095872761950473,
+    "minDistanceToRadius": 0.89041272380495284,
+    "underflowedPositiveEdges": 0,
+    "nearRadiusPairSamples": 0,
+    "distanceWarningTolerance": 7.1054273576010019E-14,
+    "spectralWarningToleranceRange": [
+      4.5933127905220459E-13,
+      5.1510495607529185E-13
+    ],
+    "nearZeroLambdaSamples": 0,
+    "minTree": 0.1716691868816303,
+    "minTreeTime": 65.9,
+    "lambda2AtMinTree": 2.9710670211973635,
+    "negativeTreeIntervals": [],
+    "lambda2WhenTreeNegative": []
+  },
+  "untightened": {
+    "minLambda2": 1.917148343835563,
+    "minLambda2Time": 89.4,
+    "minSpectralMargin": 1.717148343835563,
+    "below02Samples": 0,
+    "below02Intervals": [],
+    "disconnectedSamples": 0,
+    "disconnectedIntervals": [],
+    "componentCounts": 1,
+    "edgeCounts": 10,
+    "minPositiveWeight": 0.20050014024220814,
+    "maxPairDistance": 2.5123741042370842,
+    "minDistanceToRadius": 0.687625895762916,
+    "underflowedPositiveEdges": 0,
+    "nearRadiusPairSamples": 0,
+    "distanceWarningTolerance": 7.1054273576010019E-14,
+    "spectralWarningToleranceRange": [
+      4.2786256803142791E-13,
+      5.1394404492381659E-13
+    ],
+    "nearZeroLambdaSamples": 0,
+    "minTree": -0.0022173313315357879,
+    "minTreeTime": 78,
+    "lambda2AtMinTree": 2.1068988418334058,
+    "negativeTreeIntervals": {
+      "firstSample": 76.9,
+      "lastSample": 79.5,
+      "sampleCount": 27,
+      "entryBracket": [
+        76.800000000000011,
+        76.9
+      ],
+      "exitBracket": [
+        79.5,
+        79.600000000000009
+      ]
+    },
+    "lambda2WhenTreeNegative": [
+      2.0682397303501663,
+      2.1528359689189136
+    ]
+  }
+}
