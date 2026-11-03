@@ -1,0 +1,14 @@
+{
+  "slowWindow": [
+    20,
+    120
+  ],
+  "slowSlope": -0.016463959988123455,
+  "fastWindow": [
+    0,
+    1.7857142857142858E-5
+  ],
+  "fastSlope": -279999.7543183348,
+  "theoreticalNormRateLower": 0.00035611995905298352,
+  "fastMechanism": "Initial mismatch component dominates the fast initial layer; fitted rate is not a uniform bound."
+}

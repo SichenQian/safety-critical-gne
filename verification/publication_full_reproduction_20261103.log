@@ -1,0 +1,150 @@
+VARIABLE_OBSTACLE_GENERALIZATION_PASS
+ADOPTED_EQUATIONS_EXACT_PASS
+ERROR_COORDINATE_REGRESSION_PASS 6.38e-13
+Integrating projected flow by smooth faces: tight=1
+Initial filter distortion 0.993416667, active multipliers 6
+  tight=1 t=0.000 / 1200, wall=0.2 s
+  event 20 at t=42.1279614, active=12
+  tight=1 t=100.022 / 1200, wall=12.1 s
+  event 40 at t=184.06424, active=4
+  tight=1 t=200.197 / 1200, wall=21.3 s
+  tight=1 t=300.375 / 1200, wall=25.0 s
+  tight=1 t=400.375 / 1200, wall=25.5 s
+  tight=1 t=500.375 / 1200, wall=26.0 s
+  tight=1 t=600.437 / 1200, wall=26.6 s
+  tight=1 t=700.437 / 1200, wall=27.0 s
+  tight=1 t=800.437 / 1200, wall=27.5 s
+  tight=1 t=900.437 / 1200, wall=27.9 s
+  tight=1 t=1000.437 / 1200, wall=28.4 s
+  tight=1 t=1100.490 / 1200, wall=29.0 s
+Finished tight=1, t=1200, events=48, wall=30.6 s
+FINAL selected 1/138745
+FINAL selected 10001/138745
+FINAL selected 20001/138745
+FINAL selected 30001/138745
+FINAL selected 40001/138745
+FINAL selected 50001/138745
+FINAL selected 60001/138745
+FINAL selected 70001/138745
+FINAL selected 80001/138745
+FINAL selected 90001/138745
+FINAL selected 100001/138745
+FINAL selected 110001/138745
+FINAL selected 120001/138745
+FINAL selected 130001/138745
+SELECTED_DENSE_DONE selected
+Integrating projected flow by smooth faces: tight=1
+Initial filter distortion 0.993416667, active multipliers 6
+  tight=1 t=0.000 / 1200, wall=0.1 s
+  event 20 at t=42.1279613, active=12
+  tight=1 t=100.012 / 1200, wall=15.4 s
+  event 40 at t=184.06424, active=4
+  tight=1 t=200.058 / 1200, wall=23.8 s
+  tight=1 t=300.109 / 1200, wall=26.1 s
+  tight=1 t=400.109 / 1200, wall=26.7 s
+  tight=1 t=500.196 / 1200, wall=27.3 s
+  tight=1 t=600.196 / 1200, wall=27.7 s
+  tight=1 t=700.196 / 1200, wall=28.1 s
+  tight=1 t=800.196 / 1200, wall=28.5 s
+  tight=1 t=900.281 / 1200, wall=29.3 s
+  internal t=957.022795, active=0, maxLambda=0
+  tight=1 t=1000.401 / 1200, wall=30.9 s
+  tight=1 t=1100.426 / 1200, wall=31.4 s
+Finished tight=1, t=1200, events=48, wall=33.3 s
+FINAL selected_refined 1/144958
+FINAL selected_refined 10001/144958
+FINAL selected_refined 20001/144958
+FINAL selected_refined 30001/144958
+FINAL selected_refined 40001/144958
+FINAL selected_refined 50001/144958
+FINAL selected_refined 60001/144958
+FINAL selected_refined 70001/144958
+FINAL selected_refined 80001/144958
+FINAL selected_refined 90001/144958
+FINAL selected_refined 100001/144958
+FINAL selected_refined 110001/144958
+FINAL selected_refined 120001/144958
+FINAL selected_refined 130001/144958
+FINAL selected_refined 140001/144958
+SELECTED_DENSE_DONE selected_refined
+Integrating projected flow by smooth faces: tight=0
+Initial filter distortion 0.993416667, active multipliers 6
+  tight=0 t=0.000 / 1200, wall=0.1 s
+  tight=0 t=100.042 / 1200, wall=8.1 s
+  event 20 at t=118.187711, active=6
+  tight=0 t=200.269 / 1200, wall=14.3 s
+  tight=0 t=300.445 / 1200, wall=16.9 s
+  tight=0 t=400.445 / 1200, wall=17.4 s
+  tight=0 t=500.445 / 1200, wall=18.0 s
+  tight=0 t=600.445 / 1200, wall=18.3 s
+  tight=0 t=700.445 / 1200, wall=18.6 s
+  tight=0 t=800.445 / 1200, wall=18.9 s
+  tight=0 t=900.445 / 1200, wall=19.2 s
+  tight=0 t=1000.445 / 1200, wall=19.6 s
+  tight=0 t=1100.445 / 1200, wall=20.0 s
+Finished tight=0, t=1200, events=28, wall=21.2 s
+FINAL untightened 1/132985
+FINAL untightened 10001/132985
+FINAL untightened 20001/132985
+FINAL untightened 30001/132985
+FINAL untightened 40001/132985
+FINAL untightened 50001/132985
+FINAL untightened 60001/132985
+FINAL untightened 70001/132985
+FINAL untightened 80001/132985
+FINAL untightened 90001/132985
+FINAL untightened 100001/132985
+FINAL untightened 110001/132985
+FINAL untightened 120001/132985
+FINAL untightened 130001/132985
+UNTIGHTENED_DONE untightened
+Integrating projected flow by smooth faces: tight=0
+Initial filter distortion 0.993416667, active multipliers 6
+  tight=0 t=0.000 / 1200, wall=0.1 s
+  tight=0 t=100.056 / 1200, wall=9.0 s
+  event 20 at t=118.187711, active=6
+  tight=0 t=200.170 / 1200, wall=16.3 s
+  tight=0 t=300.179 / 1200, wall=18.8 s
+  tight=0 t=400.179 / 1200, wall=19.4 s
+  tight=0 t=500.281 / 1200, wall=20.1 s
+  tight=0 t=600.281 / 1200, wall=20.5 s
+  tight=0 t=700.281 / 1200, wall=21.0 s
+  tight=0 t=800.281 / 1200, wall=21.6 s
+  tight=0 t=900.326 / 1200, wall=22.9 s
+  tight=0 t=1000.326 / 1200, wall=23.6 s
+  tight=0 t=1100.326 / 1200, wall=24.2 s
+Finished tight=0, t=1200, events=28, wall=26.7 s
+FINAL untightened_refined 1/138685
+FINAL untightened_refined 10001/138685
+FINAL untightened_refined 20001/138685
+FINAL untightened_refined 30001/138685
+FINAL untightened_refined 40001/138685
+FINAL untightened_refined 50001/138685
+FINAL untightened_refined 60001/138685
+FINAL untightened_refined 70001/138685
+FINAL untightened_refined 80001/138685
+FINAL untightened_refined 90001/138685
+FINAL untightened_refined 100001/138685
+FINAL untightened_refined 110001/138685
+FINAL untightened_refined 120001/138685
+FINAL untightened_refined 130001/138685
+UNTIGHTENED_DONE untightened_refined
+LOCAL_ERROR_COORDINATE_DONE wall=2.95 steps=2258
+FINAL local 1/10798
+FINAL local 10001/10798
+LOCAL_ERROR_COORDINATE_DONE wall=5.02 steps=4336
+FINAL local_refined 1/12876
+FINAL local_refined 10001/12876
+FINAL_GRAPH_GEOMETRY_DONE selected
+FINAL_GRAPH_GEOMETRY_DONE selected_refined
+FINAL_GRAPH_GEOMETRY_DONE untightened
+FINAL_GRAPH_GEOMETRY_DONE untightened_refined
+LOCAL_FIGURE_DONE
+[警告: 向量化内容可能需要很长时间才能创建，或者可能包含意外结果。将 'ContentType' 设置为 'image' 以提高性能。<a href="matlab:warning('off', 'MATLAB:print:ContentTypeImageSuggested')">点击此处</a>以不再显示此消息。] 
+[警告: 向量化内容可能需要很长时间才能创建，或者可能包含意外结果。将 'ContentType' 设置为 'image' 以提高性能。<a href="matlab:warning('off', 'MATLAB:print:ContentTypeImageSuggested')">点击此处</a>以不再显示此消息。] 
+FINAL_COMPARISON_FIGURES_DONE
+FINAL_TABLES_DONE
+ABLATION_SCALING_VALIDATION_PASS
+FINAL_RESULTS_VALIDATION_PASS
+EDITABLE_FIGURES_PASS
+FINAL_REVISION_REPRODUCTION_PASS mode=full

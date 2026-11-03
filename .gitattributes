@@ -1,0 +1,6 @@
+# Preserve archived figures, numerical data and source-checksum bytes.
+* -text whitespace=cr-at-eol
+# Byte-exact source archives and generated logs retain their original spacing.
+figures/** -whitespace
+docs/numerical_section.tex -whitespace
+verification/*.log -whitespace

@@ -1,0 +1,26 @@
+{
+  "box": [
+    [
+      -3.1,
+      3.1
+    ],
+    [
+      -1.3,
+      1.3
+    ]
+  ],
+  "rectangleDiameter": 6.7230945255886443,
+  "pairwiseDiameterBound": 2.5,
+  "collisionCoefficientBound": 5,
+  "observedPairwiseDiameter": 2.3,
+  "observedIndividualSpeed": 0.087423514154109622,
+  "xRange": [
+    -3,
+    2.9999996775788293
+  ],
+  "yRange": [
+    -1.15,
+    1.1500000067972711
+  ],
+  "trajectoryWithinRegion": true
+}

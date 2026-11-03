@@ -1,0 +1,9 @@
+{
+  "maxComponents": 1,
+  "minimumActiveWeightComputed": 0,
+  "activeWeightBoundaryInfimum": 0,
+  "minimumBottleneckTreeWeight": 0.44431952315182233,
+  "minimumBottleneckTime": 98.38891250562834,
+  "underflowActiveSamples": 254,
+  "stateCount": 144958
+}

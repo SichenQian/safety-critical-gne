@@ -1,0 +1,14 @@
+{
+  "maxDifferences": [
+    0,
+    2.1116441928370477E-13,
+    8.6256414337515519E-16,
+    6.3775373870811336E-13
+  ],
+  "tolerance": 1E-10,
+  "analyticIdentities": [
+    "L(y) times consensus equilibrium = 0",
+    "B ystar = p"
+  ],
+  "onlineQPSubstitution": false
+}

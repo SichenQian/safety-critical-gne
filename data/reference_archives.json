@@ -1,0 +1,417 @@
+{
+  "repository": "SichenQian/safety-critical-gne",
+  "tag": "v1.0.0",
+  "archives": [
+    {
+      "name": "tcns-reference-selected.zip",
+      "case": "selected",
+      "bytes": 209148247,
+      "sha256": "50a7bc0e61f5f4dc40b4e6a0b8ce511e38878a859721ac45ce55b9b58494d532",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-selected.zip",
+      "file_count": 14,
+      "files": [
+        {
+          "path": "results/selected/certificate.json",
+          "bytes": 2861,
+          "sha256": "ffce9668243a4e656c2be4df2e256d637f4574f6c4d2347c06602ac9490f5d73"
+        },
+        {
+          "path": "results/selected/figure_diagnostics.mat",
+          "bytes": 670236,
+          "sha256": "ac6c8d2add4312edc69d835f8d9253e67e6258870e073e0b42cc467c1b3f0e34"
+        },
+        {
+          "path": "results/selected/final_full.csv",
+          "bytes": 56672835,
+          "sha256": "9f9afc39d44d71383e3cae0484e92bde60af03f6010f820acd8a4547de27547b"
+        },
+        {
+          "path": "results/selected/final_full.json",
+          "bytes": 1378,
+          "sha256": "fc3b5c66da7ffba18b5927cd77eb09a7131478228a1df7256c3d38bb244a7f4c"
+        },
+        {
+          "path": "results/selected/final_full.mat",
+          "bytes": 29602989,
+          "sha256": "9ae44b8a8d7268bd12d78d18f9464dce89adb4b05876484f67e104544b0a3c9b"
+        },
+        {
+          "path": "results/selected/geometry_extrema.json",
+          "bytes": 2868,
+          "sha256": "e0673581052a5bd604e2ea8c60940a8c2e5c55f1a0b9d221dbd6eb7a973ebe05"
+        },
+        {
+          "path": "results/selected/graph_statistics.json",
+          "bytes": 254,
+          "sha256": "c8c7f12f7589bcf1babeb6b6849ddc7c0e52d2caa7cc59e5bc942cafe524720f"
+        },
+        {
+          "path": "results/selected/parameters.json",
+          "bytes": 5196,
+          "sha256": "3880e0309e0caa1f3ff0d52f8efb6f63259bab8406fd83d4a19f835d4ae48c84"
+        },
+        {
+          "path": "results/selected/refined_peaks.json",
+          "bytes": 2437,
+          "sha256": "4d5164ba7395175d62cba628ddba5d7a8257a931b603f69f15b895f5e9a3dd1d"
+        },
+        {
+          "path": "results/selected/region_check.json",
+          "bytes": 419,
+          "sha256": "787a853559177c4ca5400f2695335704d3837c628ab2409e3e16efe4c8931e45"
+        },
+        {
+          "path": "results/selected/switch_neighborhoods.csv",
+          "bytes": 2875,
+          "sha256": "143c4e71ec45e5c4d8da576d04f16cf396b4b8a305064fc115ea3a27000bda0b"
+        },
+        {
+          "path": "results/selected/switch_validation.json",
+          "bytes": 475,
+          "sha256": "ecb88c04b1057829281010638d4ad7af002dcc192ca1146f2295ff005260c813"
+        },
+        {
+          "path": "results/selected/topology_full.csv",
+          "bytes": 48603113,
+          "sha256": "f582438ab3c3bb9d31a591164340b21aebb2fb5a0f85713349cf4ab04720d4b3"
+        },
+        {
+          "path": "results/selected/trajectory.mat",
+          "bytes": 142996297,
+          "sha256": "27c4fcd480c11f647e04d90d258eb7c4d1381db4ad42c95d55b1be07ff7b1794"
+        }
+      ]
+    },
+    {
+      "name": "tcns-reference-selected_refined.zip",
+      "case": "selected_refined",
+      "bytes": 236624008,
+      "sha256": "29c798c0a6ff2aa0aff641caba9efaf4d9a659b20674e80c5e933c0d082494f5",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-selected_refined.zip",
+      "file_count": 14,
+      "files": [
+        {
+          "path": "results/selected_refined/certificate.json",
+          "bytes": 2861,
+          "sha256": "ffce9668243a4e656c2be4df2e256d637f4574f6c4d2347c06602ac9490f5d73"
+        },
+        {
+          "path": "results/selected_refined/figure_diagnostics.mat",
+          "bytes": 698840,
+          "sha256": "18fb3ed887914100b1a07f3136c0ca04420ac47b8454b1d64d88357c175fbdae"
+        },
+        {
+          "path": "results/selected_refined/final_full.csv",
+          "bytes": 59292781,
+          "sha256": "d3da534df610efe365ebda3581114b5c0fac401deb01107612a8176b401eb941"
+        },
+        {
+          "path": "results/selected_refined/final_full.json",
+          "bytes": 1367,
+          "sha256": "8d4ae4cebfb0a98794eaebc79ef0b92ea9592de867e4f3faff1626644bc0bcdf"
+        },
+        {
+          "path": "results/selected_refined/final_full.mat",
+          "bytes": 30852923,
+          "sha256": "fed755081e367d2ffa8c2c44c0434d8086e2d9c89adfe661c04db093094a8e67"
+        },
+        {
+          "path": "results/selected_refined/geometry_extrema.json",
+          "bytes": 2869,
+          "sha256": "3400872c6545fb5654738520af956714385743b26beded9c99370818743fe55a"
+        },
+        {
+          "path": "results/selected_refined/graph_statistics.json",
+          "bytes": 253,
+          "sha256": "520b91b8e92eb721ccd0f7cbefce346da51b5482adf726a20a4d554882742d05"
+        },
+        {
+          "path": "results/selected_refined/parameters.json",
+          "bytes": 6737,
+          "sha256": "6dd89e5eaa8146db4e3c31592c4c3a9ce88bdae92d1192e6a12833221d793d2e"
+        },
+        {
+          "path": "results/selected_refined/refined_peaks.json",
+          "bytes": 2440,
+          "sha256": "97ac19a745367e14ce779f69af96cd08216b9a5c076900b1a1d92d4d9e3e2b7e"
+        },
+        {
+          "path": "results/selected_refined/region_check.json",
+          "bytes": 419,
+          "sha256": "57b07affce081d94bf6b2c00f727ce4b7a28266a9d0ffde1e4dcae5dea2fdfe4"
+        },
+        {
+          "path": "results/selected_refined/switch_neighborhoods.csv",
+          "bytes": 2891,
+          "sha256": "c0ae7997b3396caf012e66ecc5e171d3b5dc50feb65b496cf1e0225e27c05408"
+        },
+        {
+          "path": "results/selected_refined/switch_validation.json",
+          "bytes": 469,
+          "sha256": "b902347facf2eb3ec6f3469f9dc040abff3e3124ade53c0446c34234f8b70efa"
+        },
+        {
+          "path": "results/selected_refined/topology_full.csv",
+          "bytes": 50838839,
+          "sha256": "f24855a4244d72dafa576021e2605ff853c7b297145127b41a9251da4f1d5262"
+        },
+        {
+          "path": "results/selected_refined/trajectory.mat",
+          "bytes": 167568924,
+          "sha256": "94dd009cee872fa96c2ddf2bda9c67e95d69a3d50edbfafab0566782f957fc5f"
+        }
+      ]
+    },
+    {
+      "name": "tcns-reference-untightened.zip",
+      "case": "untightened",
+      "bytes": 175214633,
+      "sha256": "982bdb39d2a5c47f87eded9487c5707f4bb8cb82c00d69f316e8b7de21f604da",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-untightened.zip",
+      "file_count": 11,
+      "files": [
+        {
+          "path": "results/untightened/figure_diagnostics.mat",
+          "bytes": 660013,
+          "sha256": "8592dcc6ef2a5392e5bf8811968adbaeb5d7d4d2818d6e8570b7b6d0b8a3b4a2"
+        },
+        {
+          "path": "results/untightened/final_full.csv",
+          "bytes": 54558462,
+          "sha256": "75441600096f34e5f448189f2abd57e4150e034324839ac0a4975e1bfffecd6f"
+        },
+        {
+          "path": "results/untightened/final_full.json",
+          "bytes": 1395,
+          "sha256": "fb58ce78b3c207099bc67cb4b18b4ad6d679fec2a526b829ade65ca1b0c1dc34"
+        },
+        {
+          "path": "results/untightened/final_full.mat",
+          "bytes": 28651883,
+          "sha256": "4411f29ab70e30bd1b463ab6610b35907bb6d1b6530037f8eb569fc50a06339d"
+        },
+        {
+          "path": "results/untightened/geometry_extrema.json",
+          "bytes": 2849,
+          "sha256": "4b35c121753e0e15989e685d3913be471c62c311877ddcd8407bde314d9b3e35"
+        },
+        {
+          "path": "results/untightened/graph_statistics.json",
+          "bytes": 254,
+          "sha256": "0441ff3d1d497e9494c80f41e6bf916942e1b8886d89d585969372401b484fa6"
+        },
+        {
+          "path": "results/untightened/parameters.json",
+          "bytes": 7080,
+          "sha256": "4b8c60d436b017cc1b53621bffe0eab2de27cc87833d6e0cbf3e7bb4e9445e5e"
+        },
+        {
+          "path": "results/untightened/refined_peaks.json",
+          "bytes": 2425,
+          "sha256": "8113d29478ff5bb7836d9a68ce9f8c0a0042feffed4b3486bd48c917d4a2eb3a"
+        },
+        {
+          "path": "results/untightened/region_check.json",
+          "bytes": 405,
+          "sha256": "61b5ab7bd1c3a922ba58505111f07ace7a2e64b216403dd15359d32f92b26c0a"
+        },
+        {
+          "path": "results/untightened/topology_full.csv",
+          "bytes": 46545472,
+          "sha256": "fff8f6028ab307839b4f9bc7e8d328656e063a810e4b88ba9d11754c48e3b296"
+        },
+        {
+          "path": "results/untightened/trajectory.mat",
+          "bytes": 111175850,
+          "sha256": "da98d9d8737f76ae59f6bcda3261345e7ee62d7730d209883696435d2ec685db"
+        }
+      ]
+    },
+    {
+      "name": "tcns-reference-untightened_refined.zip",
+      "case": "untightened_refined",
+      "bytes": 201431468,
+      "sha256": "5f0a147d2ad98d3325665bc24e87fe4046b9ba6fda7472c77c726c361b958053",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-untightened_refined.zip",
+      "file_count": 11,
+      "files": [
+        {
+          "path": "results/untightened_refined/figure_diagnostics.mat",
+          "bytes": 687277,
+          "sha256": "cffb222fc9315c329d8e035ebd8216ec6842c98dea6e146d2b4e076bc4251e37"
+        },
+        {
+          "path": "results/untightened_refined/final_full.csv",
+          "bytes": 56979684,
+          "sha256": "535d97e6466621a3f1fe93881fd47f08f197cac8acc4b6ab2e3d7aa1f179fc1f"
+        },
+        {
+          "path": "results/untightened_refined/final_full.json",
+          "bytes": 1392,
+          "sha256": "f0b96c682f44984fba09983d5c6a15d6e6e02c79af4737e3c6fd1bda63ca1683"
+        },
+        {
+          "path": "results/untightened_refined/final_full.mat",
+          "bytes": 29811785,
+          "sha256": "9196c4b3c2afa971c2d45471acff7234b62a96ebceeb27712334a2b22a3c6284"
+        },
+        {
+          "path": "results/untightened_refined/geometry_extrema.json",
+          "bytes": 2852,
+          "sha256": "b11fc581e63b7e8f27c7a97e6479beac71b8ca26f7a25ba85514e55c3fb1d3b1"
+        },
+        {
+          "path": "results/untightened_refined/graph_statistics.json",
+          "bytes": 251,
+          "sha256": "1cdb8406cab03e62cec617288122e0f5ff74db1c1a1ce72bdadcfa82fd66227e"
+        },
+        {
+          "path": "results/untightened_refined/parameters.json",
+          "bytes": 8621,
+          "sha256": "431bc28630e3ffa9f0c2150551557c55ee27d2ecc2319052811bc8c0db29b7ce"
+        },
+        {
+          "path": "results/untightened_refined/refined_peaks.json",
+          "bytes": 2421,
+          "sha256": "b9d39fdb133386fe2ee31b9cc63ce64ad68c874393b638ab9e437e95084609f1"
+        },
+        {
+          "path": "results/untightened_refined/region_check.json",
+          "bytes": 405,
+          "sha256": "a7a791dfea4da8f72643e3f03d332bdbe7f539c24b63eb261a8e59214cf40c19"
+        },
+        {
+          "path": "results/untightened_refined/topology_full.csv",
+          "bytes": 48600598,
+          "sha256": "b24520eb79ac0933d974605be1b67d128573642b625bedb9df100aa33cb2f48e"
+        },
+        {
+          "path": "results/untightened_refined/trajectory.mat",
+          "bytes": 134699100,
+          "sha256": "84618a1913cd4a21c51b062a46ea4bd5300b95d3fa913269057c9eed5e65f384"
+        }
+      ]
+    },
+    {
+      "name": "tcns-reference-local.zip",
+      "case": "local",
+      "bytes": 16583058,
+      "sha256": "bbab0081b2859aa971414b4b955bae5f1b6aeb2c1216bfb0d387e3fb1eb74c7b",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-local.zip",
+      "file_count": 10,
+      "files": [
+        {
+          "path": "results/local/certificate.json",
+          "bytes": 2861,
+          "sha256": "ffce9668243a4e656c2be4df2e256d637f4574f6c4d2347c06602ac9490f5d73"
+        },
+        {
+          "path": "results/local/final_full.csv",
+          "bytes": 4264753,
+          "sha256": "12885be3e5483306c34acd08ee1ecd7073d5027daacce442d173a1748dce42c5"
+        },
+        {
+          "path": "results/local/final_full.json",
+          "bytes": 971,
+          "sha256": "f0b6da746faf82d53d63c0edc65479f956304cbaf967edb5afdb34f2c584334d"
+        },
+        {
+          "path": "results/local/final_full.mat",
+          "bytes": 1413539,
+          "sha256": "62efeadad491d315eed82a12aab69bb401c58f963ff9d625470fe6bdb0feeb95"
+        },
+        {
+          "path": "results/local/initial.json",
+          "bytes": 416,
+          "sha256": "32b16d92b794fafe93dca251f54b81f6b13de82ffe51953d8278f06660ccd2a4"
+        },
+        {
+          "path": "results/local/parameters.json",
+          "bytes": 40626,
+          "sha256": "f2b9d6b79bd4b072a73976eba9b9ee8b71809cec4200b80da1e58459e5763cd9"
+        },
+        {
+          "path": "results/local/refined_peaks.json",
+          "bytes": 2536,
+          "sha256": "088cbfe7b4f8dbae864d9705f19230a6faa5ebac81a322e421c54b9973b97c32"
+        },
+        {
+          "path": "results/local/topology_full.csv",
+          "bytes": 3735648,
+          "sha256": "3bdffbd246d84d97374ea35925ba492511a8bedad365eb71de50ed8474a7b678"
+        },
+        {
+          "path": "results/local/trajectory.mat",
+          "bytes": 13413492,
+          "sha256": "4c2df6d8fa39baba352fe68032319da847b6d1ddcb37e56ad7d0aee7da870d94"
+        },
+        {
+          "path": "results/local/tube_validation.json",
+          "bytes": 519,
+          "sha256": "742ce69bec20e8a81f4ff93b1604815b0dd2606224cbebcc0354c899301cfee6"
+        }
+      ]
+    },
+    {
+      "name": "tcns-reference-local_refined.zip",
+      "case": "local_refined",
+      "bytes": 26649850,
+      "sha256": "f88a23e6d9c8fb5327a4b6992dbe98cab54d9d84755b466e5c4cc4f023d0555d",
+      "url": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.0/tcns-reference-local_refined.zip",
+      "file_count": 10,
+      "files": [
+        {
+          "path": "results/local_refined/certificate.json",
+          "bytes": 2861,
+          "sha256": "ffce9668243a4e656c2be4df2e256d637f4574f6c4d2347c06602ac9490f5d73"
+        },
+        {
+          "path": "results/local_refined/final_full.csv",
+          "bytes": 5102326,
+          "sha256": "f75381d58977a6bb1d44003f36aad2b0bbaaedf404cdcb36c0e4560fa050c243"
+        },
+        {
+          "path": "results/local_refined/final_full.json",
+          "bytes": 967,
+          "sha256": "963a4e27a653afa62c06b56f362855fc5cfefaac986b64206e636d5dda0a4b03"
+        },
+        {
+          "path": "results/local_refined/final_full.mat",
+          "bytes": 1694601,
+          "sha256": "910059c30bf7ecda61140f76db7c3be3fe02c8dfa537985f3dbe7113d9a9b142"
+        },
+        {
+          "path": "results/local_refined/initial.json",
+          "bytes": 416,
+          "sha256": "32b16d92b794fafe93dca251f54b81f6b13de82ffe51953d8278f06660ccd2a4"
+        },
+        {
+          "path": "results/local_refined/parameters.json",
+          "bytes": 40627,
+          "sha256": "e29e10c86b7753644db248479eb3f2f2f5a23086cfe9fdc83b67708b64ea41e7"
+        },
+        {
+          "path": "results/local_refined/refined_peaks.json",
+          "bytes": 2540,
+          "sha256": "07d7c8aca105a9ebbf230e060b4dbb5cdb2d0820bfaf5d5ec9a9b91a53cc2739"
+        },
+        {
+          "path": "results/local_refined/topology_full.csv",
+          "bytes": 4471317,
+          "sha256": "9c199e575382c054f394b2df47ba2a7855c9e2254259779215df4554963aaccf"
+        },
+        {
+          "path": "results/local_refined/trajectory.mat",
+          "bytes": 22832723,
+          "sha256": "f5c0da7f6f7f98448707d532d9ad0c862e1a33b9e9c33f026bebf3c56988d784"
+        },
+        {
+          "path": "results/local_refined/tube_validation.json",
+          "bytes": 519,
+          "sha256": "53926236e0b3042ccc83537d78c49a36b4f60b32b5844c70e8e5b3434bb0dc72"
+        }
+      ]
+    }
+  ],
+  "uncompressed_bytes": 1157261578
+}

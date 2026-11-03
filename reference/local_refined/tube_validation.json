@@ -1,0 +1,15 @@
+{
+  "slowMaximum": 5.0212410551167307E-9,
+  "slowDomainRadius": 7.8125E-7,
+  "fastMaximum": 3.2949110234637877E-7,
+  "fastTubeRadius": 4.796551484423235E-6,
+  "VcMaximum": 3.863010220463281E-15,
+  "rho": 6.5125850153104723E-14,
+  "maxRetainedRow": -0.00051210397684176457,
+  "maxAbsDual": 0,
+  "initialCertified": true,
+  "analyticLocalPass": true,
+  "allSavedStatesInTube": true,
+  "outputGridSamples": 2241,
+  "scope": "Regular saved output grid; omitted identically-zero rows are excluded from retained-row slack."
+}

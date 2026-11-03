@@ -1,0 +1,248 @@
+{
+  "equations": "nominal_HB_stacked",
+  "stateDimension": 60,
+  "stateOrder": "col{reshape(X transpose,50,1),reshape(V transpose,10,1)}",
+  "parameters": {
+    "c": 200,
+    "gamma": 65,
+    "dc": 2.2,
+    "lambdaLower": 0.04,
+    "B": [
+      [
+        1.1199999999999999,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03
+      ],
+      [
+        -0.03,
+        1.1199999999999999,
+        -0.03,
+        -0.03,
+        -0.03
+      ],
+      [
+        -0.03,
+        -0.03,
+        1.1199999999999999,
+        -0.03,
+        -0.03
+      ],
+      [
+        -0.03,
+        -0.03,
+        -0.03,
+        1.1199999999999999,
+        -0.03
+      ],
+      [
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        1.1199999999999999
+      ]
+    ],
+    "p": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        -0.6325
+      ],
+      [
+        2.9999999999999996,
+        -1.3224999999999998
+      ],
+      [
+        2.9999999999999996,
+        1.3224999999999998
+      ],
+      [
+        2.9999999999999996,
+        0.6325
+      ]
+    ],
+    "y0": [
+      [
+        -3,
+        0.002
+      ],
+      [
+        -3,
+        -1.15
+      ],
+      [
+        -3,
+        -0.55
+      ],
+      [
+        -3,
+        0.55
+      ],
+      [
+        -3,
+        1.15
+      ]
+    ],
+    "v0": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "initialEstimates": [
+      [
+        -3,
+        0.002,
+        -3,
+        -1.15,
+        -3,
+        -0.55,
+        -3,
+        0.55,
+        -3,
+        1.15
+      ],
+      [
+        -3,
+        0.002,
+        -3,
+        -1.15,
+        -3,
+        -0.55,
+        -3,
+        0.55,
+        -3,
+        1.15
+      ],
+      [
+        -3,
+        0.002,
+        -3,
+        -1.15,
+        -3,
+        -0.55,
+        -3,
+        0.55,
+        -3,
+        1.15
+      ],
+      [
+        -3,
+        0.002,
+        -3,
+        -1.15,
+        -3,
+        -0.55,
+        -3,
+        0.55,
+        -3,
+        1.15
+      ],
+      [
+        -3,
+        0.002,
+        -3,
+        -1.15,
+        -3,
+        -0.55,
+        -3,
+        0.55,
+        -3,
+        1.15
+      ]
+    ],
+    "target": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        -0.55
+      ],
+      [
+        3,
+        -1.15
+      ],
+      [
+        3,
+        1.15
+      ],
+      [
+        3,
+        0.55
+      ]
+    ]
+  },
+  "gainCheck": {
+    "tildeL": 1.121605991424796,
+    "cLower": 185.08514407816557,
+    "gammaLower": 56.689721673583207,
+    "pass": true
+  },
+  "maximumRhsDiscrepancy": 0,
+  "standard": {
+    "solver": "ode15s",
+    "horizon": 1200,
+    "relativeTolerance": 2E-9,
+    "absoluteTolerance": 1E-12,
+    "maximumStep": 0.25,
+    "outputInterval": 0.1,
+    "denseInterval": 0.01,
+    "acceptedNodes": 5036,
+    "diagnosticSamples": 126097,
+    "minimumLambda2": 1.5861628045911216,
+    "minimumTime": 0,
+    "initialLambda2": 1.5861628045911216,
+    "terminalLambda2": 1.5861666920302468,
+    "terminalErrorNorm": 8.381855623799863E-7,
+    "connectivityThreshold": 0.04,
+    "thresholdCrossings": 0
+  },
+  "refined": {
+    "solver": "ode15s",
+    "horizon": 1200,
+    "relativeTolerance": 2E-10,
+    "absoluteTolerance": 1E-13,
+    "maximumStep": 0.125,
+    "outputInterval": 0.1,
+    "denseInterval": 0.01,
+    "acceptedNodes": 10440,
+    "diagnosticSamples": 131501,
+    "minimumLambda2": 1.5861628045911216,
+    "minimumTime": 0,
+    "initialLambda2": 1.5861628045911216,
+    "terminalLambda2": 1.5861666920300874,
+    "terminalErrorNorm": 8.379974618909594E-7,
+    "connectivityThreshold": 0.04,
+    "thresholdCrossings": 0
+  },
+  "precisionComparison": {
+    "maximumSlowStateDifference": 5.1388708843802533E-9,
+    "maximumOutputLambda2Difference": 7.090321663127952E-10,
+    "minimumLambda2Difference": 0
+  },
+  "matlabVersion": "24.1.0.2537033 (R2024a)",
+  "scope": "Finite-horizon numerical trajectory and interpolant diagnostics; not an analytic continuous-time lower bound."
+}

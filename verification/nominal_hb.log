@@ -1,0 +1,5 @@
+nominal: minimum lambda2=1.58616280459112 at t=0; 126097 diagnostics
+nominal_refined: minimum lambda2=1.58616280459112 at t=0; 131501 diagnostics
+NOMINAL_HB_VALIDATION_PASS minimum_lambda2=1.58616280459112 t=0
+REPRODUCTION_PASS mode=nominal
+Output: D:/Codex/2026-10-31/tcns-matlab-theorem-1-theorem-2/outputs/TCNS_nominal_sync_20261103/nominal_run

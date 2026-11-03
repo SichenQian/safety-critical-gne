@@ -1,0 +1,141 @@
+[
+  {
+    "file": "audit_core.m",
+    "source_sha256": "f90f3781f22176565efcd88c5e6992073761cf23cd1d68404e73c35e7854a503",
+    "published_sha256": "f90f3781f22176565efcd88c5e6992073761cf23cd1d68404e73c35e7854a503",
+    "io_root_only_change": true
+  },
+  {
+    "file": "audit_final.m",
+    "source_sha256": "69be9df792d2ed4f85b7df5b68bd89e87e8dc11a5b7fcd3d6aa15eae4600d887",
+    "published_sha256": "e7be568260f3b538762fce28bda8fd6b04e1806be00ba634e4f9ae63e28a98f0",
+    "io_root_only_change": true
+  },
+  {
+    "file": "audit_qp.m",
+    "source_sha256": "1f8801960d56307dbf4a2910abaa045e53491f55feec10c9e257e8728786d7e7",
+    "published_sha256": "1f8801960d56307dbf4a2910abaa045e53491f55feec10c9e257e8728786d7e7",
+    "io_root_only_change": true
+  },
+  {
+    "file": "audit_state.m",
+    "source_sha256": "aa2a33cfabd582fc6d55274b1b9e289f03a363cd507d2813c06a7733315b345f",
+    "published_sha256": "aa2a33cfabd582fc6d55274b1b9e289f03a363cd507d2813c06a7733315b345f",
+    "io_root_only_change": true
+  },
+  {
+    "file": "build_final_tables.m",
+    "source_sha256": "def729fa7730312cbbf969c9b725d89f0040cad50bd76ee28c6374fda02e4f58",
+    "published_sha256": "5abcf6ec39c331a288e48d985252e455a94174750fb422a38d9af0ca31e48ede",
+    "io_root_only_change": false,
+    "additional_change": "Table I connectivity row reads independent nominal HB diagnostics."
+  },
+  {
+    "file": "design_parameters.m",
+    "source_sha256": "b4ebfa7e03f2d0ae9f267cda59213d96242e099fa02081716ec3c7efd460ce91",
+    "published_sha256": "b4ebfa7e03f2d0ae9f267cda59213d96242e099fa02081716ec3c7efd460ce91",
+    "io_root_only_change": true
+  },
+  {
+    "file": "final_diagnostics.m",
+    "source_sha256": "0a4d8a4094dd526aac821b5758a460cab1b7422c1059b58f7d7928a0e1e5ec33",
+    "published_sha256": "39dd51f1301f06a734e46a4fc59c7e647c7689e1c4ad4a5c2ee30831801bd0a9",
+    "io_root_only_change": true
+  },
+  {
+    "file": "frozen_core.m",
+    "source_sha256": "c4a7d564f959d9eab84080631a6cd878609a07b81822c9c6f545419a573c23bd",
+    "published_sha256": "c4a7d564f959d9eab84080631a6cd878609a07b81822c9c6f545419a573c23bd",
+    "io_root_only_change": true
+  },
+  {
+    "file": "normalized_reference_rows.m",
+    "source_sha256": "bad2d76cf74660d142f337ff809b0b9ae8e363e7dcd1633c8bb671f4d2e5a7ca",
+    "published_sha256": "bad2d76cf74660d142f337ff809b0b9ae8e363e7dcd1633c8bb671f4d2e5a7ca",
+    "io_root_only_change": true
+  },
+  {
+    "file": "parameter_at.m",
+    "source_sha256": "a8803f0176b28c77eb9f524c4d586cf075b074c26cc52832a460f914b338e336",
+    "published_sha256": "a8803f0176b28c77eb9f524c4d586cf075b074c26cc52832a460f914b338e336",
+    "io_root_only_change": true
+  },
+  {
+    "file": "run_local.m",
+    "source_sha256": "61e32addd448657a78de1d58d7c3abeb740087758f9f70d6a3e989103fd3860c",
+    "published_sha256": "d9f286ae221d9137fa2587cc4e16180bd413ed200d3a7bff605d877f6a747d71",
+    "io_root_only_change": true
+  },
+  {
+    "file": "run_selected.m",
+    "source_sha256": "b0c1f587a4723bc70f3c909b0c8cac0708b2362d6e13fc6cd48b2ce82a220a52",
+    "published_sha256": "fe03a1479aab08219bcd4d81c70e2cb80d11e7c9e0b59c469c63b9a7293c4cb1",
+    "io_root_only_change": true
+  },
+  {
+    "file": "run_untightened.m",
+    "source_sha256": "5b113d6802b201ddf55ca5317aafc47a528bddd7fe4ba620e1867db4a230dd2a",
+    "published_sha256": "130b33cd07b7ca88994be91fdb9e30532c0873d27841eb6aaab221b3b6aedb5b",
+    "io_root_only_change": true
+  },
+  {
+    "file": "simulate_local_error.m",
+    "source_sha256": "f4f9d9b323476ce2de298a127a661253292121f8e9082343582d486e6db5d031",
+    "published_sha256": "f4f9d9b323476ce2de298a127a661253292121f8e9082343582d486e6db5d031",
+    "io_root_only_change": true
+  },
+  {
+    "file": "theorem_certificates.m",
+    "source_sha256": "5e9ab4e25bf9be84079e87682e510f98b5cc84b1e2642114c6ca4c896776a815",
+    "published_sha256": "5e9ab4e25bf9be84079e87682e510f98b5cc84b1e2642114c6ca4c896776a815",
+    "io_root_only_change": true
+  },
+  {
+    "file": "validate_adopted_equations.m",
+    "source_sha256": "c315dc1a9dc9ae69123fa5ccbb8c02f3564f5760bc370611ac265a1a4bf7753e",
+    "published_sha256": "bd33f850f9ecfc6cf7318bf263cc3c1c190955caa5209038db88aa6321d36891",
+    "io_root_only_change": true
+  },
+  {
+    "file": "validate_error_coordinates.m",
+    "source_sha256": "10b5e489d03de97d61221d4f971681dcf5ee7b2da99c6ba290c5ab1ac7d6b886",
+    "published_sha256": "81bd1ca7123c9ad98e7123ccd152c807a75507ea5a5a6013948da23703ffba65",
+    "io_root_only_change": true
+  },
+  {
+    "file": "validate_generalization.m",
+    "source_sha256": "918edca6b1545e6b240e7841de0be7f6ba7a1a87ee45a5595f6b830fdd21a565",
+    "published_sha256": "d19398df793dfb28a75d0b630e65ea60da4916e07025d55450e312badfdd0a40",
+    "io_root_only_change": true
+  },
+  {
+    "file": "validate_local_certificate.m",
+    "source_sha256": "6f9e463e118dfc78829794c80d29dcd040c92fd852c4d952b42630332686acb2",
+    "published_sha256": "1669348528989ee766ac75ab26c591564fa425d137af776763e46280d5279104",
+    "io_root_only_change": true
+  },
+  {
+    "file": "validate_switches.m",
+    "source_sha256": "e278bfbf9d2ffec30bb9a258caeac2b5a7bf0bec4e8002ddb963f1ca80695bce",
+    "published_sha256": "cf7176557e09362a3e7585cfb7e094c78e26a2fd1a1970e46c9749c0b0e65a39",
+    "io_root_only_change": true
+  },
+  {
+    "file": "verify_final_results.m",
+    "source_sha256": "cc612e5f6537ac7bd57c79731b7d1a24b69f3b92647049495aa39f0dec04dc77",
+    "published_sha256": "ad8a362ac96daa1ad5e479f664b5252f5d9b5caee2105c770150a742cee18cf4",
+    "io_root_only_change": true
+  },
+  {
+    "file": "verify_scaling_and_ablation.m",
+    "source_sha256": "8ad03458bc0d2575741c70892d92c27e2e068924433d989855d76b3cbdfc41a9",
+    "published_sha256": "40e16266f4b038310dd17358bb1b09f4d74207a299fdd54351cda8d83f169b46",
+    "io_root_only_change": true
+  },
+  {
+    "file": "write_json.m",
+    "source_sha256": "876b9b2c1733d5fad8204ac006bc7566901ff59076c44c9246ba5e6bb8b9104c",
+    "published_sha256": "876b9b2c1733d5fad8204ac006bc7566901ff59076c44c9246ba5e6bb8b9104c",
+    "io_root_only_change": true
+  }
+]

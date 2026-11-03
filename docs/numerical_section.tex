@@ -1,0 +1,333 @@
+\section{Numerical Simulations}\label{simulations}
+
+Consider five planar second-order agents. The initial and target
+configurations are respectively
+$[y_1(0),\ldots,y_5(0)] = \left[\begin{smallmatrix} -3 & -3 & -3 & -3 & -3 \\ 0.002 & -1.15 & -0.55 & 0.55 & 1.15 \end{smallmatrix}\right]$ and $[y_1^\star,\ldots,y_5^\star] = \left[\begin{smallmatrix} 3 & 3 & 3 & 3 & 3 \\ 0 & -0.55 & -1.15 & 1.15 & 0.55 \end{smallmatrix}\right]$.
+All agents start at rest, with $v_i(0)=\mathbf 0_n$ and
+$\mathbf y^i(0)=y(0)$ for all $i\in\mathcal V$.
+The cost of player $i$ is
+$
+J_i(y_i,y_{-i})
+=
+\frac12\|y_i-p_i\|^2
++
+\frac{0.03}{2}
+\sum_{j\ne i}\|y_i-y_j\|^2,
+$
+where
+$
+[p_1,\ldots,p_5]
+=
+[y_1^\star,\ldots,y_5^\star]B$ with $
+B=1.15I_5-0.03\mathbf 1_5\mathbf 1_5^\top.
+$
+The pseudo-gradient is $1$-strongly monotone and
+$1.15$-Lipschitz, yielding the unique unconstrained NE
+$y^\star$. The extended pseudo-gradient satisfies
+$\tilde l\simeq1.12161$.
+The workspace contains three circular obstacles with centers
+$o_1=(0.24,0)^\top$ and
+$o_{2,3}=(1.72,\pm1.1)^\top$, and radii
+$r_1=0.625$ and $r_2=r_3=0.315$.
+We set the sensing radius to $d_c=2.2$ and the collision
+distance to $d_{ij}=0.345$.
+The collision and obstacle barriers are
+$
+	h_{ij}^{\mathrm{int}}
+	=\|y_i-y_j\|^2-d_{ij}^2$,
+	$h_{i,k}^{\mathrm{obs}}
+	=\|y_i-o_k\|^2-r_k^2,
+$
+and the normalized matrix-tree certificate is
+$
+h^{\mathrm c}(y)
+=
+\frac{5}{512}\det L_\chi^{(r)}(y)-0.04$
+with $
+\underline{\lambda}_\chi=0.04,
+$
+where $L_\chi^{(r)}(y)$ is the principal cofactor
+defined in Remark~\ref{tree}.
+
+The ECBF gains are selected as
+$
+K_1=\alpha_1\alpha_2=4$ and $
+K_2=\alpha_1+\alpha_2=4.6$,
+with $\alpha_1\simeq1.16422$ and
+$\alpha_2\simeq3.43578$.
+The remaining algorithm parameters are
+$
+(c,\gamma,\xi,\epsilon,\nu)
+=
+(200,65,1.4,5\times10^{-6},0.02),
+$
+together with $\theta_i=50$ and $\delta_{p,i}=10^{-3}$.
+The uniform tightening margins are
+$
+(\underline{\Delta}_{\mathrm{int}},
+\underline{\Delta}_{\mathrm{obs}},
+\Delta^{\mathrm c})
+=
+(0.5,0.7,0.4).
+$
+The collision and obstacle rows
+and their margins are scaled by $0.06$,
+while the connectivity rows and their margins are scaled by
+$0.1$. The mismatch terms remain unscaled.
+We take
+$$
+\mathcal D_R=
+\left\{
+(y,v)\ \middle|\
+\begin{array}{l}
+	y_i\in[-3.1,3.1]\times[-1.3,1.3],\\
+	\max_{i<j}\|y_i-y_j\|\leqslant2.5,\\
+	\max_i\|v_i\|\leqslant0.5
+\end{array}
+\right\}.
+$$
+The corresponding coefficient bounds are
+$
+(\bar a_{\mathrm{int}},
+\bar a_{\mathrm{obs}},
+\bar a_{\mathrm c})
+=
+(5,10.7689182372,2.69279673023).
+$
+The sensing-edge reactivation condition satisfies
+$
+2d_c\bar v_{ij,R}
+\leqslant4.4
+<
+5.49625
+=
+\alpha_1(d_c^2-d_{ij}^2).
+$
+Both trajectories remain in this domain, with maximum
+pairwise distance $2.3$ and maximum individual speed
+$0.0874257$. Both runs are simulated 
+using \texttt{ode15s}, with
+$\mathrm{RelTol}=2\times10^{-9}$,
+$\mathrm{AbsTol}=10^{-12}$, and
+$\mathrm{MaxStep}=0.25$s.
+
+We choose the design budgets
+$r_u=0.061$ and $\delta_{\mathrm c}=0.03$, with
+$
+\mathcal U_R^u=\{u\mid\|u\|\leqslant15\}.
+$
+Along the tightened trajectory, define the trajectory-wise connectivity-estimation discrepancy as
+$
+\delta_{\mathrm c}^{\mathrm{tr}}(t)
+=
+\max_{u\in\mathcal U_R^u}
+|
+q^{\mathrm c}(\vartheta_{\mathrm{tight}}(t),u)
+-
+\sum_{i=1}^N
+\hat q_i^{\mathrm c}(\vartheta_{\mathrm{tight}}(t),u_i)
+|.
+$
+Table~\ref{tab:numerical-checks} summarizes the design and
+initialization checks, with the connectivity minimum
+evaluated along the nominal flow and the tracking-error
+and connectivity-discrepancy maxima along the tightened flow.
+
+\begin{table}[!t]
+	\caption{Numerical Checks for Theorems~\ref{nominal_LES}--\ref{thm:closed_loop_LES}}
+	\label{tab:numerical-checks}
+	\centering
+	\footnotesize
+	\setlength{\tabcolsep}{2.5pt}
+	\renewcommand{\arraystretch}{1.12}
+	\begin{tabularx}{\columnwidth}{
+			@{}
+			>{\raggedright\arraybackslash}p{0.3\columnwidth}
+			>{\centering\arraybackslash}p{0.3\columnwidth}
+			>{\raggedright\arraybackslash}X
+			@{}
+		}
+		\toprule
+		Quantity & Value & Threshold\\
+		\midrule
+		
+		\multicolumn{3}{@{}l}{
+			\textit{Theorem \ref{nominal_LES}}
+		}\\
+		\midrule
+		
+		$c$
+		& $200$
+		& $>185.085$\\
+		
+		$\gamma$
+		& $65$
+		& $>56.6897$\\
+		
+		\shortstack[l]{
+			$\min_{t}\lambda_2(L_\chi(y(t)))$
+		}
+	& $1.58616$
+	& $>\underline{\lambda}_\chi=0.04$\\
+		
+		\addlinespace[2pt]
+		\multicolumn{3}{@{}l}{
+			\textit{Theorem \ref{thm:regional_safety}}
+		}\\
+		\midrule
+		
+		$\sqrt{2}\,\bar a_{\mathrm{int}}r_u$
+		& $0.431335$
+		& $<\underline{\Delta}_{\mathrm{int}}=0.5$\\
+		
+		$\bar a_{\mathrm{obs}}r_u$
+		& $0.656904$
+		& $<\underline{\Delta}_{\mathrm{obs}}=0.7$\\
+		
+		\shortstack[l]{
+			$\sqrt{N}\,\bar a_{\mathrm c}r_u+\delta_{\mathrm c}$
+		}
+		& $0.397298$
+		& $<\Delta^{\mathrm c}=0.4$\\
+		
+		\shortstack[l]{
+			$\max_{t}\|\tilde u(t)\|$
+		}
+		& $0.0571577$
+		& $<r_u=0.061$\\
+		
+		\shortstack[l]{
+			$\max_{t}
+			\delta_{\mathrm c}^{\mathrm{tr}}(t)$
+		}
+		& $0.00949398$
+		& $<\delta_{\mathrm c}=0.03$\\
+		
+		\addlinespace[2pt]
+		\multicolumn{3}{@{}l}{
+			\textit{Theorem \ref{thm:closed_loop_LES}}
+		}\\
+		\midrule
+		
+		$\epsilon$
+		& $5\times10^{-6}$
+		& $<\bar\epsilon=9.31743\times10^{-6}$\\
+		
+		$\|e_\vartheta(0)\|$
+		& $4.45854\times10^{-9}$
+		& $<r_{\Theta_1}=5.94472\times10^{-9}$\\
+		
+		$\|e_f(0)\|$
+		& $3.29491\times10^{-7}$
+		& $<r_f=6.58982\times10^{-7}$\\
+		
+		$\eta_{\mathcal I}$
+		& $1.53577\times10^{-4}$
+		& $>0$\\
+		
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+To assess the effect of tightening, the untightened run is
+obtained by setting
+$
+\Delta_{ij}^{\mathrm{int}}
+=
+\Delta_{i,k}^{\mathrm{obs}}
+=
+\Delta^{\mathrm c}
+=0,
+$
+while keeping all remaining parameters and the complete
+initial state unchanged.
+Fig.~\ref{fig:trajectories} compares the resulting trajectories.
+The tightened flow avoids collisions and obstacles while
+approaching the prescribed target configuration. In contrast,
+the untightened flow exhibits obstacle penetration by agent~1
+and an inter-agent collision between agents~4 and~5.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\linewidth]
+	{TCNS_final_revision_20261101/trajectory.eps}
+	\caption{Agent trajectories under the tightened (solid)
+		and untightened (dashed) flows. Circles and diamonds mark initial and target positions.
+		Insets A and B show
+		the obstacle~$1$ and pairwise~$(4,5)$ constraints, respectively,
+		highlighting the violations in the untightened run.}
+	\label{fig:trajectories}
+\end{figure}
+
+
+
+Fig.~\ref{fig:physical-margins} compares the collision
+and obstacle margins. The tightened flow maintains
+positive safety margins, whereas the untightened flow
+violates both collision and obstacle constraints.
+Fig.~\ref{fig:connectivity-spectrum} compares the matrix-tree
+certificate and algebraic connectivity. Although the
+certificate becomes negative in the untightened case,
+the algebraic connectivity remains above the prescribed
+threshold in both runs. This illustrates that the
+matrix-tree condition is sufficient but not necessary
+for connectivity preservation.
+As shown in Fig.~\ref{fig:edge-switching}, the
+communication topology undergoes edge activation and
+deactivation, with the number of active edges changing
+from $9$ to $10$ and back to $9$.
+
+
+\begin{figure}[!t]
+	\centering
+	\subfloat[Collision and obstacle margins.]{
+		\includegraphics[width=\linewidth]
+		{TCNS_final_revision_20261101/safety.eps}
+		\label{fig:physical-margins}
+	}
+	\\
+	\subfloat[Matrix-tree certificate and algebraic connectivity.]{
+		\includegraphics[width=\linewidth]
+		{TCNS_final_revision_20261101/connectivity.eps}
+		\label{fig:connectivity-spectrum}
+	}
+	\\
+	\subfloat[Communication-edge activation and deactivation.]{
+		\includegraphics[width=0.95\linewidth]
+		{TCNS_final_revision_20261101/edge.eps}
+		\label{fig:edge-switching}
+	}
+	\caption{Safety and connectivity under the
+		tightened and untightened flows. Solid and dashed curves
+		in (a) and (b) denote the tightened and untightened runs; (c) shows edge switching in the tightened run.}
+	\label{fig:safety-margins}
+\end{figure}
+
+Finally, we test local convergence using initial conditions
+satisfying Theorem~\ref{thm:closed_loop_LES}.
+We initialize $u(0)=u_{\mathrm{nom}}(\mathbf y(0))$,
+$\|\zeta_0(0)\|=r_f/2$, and all multipliers at zero,
+including those associated with the locally omitted
+pair $(3,4)$.
+The experiment is simulated using \texttt{ode15s}, with
+$\mathrm{RelTol}=2\times10^{-10}$,
+$\mathrm{AbsTol}=10^{-14}$, and
+$\mathrm{MaxStep}=0.1$s.
+Fig.~\ref{fig:local-exp} shows that both slow and fast
+errors converge to $0$, with the fast transient
+evolving on the rescaled time scale $t/\epsilon$.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\linewidth]
+	{TCNS_final_revision_20261101/exp.eps}
+	\caption{Slow and fast error evolution in an independent
+		local experiment initialized within the convergence region
+		of Theorem~\ref{thm:closed_loop_LES}. The inset resolves
+		the initial fast transient on the rescaled time scale
+		$t/\epsilon$.}
+	\label{fig:local-exp}
+\end{figure}
+
+The complete specifications and numerical data are provided at
+\url{https://github.com/SichenQian/safety-critical-gne}.
+

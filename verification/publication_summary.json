@@ -1,0 +1,68 @@
+{
+  "source_manuscript_sha256": "9dfa9c1a7d5e873435ff5c261618dffc617e50a51cd21475292266c7c5915260",
+  "source_pdf_pages": 12,
+  "exact_paper_figure_stems": [
+    "figures/trajectory",
+    "figures/safety",
+    "figures/connectivity",
+    "figures/edge",
+    "figures/exp"
+  ],
+  "full_standard_and_refined_experiments": 6,
+  "fresh_comparison": {
+    "maximumTightenedPositionDifference": 0,
+    "maximumUntightenedPositionDifference": 0,
+    "eventTimeDifference": [
+      0,
+      0
+    ],
+    "localCommonTimeCount": 10798,
+    "slowErrorDifference": 0,
+    "fastErrorDifference": 0,
+    "figures": {
+      "trajectory": {
+        "maximumDataDifference": 0,
+        "editableLineCount": 28,
+        "visibleOnOpen": true
+      },
+      "safety": {
+        "maximumDataDifference": 0,
+        "editableLineCount": 6,
+        "visibleOnOpen": true
+      },
+      "connectivity": {
+        "maximumDataDifference": 0,
+        "editableLineCount": 5,
+        "visibleOnOpen": true
+      },
+      "edge": {
+        "maximumDataDifference": 0,
+        "editableLineCount": 3,
+        "visibleOnOpen": true
+      },
+      "exp": {
+        "maximumDataDifference": 0,
+        "editableLineCount": 3,
+        "visibleOnOpen": true
+      }
+    }
+  },
+  "native_editable_figures": 5,
+  "credential_scan_pass": true,
+  "source_pdf_sha256": "1ffb30370ea9f245c01da0ffd90890abeb5fd81167d07ea6ba99db0816851e2a",
+  "manuscript_alignment": "docs/manuscript_alignment.md",
+  "documentation_sync": {
+    "numerical_section_matches_source": true,
+    "initialization_description_matches_implementation": true,
+    "existing_dynamics_and_safety_filter_unchanged": true,
+    "paper_figures_and_reference_data_unchanged": true,
+    "nominal_hb_runs": 2,
+    "existing_six_experiments_rerun": false
+  },
+  "independent_nominal_experiments": 2,
+  "nominal_hb_record": "verification/nominal_hb.json",
+  "fixed_release": {
+    "version": "v1.0.0",
+    "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0"
+  }
+}

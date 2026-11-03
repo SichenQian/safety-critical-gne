@@ -1,0 +1,26 @@
+{
+  "events": [
+    [
+      5.5900157356401055,
+      2,
+      5,
+      -0.0071404348349102141,
+      0.0071404348349105992,
+      5.4648277211635081,
+      1
+    ],
+    [
+      313.17490366488761,
+      3,
+      4,
+      0.0016668805540642449,
+      0.0016710667822628692,
+      5.503579908874995,
+      0
+    ]
+  ],
+  "neighborhoodChecks": 14,
+  "allPassed": true,
+  "supportDefinition": "distance < dc; not floating-point positive weight",
+  "continuousTimeProof": false
+}

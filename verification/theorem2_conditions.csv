@@ -1,0 +1,13 @@
+Condition,Numerical_value,Required_inequality
+Theorem 1: c,200,> 185.085144
+Theorem 1: gamma,65,> 56.6897217
+Nominal flow minimum lambda2,1.5861628,> 0.04
+Theorem 2: sqrt(2) a_int r_u,0.431335137,< DeltaInt = 0.5
+Theorem 2: a_obs r_u,0.656904012,< DeltaObs = 0.7
+Theorem 2: sqrt(5) a_c r_u + delta_c,0.397297869,< DeltaC = 0.4
+Trajectory maximum tracking error,0.0571576535,< r_u = 0.061
+Trajectory maximum input-ball discrepancy,0.0094939836,< delta_c = 0.03
+Theorem 3: epsilon,5e-06,< epsilon_bar = 9.31743406e-06
+Theorem 3: initial slow error,4.45854039e-09,< r_Theta1 = 5.94472069e-09
+Theorem 3: initial fast error,3.29491102e-07,< r_f = 6.58982205e-07
+Theorem 3: initial Vc,3.86301022e-15,< rho_c = 6.51258502e-14

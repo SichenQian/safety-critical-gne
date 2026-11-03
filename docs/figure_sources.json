@@ -1,0 +1,61 @@
+{
+  "manuscript_sha256": "9dfa9c1a7d5e873435ff5c261618dffc617e50a51cd21475292266c7c5915260",
+  "pdf_sha256": "1ffb30370ea9f245c01da0ffd90890abeb5fd81167d07ea6ba99db0816851e2a",
+  "figures": [
+    {
+      "paper_includegraphics": "TCNS_final_revision_20261101/trajectory.eps",
+      "repository_stem": "figures/trajectory",
+      "editable_source": "Fig1_trajectory.fig",
+      "sha256": {
+        "trajectory.eps": "d9b245e6a596be21a70c7e2f94b1b0cd9fe196505b016d9ce63e6c9af2291277",
+        "trajectory.fig": "f23b9d689c11d778084012629727f0acbf6dad2f3eaf36732f23d354d3b2052f",
+        "trajectory.png": "a6ed432885b92ffed4ba7337f31b5998de0bc587a85d15f7774f1bd20219aa23",
+        "trajectory.pdf": "78b907676596056adb80bea003dc97d79132be15b7dcca55127ca103ee7dd465"
+      }
+    },
+    {
+      "paper_includegraphics": "TCNS_final_revision_20261101/safety.eps",
+      "repository_stem": "figures/safety",
+      "editable_source": "Fig2a_safety_compact_filled.fig",
+      "sha256": {
+        "safety.eps": "9726aca144f626d2363bab6e5e6cb2e14fa9cf2b363b5312d8fa11d749830034",
+        "safety.fig": "5e53e7a1a926bc4e3730857d4237dfc38d35bc1c8682727cf4124a62690e88ca",
+        "safety.png": "94d5d1224d26a6258932be47d0248ea8c25294728547926b451eaeac04c22171",
+        "safety.pdf": "a0fe7f9e9986b3cc062f9fddbdcfa543f8b8fd4e49c268dbbfd5fa434003496e"
+      }
+    },
+    {
+      "paper_includegraphics": "TCNS_final_revision_20261101/connectivity.eps",
+      "repository_stem": "figures/connectivity",
+      "editable_source": "Fig2b_connectivity_compact_filled.fig",
+      "sha256": {
+        "connectivity.eps": "a4e36f401d7586b6b80136002be5566c752c45f4e0d3d6008eead06522cc42de",
+        "connectivity.fig": "0559fbc49229e0c4042b10df5eb196332b9977128fcc13e296a959fdbf2fabb7",
+        "connectivity.png": "be09df01b960061849025f39824a3d5c1e9c963998f32c55e3df5bcd11f00d74",
+        "connectivity.pdf": "8b00190d41914b91edcb451fd51fc704a165daa1739fc4c8d929be4c2712d5cb"
+      }
+    },
+    {
+      "paper_includegraphics": "TCNS_final_revision_20261101/edge.eps",
+      "repository_stem": "figures/edge",
+      "editable_source": "Fig2c_topology_legend_inside.fig",
+      "sha256": {
+        "edge.eps": "ce951f9e844a472ba6ca940843c4c7531462ef9eacc6d81746aa991e067ab057",
+        "edge.fig": "4766b1b6992178de869726f5e2d8647d8e134a47b980bb9d85b1b9d121d16224",
+        "edge.png": "5b0df6f81b8562c5fbee0e771b7a5f78e6c09675e32447907345905e7870823f",
+        "edge.pdf": "761641211f487e377b2093d82e1728b376ca6d4587fac8df6c3fc898e744f00b"
+      }
+    },
+    {
+      "paper_includegraphics": "TCNS_final_revision_20261101/exp.eps",
+      "repository_stem": "figures/exp",
+      "editable_source": "exp.fig",
+      "sha256": {
+        "exp.eps": "4f3f0c0bbe35a7c58bbe3498950353f99885e9fdaa009333104630ca4433308d",
+        "exp.fig": "fddd5c76627009ae30a09461c6970b330932cf1cebdcb820973ca52ae075b936",
+        "exp.png": "e60cb2ce588769ec09ae1e4fdf280ec2bb970ad804152bcf7215598b72e0d41a",
+        "exp.pdf": "102f907e59e11f1aaa199b834b57008a45eb185db2077d19a7eeb4c49d7a84a5"
+      }
+    }
+  ]
+}

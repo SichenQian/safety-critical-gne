@@ -1,0 +1,19 @@
+﻿Condition,Required bound,Numerical value,Verification
+Theorem 1 gains,c>185.085144; gamma>56.6897217,c=200; gamma=65,Analytic sufficient inequalities evaluated in double precision
+Theorem 1 nominal-flow connectivity,> 0.04,1.58616280459112,Independent nominal HB integration; accepted mesh and dense/interpolant diagnostics with a precision repeat
+Theorem 2 collision tightening,< 0.5,0.431335137,Analytic regional coefficient bound and design arithmetic
+Theorem 2 obstacle tightening,< 0.7,0.656904012,Analytic regional coefficient bound and design arithmetic
+Theorem 2 connectivity tightening,< 0.4,0.397297869,Analytic regional coefficient bound and design arithmetic
+Activation boundary,4.4 <= 5.49624563,v_pair <= 1,Analytic sufficient inequality for declared physical domain
+Tracking budget,< 0.061,0.0571576535,"Trajectory mesh, dense output and interpolant extrema; no regional supremum claim"
+Connectivity discrepancy,< 0.03,0.0094939836,Input-ball maximization at trajectory states; no regional supremum claim
+Trajectory residence,box AND diameter<=2.5 AND speed<=0.5,True,Numerical trajectory check
+Decomposed QP feasibility,all audited points valid,138745/138745,Offline numerical feasibility/KKT checks
+Original physical ECBF residuals,"q_int,q_obs,q_c <= 0","-0.496497894, -0.697491628, -0.384333083",Numerical trajectory check
+Regional residence and uniform QP feasibility,Theorem 2 regional hypotheses,Not certified over the entire region,Retained theorem assumptions; finite trajectories cannot establish them
+Regional uniform tracking/estimation bounds,Theorem 2 uniform error hypotheses,Not certified over the entire region,Retained theorem assumptions; sampled maxima are not uniform bounds
+Theorem 3 epsilon,< 9.31743406e-06,5e-06,Explicit analytic sufficient inequalities evaluated in double precision
+Local slow initialization,< 5.94472069e-09,4.45854039e-09,Explicit local certificate and numerical initialization check
+Local fast initialization,< 6.58982205e-07,3.29491102e-07,Explicit local certificate and numerical initialization check
+Local Vc initialization,< 6.51258502e-14,3.86301022e-15,Explicit local certificate and numerical initialization check
+Omitted-pair multipliers,rows 15/16 initialized at zero,0; retained at zero in saved output,"Full ODE, no omitted controller equations"

@@ -1,0 +1,15 @@
+{
+  "eTheta": 4.4585403910559677E-9,
+  "rTheta1": 5.9447206926356961E-9,
+  "eFast": 3.2949110234637877E-7,
+  "rFast": 6.5898220469275753E-7,
+  "Vc": 3.863010220463281E-15,
+  "rho": 6.5125850153104723E-14,
+  "maxNominalRow": 0,
+  "maxActualRow": 0,
+  "allDualZero": true,
+  "omittedPairs": 8,
+  "certified": true,
+  "maxRetainedNominalRow": -0.00051210397684176457,
+  "maxRetainedActualRow": -0.00051210397684176457
+}

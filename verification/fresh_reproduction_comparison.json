@@ -1,0 +1,38 @@
+{
+  "maximumTightenedPositionDifference": 0,
+  "maximumUntightenedPositionDifference": 0,
+  "eventTimeDifference": [
+    0,
+    0
+  ],
+  "localCommonTimeCount": 10798,
+  "slowErrorDifference": 0,
+  "fastErrorDifference": 0,
+  "figures": {
+    "trajectory": {
+      "maximumDataDifference": 0,
+      "editableLineCount": 28,
+      "visibleOnOpen": true
+    },
+    "safety": {
+      "maximumDataDifference": 0,
+      "editableLineCount": 6,
+      "visibleOnOpen": true
+    },
+    "connectivity": {
+      "maximumDataDifference": 0,
+      "editableLineCount": 5,
+      "visibleOnOpen": true
+    },
+    "edge": {
+      "maximumDataDifference": 0,
+      "editableLineCount": 3,
+      "visibleOnOpen": true
+    },
+    "exp": {
+      "maximumDataDifference": 0,
+      "editableLineCount": 3,
+      "visibleOnOpen": true
+    }
+  }
+}

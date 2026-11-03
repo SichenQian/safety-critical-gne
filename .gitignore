@@ -1,0 +1,7 @@
+*.asv
+*~
+.DS_Store
+Thumbs.db
+/runs/
+/downloads/
+__pycache__/

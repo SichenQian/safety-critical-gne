@@ -1,0 +1,21 @@
+{
+  "changedParameterFields": [
+    "DeltaC",
+    "DeltaInt",
+    "DeltaObs"
+  ],
+  "fullInitialStateExactlyEqual": true,
+  "refinedFullInitialStateExactlyEqual": true,
+  "refinedNonmarginParametersExactlyEqual": true,
+  "pairAggregateError": 2.1233015345956119E-14,
+  "obstacleScaleError": 1.8673951274195133E-13,
+  "connectivityMismatchCancellationError": 4.3368086899420177E-19,
+  "alpha1": 1.1642183308399454,
+  "alpha2": 3.435781669160054,
+  "product": 3.9999999999999996,
+  "sum": 4.6,
+  "activationLHS": 4.4,
+  "activationRHS": 5.4962456344371127,
+  "positiveScalingPreservesAggregatedFeasibility": true,
+  "regularizedOptimizerInvarianceClaimed": false
+}

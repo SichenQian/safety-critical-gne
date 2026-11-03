@@ -1,0 +1,59 @@
+{
+  "samples": 132985,
+  "validQP": 132985,
+  "minimumBarriers": [
+    -0.00017241100894983818,
+    -0.00011424658528536025,
+    -0.0018662558967524542
+  ],
+  "minimumLambda2": 0.62044349326872594,
+  "maxECBF": [
+    0.0014451932347792074,
+    0.0023317320470215286,
+    0.0096836719288268119
+  ],
+  "maxTracking": 0.41667018251760873,
+  "maxDeltaActual": 0.00078486505312214128,
+  "maxDeltaBall": 0.0094035416355517844,
+  "maxKKT": [
+    4.5279014912469329E-13,
+    7.8305968587022846E-11,
+    6.6191374436090664E-11,
+    3.2044592381858876E-17
+  ],
+  "maxSpeed": 0.087425735244862954,
+  "maxDistance": 2.3,
+  "maxInputNorm": 13.486087401318429,
+  "maxOptimizerInputNorm": 13.486220985453832,
+  "edgeCountRange": [
+    9,
+    10
+  ],
+  "underflowSamples": 103,
+  "minimumPsi": -0.0027518417923166521,
+  "maxComponents": 1,
+  "maxCentralWitnessResidual": 0.00013643119970024875,
+  "minimumDual": -6.7391370262015471E-12,
+  "continuousTimeProof": false,
+  "KKTcoordinates": "Positive collision weights analytically cancelled for distance<dc; zero rows retained at distance>=dc.",
+  "crossings": [
+    [
+      5.2369030391460338,
+      2,
+      5,
+      -0.018337591941307504,
+      0.018337591941307803,
+      5.41556022989536,
+      1
+    ],
+    [
+      346.10753189277568,
+      3,
+      4,
+      0.0016519902144273796,
+      0.0019709070489117193,
+      5.5035143913805928,
+      0
+    ]
+  ]
+}
