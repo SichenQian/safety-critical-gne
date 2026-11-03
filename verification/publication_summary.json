@@ -1,5 +1,5 @@
 {
-  "source_manuscript_sha256": "9dfa9c1a7d5e873435ff5c261618dffc617e50a51cd21475292266c7c5915260",
+  "source_manuscript_sha256": "8d70441e5f45422dc4bcf8648ea0dc7c69ab5b6789917d76ad847c26f53a8439",
   "source_pdf_pages": 12,
   "exact_paper_figure_stems": [
     "figures/trajectory",
@@ -49,7 +49,7 @@
   },
   "native_editable_figures": 5,
   "credential_scan_pass": true,
-  "source_pdf_sha256": "1ffb30370ea9f245c01da0ffd90890abeb5fd81167d07ea6ba99db0816851e2a",
+  "source_pdf_sha256": "0593e423ac757d7a41253bc55b7d0db10449a71e416328d6eb3d69c6d9243e5f",
   "manuscript_alignment": "docs/manuscript_alignment.md",
   "documentation_sync": {
     "numerical_section_matches_source": true,
@@ -62,7 +62,17 @@
   "independent_nominal_experiments": 2,
   "nominal_hb_record": "verification/nominal_hb.json",
   "fixed_release": {
-    "version": "v1.0.0",
-    "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0"
+    "version": "v1.0.1",
+    "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1",
+    "reference_data_version": "v1.0.0"
+  },
+  "response_comment_03": {
+    "source_memo_tex_sha256": "c4f97ce5f1e19ee29b42b67fb3ff94133ae07e7475886a3ef0e3443299d5ae15",
+    "source_memo_pdf_sha256": "de42333cc6c3680703ade10838f2f007c3a77ed61ee4f0ab9b3374eafbd906f3",
+    "scope_table": "verification/theorem2_conditions_with_scope.csv",
+    "machine_readable_report": "verification/theorem2_audit.json",
+    "generator": "matlab/theorem2_condition_audit.m",
+    "regional_uniform_certificate": false,
+    "continuous_time_proof": false
   }
 }

@@ -1,0 +1,14 @@
+response03_audit_verify_schema_20261103.log
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+PAPER_PARAMETER_ARCHIVE_VALIDATION_PASS
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+PAPER_FIGURE_DATA_VALIDATION_PASS
+REPRODUCTION_PASS mode=verify
+Output: D:/Codex/2026-10-31/tcns-matlab-theorem-1-theorem-2/outputs/TCNS_response03_release_20261103/verify_run
+
+response03_table_pipeline_final_20261103.log
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+FINAL_TABLES_DONE
+RESPONSE03_FULL_TABLE_PIPELINE_VALIDATION_PASS
+

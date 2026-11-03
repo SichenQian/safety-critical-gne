@@ -1,19 +1,23 @@
-﻿Condition,Required bound,Numerical value,Verification
-Theorem 1 gains,c>185.085144; gamma>56.6897217,c=200; gamma=65,Analytic sufficient inequalities evaluated in double precision
-Theorem 1 nominal-flow connectivity,> 0.04,1.58616280459112,Independent nominal HB integration; accepted mesh and dense/interpolant diagnostics with a precision repeat
-Theorem 2 collision tightening,< 0.5,0.431335137,Analytic regional coefficient bound and design arithmetic
-Theorem 2 obstacle tightening,< 0.7,0.656904012,Analytic regional coefficient bound and design arithmetic
-Theorem 2 connectivity tightening,< 0.4,0.397297869,Analytic regional coefficient bound and design arithmetic
-Activation boundary,4.4 <= 5.49624563,v_pair <= 1,Analytic sufficient inequality for declared physical domain
-Tracking budget,< 0.061,0.0571576535,"Trajectory mesh, dense output and interpolant extrema; no regional supremum claim"
-Connectivity discrepancy,< 0.03,0.0094939836,Input-ball maximization at trajectory states; no regional supremum claim
-Trajectory residence,box AND diameter<=2.5 AND speed<=0.5,True,Numerical trajectory check
-Decomposed QP feasibility,all audited points valid,138745/138745,Offline numerical feasibility/KKT checks
-Original physical ECBF residuals,"q_int,q_obs,q_c <= 0","-0.496497894, -0.697491628, -0.384333083",Numerical trajectory check
-Regional residence and uniform QP feasibility,Theorem 2 regional hypotheses,Not certified over the entire region,Retained theorem assumptions; finite trajectories cannot establish them
-Regional uniform tracking/estimation bounds,Theorem 2 uniform error hypotheses,Not certified over the entire region,Retained theorem assumptions; sampled maxima are not uniform bounds
-Theorem 3 epsilon,< 9.31743406e-06,5e-06,Explicit analytic sufficient inequalities evaluated in double precision
-Local slow initialization,< 5.94472069e-09,4.45854039e-09,Explicit local certificate and numerical initialization check
-Local fast initialization,< 6.58982205e-07,3.29491102e-07,Explicit local certificate and numerical initialization check
-Local Vc initialization,< 6.51258502e-14,3.86301022e-15,Explicit local certificate and numerical initialization check
-Omitted-pair multipliers,rows 15/16 initialized at zero,0; retained at zero in saved output,"Full ODE, no omitted controller equations"
+Condition,Required bound,Numerical value,Verification
+Theorem 1 gains,"c>185.085144078; gamma>56.6897216736",c=200; gamma=65,Analytic sufficient inequalities evaluated in double precision
+Theorem 1 nominal-flow connectivity,"> 0.04",1.58616280459,Independent nominal HB trajectory; accepted mesh and dense/interpolant diagnostics with a precision repeat
+Collision tightening,"sqrt(2) a_int r_u <= 0.5",0.431335136524,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Obstacle tightening,"a_obs r_u <= 0.7",0.656904012471,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Connectivity tightening,"sqrt(5) a_c r_u + delta_c <= 0.4",0.397297868842,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Tracking peak on tightened trajectory,"< r_u = 0.061",0.0571576535274,Recorded tightened-trajectory mesh/dense/interpolant diagnostics
+Input-ball connectivity-discrepancy peak,"< delta_c = 0.03",0.00949398359918,At each tightened-trajectory state maximize over ||u|| <= 15; not over Theta_R
+Regional uniform connectivity discrepancy,"sup over Theta_R x U_R of |q_c - sum_i qhat_i_c| <= delta_c",Retained assumption,Not certified over the region; trajectory peak does not replace this bound
+Input-set membership,"u(t) in U_R; U_R = {u: ||u|| <= 15}",13.4800990276,Input-norm peak at audited tightened-trajectory states; not a continuous-time certificate
+Full slow-domain residence,"vartheta(t) in Theta_R",Retained assumption,Full Theta_R forward invariance not established by physical D_R trajectory checks
+Region-wide QP feasibility,"QP feasible for every vartheta in Theta_R",Retained assumption,Pointwise reference-QP checks do not establish feasibility throughout Theta_R
+Continuous-time uniform tracking bound,"||u(t)-uhat_xi_star(vartheta(t))|| <= r_u",Retained assumption,Finite trajectory diagnostics do not certify a uniform continuous-time bound
+Physical-domain residence,"Position box; diameter <= 2.5; individual speed <= 0.5",Observed at checked states,Physical D_R check only; distinct from full slow-domain Theta_R invariance
+Pointwise reference-QP checks,"All audited states valid",138745/138745,Numerical reference solves and KKT diagnostics at recorded trajectory states
+Reference-QP KKT residual,"Diagnostic maximum of four saved coordinates",1.86351310666e-10,Solver accuracy; not filter tracking error or region-wide QP feasibility
+Original physical ECBF residuals,"q_int, q_obs, q_c <= 0",-0.496497894077; -0.697491627712; -0.384333083326,Recorded tightened-trajectory states; collision residuals apply to active rows
+Sensing-edge reactivation,"2 d_c v_pair <= alpha1 (d_c^2-dsafe^2)",4.4 <= 5.49624563444,Analytic sufficient inequality on the declared physical domain
+Theorem 3 epsilon,"< 9.31743406422e-06",5e-06,Explicit local sufficient inequalities evaluated in double precision
+Local slow initialization,"< 5.94472069264e-09",4.45854039106e-09,Explicit local certificate and numerical initialization check
+Local fast initialization,"< 6.58982204693e-07",3.29491102346e-07,Explicit local certificate and numerical initialization check
+Local Vc initialization,"< 6.51258501531e-14",3.86301022046e-15,Explicit local certificate and numerical initialization check
+Omitted-pair multipliers,"Rows 15/16 initialized at zero",0; retained at zero in saved output,Full projected flow; no controller equations omitted

@@ -67,9 +67,34 @@ The local experiment uses a separately certified near-equilibrium initial condit
 
 ## Numerical data and checks
 
+### Theorem 2 condition checks
+
+The condition table distinguishes design arithmetic, observations along the tightened trajectory, and retained hypotheses. It follows comment 03 of the revision memo.
+
+| Condition or quantity | Required bound | Numerical value | Verification |
+| --- | --- | --- | --- |
+| sqrt(2) a_int r_u | ≤0.5 | 0.431335 | Analytic coefficient bound evaluated in double precision |
+| a_obs r_u | ≤0.7 | 0.656904 | Same |
+| sqrt(5) a_c r_u + delta_c | ≤0.4 | 0.397298 | Same |
+| Tightened-trajectory tracking peak | <r_u=0.061 | 0.0571577 | Mesh, dense output and interpolant diagnostics |
+| Input-ball connectivity-discrepancy peak | <delta_c=0.03 | 0.00949398 | At each trajectory state maximize over ‖u‖≤15 |
+| Regional uniform connectivity discrepancy | sup over Theta_R × U_R ≤delta_c | Retained assumption | Trajectory-state maxima do not establish this regional bound |
+| Input-set membership | u(t)∈U_R, with ‖u‖≤15 | 13.48010 | Input-norm peak at audited trajectory states |
+| Full slow-domain residence | vartheta(t)∈Theta_R | Retained assumption | Forward invariance of Theta_R not established |
+| Region-wide QP feasibility | Feasible for every vartheta∈Theta_R | Retained assumption | Pointwise trajectory checks only |
+| Continuous-time uniform tracking bound | ‖u(t)−uhat_xi_star(vartheta(t))‖≤r_u | Retained assumption | Numerical peaks do not establish the all-time bound |
+
+The three remaining tightening margins are approximately 0.0686649, 0.0430960 and 0.00270213. Physical-state residence in D_R is checked separately from full slow-state residence in Theta_R. All 138745 audited tightened-trajectory states have valid reference QPs; the largest recorded KKT component is about 1.86×10⁻¹⁰. This residual measures reference-solver accuracy, separately from dynamic filter tracking error.
+
+Fig. 2 displays the first 400 s. Error peaks, physical-domain checks and reference-QP diagnostics use the complete 0–1200 s runs.
+
+`reproduce_paper('verify')` regenerates the scoped condition tables and JSON report in the run's verification/ folder. The public records are [theorem2_conditions_with_scope.csv](verification/theorem2_conditions_with_scope.csv), [theorem2_audit.json](verification/theorem2_audit.json) and the combined [theorem_checks_with_scope.csv](verification/theorem_checks_with_scope.csv). [Theorem 2 details](docs/theorem2_conditions.md) give the definitions, source quantities and verification scope.
+
+### Nominal flow and reference data
+
 Table I's nominal-flow connectivity minimum is reproduced independently by [matlab/run_nominal_hb.m](matlab/run_nominal_hb.m). It integrates the 60-state nominal HB equations with the same game, initial slow state and communication weights. Standard and refined runs give a minimum of 1.58616280459112 over 0–1200 s, reported as 1.58616 in the table. Parameters, solver settings and numerical checks are saved in [verification/nominal_hb.json](verification/nominal_hb.json).
 
-The included data/paper_plot_data.mat is sufficient to redraw the five figures. Full trajectories, solver interpolants, dense diagnostic tables and refined-precision results are available in the [v1.0.0 release](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0).
+The current code and scoped condition checks are fixed in [v1.0.1](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1). The included data/paper_plot_data.mat is sufficient to redraw the five figures. The unchanged full trajectories, solver interpolants, dense diagnostic tables and refined-precision results remain in the [v1.0.0 reference-data release](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0).
 
 Download and verify all six full-data archives from MATLAB:
 

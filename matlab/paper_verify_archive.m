@@ -32,6 +32,30 @@ assert(isequal(N.parameters.y0,P.y0)&&isequal(N.parameters.v0,P.v0));
 assert(N.standard.minimumLambda2>P.lambdaLower&&N.refined.minimumLambda2>P.lambdaLower);
 assert(N.precisionComparison.minimumLambda2Difference<1e-7);
 report.nominalMinimumLambda2=[N.standard.minimumLambda2,N.refined.minimumLambda2];
+A=theorem2_condition_audit();archived=jsondecode(fileread(fullfile(repo,'verification','theorem2_audit.json')));
+assert(audit_matches(jsondecode(jsonencode(A)),archived),'Theorem 2 scope report is stale; regenerate it with theorem2_condition_audit.');
+report.theorem2DesignAndTrajectoryChecksPass=true;
+report.theorem2RegionalUniformCertificate=A.regionalUniformCertificate;
+report.theorem2ContinuousTimeProof=A.continuousTimeProof;
 report.scope='Recomputed design/local inequalities and recorded dense-trajectory diagnostics; regional uniform hypotheses are stated in docs/numerical_details.md.';
 fprintf('PAPER_PARAMETER_ARCHIVE_VALIDATION_PASS\n');
+end
+
+function ok=audit_matches(A,B)
+% Preserve scope text exactly and allow small floating-point platform changes.
+if isnumeric(A)&&isnumeric(B)
+ ok=isequal(size(A),size(B))&&all(abs(A-B)<=5e-15+1e-10*max(abs(A),abs(B)),'all');
+elseif isstruct(A)&&isstruct(B)
+ fields=fieldnames(A);ok=isequal(size(A),size(B))&&isequal(sort(fields),sort(fieldnames(B)));
+ for j=1:numel(A)
+  for k=1:numel(fields),if ~ok,return;end;ok=audit_matches(A(j).(fields{k}),B(j).(fields{k}));end
+ end
+elseif iscell(A)&&iscell(B)
+ ok=isequal(size(A),size(B));
+ for k=1:numel(A),if ~ok,return;end;ok=audit_matches(A{k},B{k});end
+elseif ischar(A)&&ischar(B)&&isfinite(str2double(A))&&isfinite(str2double(B))
+ ok=audit_matches(str2double(A),str2double(B));
+else
+ ok=isequaln(A,B);
+end
 end

@@ -26,9 +26,9 @@
   {
     "file": "build_final_tables.m",
     "source_sha256": "def729fa7730312cbbf969c9b725d89f0040cad50bd76ee28c6374fda02e4f58",
-    "published_sha256": "5abcf6ec39c331a288e48d985252e455a94174750fb422a38d9af0ca31e48ede",
+    "published_sha256": "bee6deacf585b7bdbc182bd41240e6e001736d96a9cad96be43f558d61fb9f41",
     "io_root_only_change": false,
-    "additional_change": "Table I connectivity row reads independent nominal HB diagnostics."
+    "additional_change": "Table I nominal connectivity and automatic generation of scoped Theorem 2 condition records."
   },
   {
     "file": "design_parameters.m",

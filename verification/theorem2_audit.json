@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "design": {
+    "coefficients": [
+      5,
+      10.768918237223273,
+      2.69279673023385
+    ],
+    "trackingBudget": 0.061,
+    "connectivityDiscrepancyBudget": 0.03,
+    "inputBallRadius": 15,
+    "requiredTightening": [
+      0.431335136523794,
+      0.65690401247061969,
+      0.39729786884191509
+    ],
+    "selectedTightening": [
+      0.5,
+      0.7,
+      0.4
+    ],
+    "remainingMargins": [
+      0.068664863476205984,
+      0.043095987529380264,
+      0.0027021311580849305
+    ],
+    "activationLHS": 4.4,
+    "activationRHS": 5.4962456344371127,
+    "classification": "Analytic coefficient formulas and sufficient inequalities evaluated in double precision."
+  },
+  "observations": {
+    "selected": {
+      "trackingPeak": 0.057157653527350076,
+      "inputBallDiscrepancyPeak": 0.0094939835991801579,
+      "actualInputDiscrepancyPeak": 0.00079548352367225794,
+      "inputNormPeakAtAuditedStates": 13.480099027619662,
+      "optimizerInputNormPeakAtAuditedStates": 13.480292163479838,
+      "auditedStates": 138745,
+      "validReferenceQPs": 138745,
+      "kktResidualMaxima": [
+        6.4034888502817466E-13,
+        6.7852086582509446E-11,
+        1.8635131066624079E-10,
+        2.1641599930158415E-16
+      ],
+      "maximumKKTComponent": 1.8635131066624079E-10,
+      "referenceKKTCoordinates": "Positive collision weights analytically cancelled for distance<dc; zero rows retained at distance>=dc.",
+      "physicalDomainResidenceAtCheckedStates": true,
+      "physicalDomainDiagnostics": {
+        "box": [
+          [
+            -3.1,
+            3.1
+          ],
+          [
+            -1.3,
+            1.3
+          ]
+        ],
+        "rectangleDiameter": 6.7230945255886443,
+        "pairwiseDiameterBound": 2.5,
+        "collisionCoefficientBound": 5,
+        "observedPairwiseDiameter": 2.3,
+        "observedIndividualSpeed": 0.087423514154109622,
+        "xRange": [
+          -3,
+          2.9999996775788293
+        ],
+        "yRange": [
+          -1.15,
+          1.1500000067972711
+        ],
+        "trajectoryWithinRegion": true
+      },
+      "originalECBFResidualMaxima": [
+        -0.49649789407706268,
+        -0.69749162771238638,
+        -0.38433308332580651
+      ]
+    },
+    "selected_refined": {
+      "trackingPeak": 0.057157653507393304,
+      "inputBallDiscrepancyPeak": 0.0094939836051643155,
+      "actualInputDiscrepancyPeak": 0.00079548851284416688,
+      "inputNormPeakAtAuditedStates": 13.4800990276361,
+      "optimizerInputNormPeakAtAuditedStates": 13.480292163496268,
+      "auditedStates": 144958,
+      "validReferenceQPs": 144958,
+      "kktResidualMaxima": [
+        5.6615823140759858E-13,
+        6.7842041873144109E-11,
+        1.8635149402780855E-10,
+        2.1644539320940727E-16
+      ],
+      "maximumKKTComponent": 1.8635149402780855E-10,
+      "referenceKKTCoordinates": "Positive collision weights analytically cancelled for distance<dc; zero rows retained at distance>=dc.",
+      "physicalDomainResidenceAtCheckedStates": true,
+      "physicalDomainDiagnostics": {
+        "box": [
+          [
+            -3.1,
+            3.1
+          ],
+          [
+            -1.3,
+            1.3
+          ]
+        ],
+        "rectangleDiameter": 6.7230945255886443,
+        "pairwiseDiameterBound": 2.5,
+        "collisionCoefficientBound": 5,
+        "observedPairwiseDiameter": 2.3,
+        "observedIndividualSpeed": 0.087423513454809476,
+        "xRange": [
+          -3,
+          2.9999996775782387
+        ],
+        "yRange": [
+          -1.15,
+          1.1500000067972735
+        ],
+        "trajectoryWithinRegion": true
+      },
+      "originalECBFResidualMaxima": [
+        -0.49649789407511169,
+        -0.69749166773253446,
+        -0.384333110555397
+      ]
+    }
+  },
+  "precisionComparison": {
+    "trackingPeakDifference": 1.9956772345786078E-11,
+    "inputBallDiscrepancyPeakDifference": 5.984157613880825E-12
+  },
+  "hypotheses": {
+    "regionalUniformConnectivityDiscrepancyCertified": false,
+    "fullSlowDomainForwardInvarianceCertified": false,
+    "regionWideQPFeasibilityCertified": false,
+    "continuousTimeUniformTrackingBoundCertified": false,
+    "continuousTimeInputMembershipCertified": false
+  },
+  "conditions": [
+    {
+      "condition": "Collision tightening",
+      "requiredBound": "sqrt(2) a_int r_u <= 0.5",
+      "numericalValue": "0.431335136524",
+      "verification": "Analytic coefficient bound; sufficient inequality evaluated in double precision"
+    },
+    {
+      "condition": "Obstacle tightening",
+      "requiredBound": "a_obs r_u <= 0.7",
+      "numericalValue": "0.656904012471",
+      "verification": "Analytic coefficient bound; sufficient inequality evaluated in double precision"
+    },
+    {
+      "condition": "Connectivity tightening",
+      "requiredBound": "sqrt(5) a_c r_u + delta_c <= 0.4",
+      "numericalValue": "0.397297868842",
+      "verification": "Analytic coefficient bound; sufficient inequality evaluated in double precision"
+    },
+    {
+      "condition": "Tracking peak on tightened trajectory",
+      "requiredBound": "< r_u = 0.061",
+      "numericalValue": "0.0571576535274",
+      "verification": "Recorded tightened-trajectory mesh/dense/interpolant diagnostics"
+    },
+    {
+      "condition": "Input-ball connectivity-discrepancy peak",
+      "requiredBound": "< delta_c = 0.03",
+      "numericalValue": "0.00949398359918",
+      "verification": "At each tightened-trajectory state maximize over ||u|| <= 15; not over Theta_R"
+    },
+    {
+      "condition": "Regional uniform connectivity discrepancy",
+      "requiredBound": "sup over Theta_R x U_R of |q_c - sum_i qhat_i_c| <= delta_c",
+      "numericalValue": "Retained assumption",
+      "verification": "Not certified over the region; trajectory peak does not replace this bound"
+    },
+    {
+      "condition": "Input-set membership",
+      "requiredBound": "u(t) in U_R; U_R = {u: ||u|| <= 15}",
+      "numericalValue": "13.4800990276",
+      "verification": "Input-norm peak at audited tightened-trajectory states; not a continuous-time certificate"
+    },
+    {
+      "condition": "Full slow-domain residence",
+      "requiredBound": "vartheta(t) in Theta_R",
+      "numericalValue": "Retained assumption",
+      "verification": "Full Theta_R forward invariance not established by physical D_R trajectory checks"
+    },
+    {
+      "condition": "Region-wide QP feasibility",
+      "requiredBound": "QP feasible for every vartheta in Theta_R",
+      "numericalValue": "Retained assumption",
+      "verification": "Pointwise reference-QP checks do not establish feasibility throughout Theta_R"
+    },
+    {
+      "condition": "Continuous-time uniform tracking bound",
+      "requiredBound": "||u(t)-uhat_xi_star(vartheta(t))|| <= r_u",
+      "numericalValue": "Retained assumption",
+      "verification": "Finite trajectory diagnostics do not certify a uniform continuous-time bound"
+    },
+    {
+      "condition": "Physical-domain residence",
+      "requiredBound": "Position box; diameter <= 2.5; individual speed <= 0.5",
+      "numericalValue": "Observed at checked states",
+      "verification": "Physical D_R check only; distinct from full slow-domain Theta_R invariance"
+    },
+    {
+      "condition": "Pointwise reference-QP checks",
+      "requiredBound": "All audited states valid",
+      "numericalValue": "138745/138745",
+      "verification": "Numerical reference solves and KKT diagnostics at recorded trajectory states"
+    },
+    {
+      "condition": "Reference-QP KKT residual",
+      "requiredBound": "Diagnostic maximum of four saved coordinates",
+      "numericalValue": "1.86351310666e-10",
+      "verification": "Solver accuracy; not filter tracking error or region-wide QP feasibility"
+    },
+    {
+      "condition": "Original physical ECBF residuals",
+      "requiredBound": "q_int, q_obs, q_c <= 0",
+      "numericalValue": "-0.496497894077; -0.697491627712; -0.384333083326",
+      "verification": "Recorded tightened-trajectory states; collision residuals apply to active rows"
+    },
+    {
+      "condition": "Sensing-edge reactivation",
+      "requiredBound": "2 d_c v_pair <= alpha1 (d_c^2-dsafe^2)",
+      "numericalValue": "4.4 <= 5.49624563444",
+      "verification": "Analytic sufficient inequality on the declared physical domain"
+    }
+  ],
+  "kktCoordinateOrder": [
+    "primal",
+    "stationarity",
+    "complementarity",
+    "dual"
+  ],
+  "trackingErrorDefinition": "u - uhat_xi_star(vartheta); distinct from reference-solver KKT residuals.",
+  "connectivityDiscrepancyDefinition": "delta_c_tr(t) = |db(vartheta(t))| + 15 ||da(vartheta(t))||_2, a maximization over the input ball at a fixed trajectory state.",
+  "physicalVsSlowDomain": "D_R concerns physical positions and velocities; Theta_R additionally concerns decision estimates.",
+  "regionalUniformCertificate": false,
+  "continuousTimeProof": false
+}

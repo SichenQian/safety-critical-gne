@@ -15,6 +15,8 @@ This file supplements the numerical section archived in numerical_section.tex. T
 
 All use ode15s. Main saved outputs are spaced by 0.1 s; diagnostics combine those samples, accepted internal nodes and 0.01 s dense output. Communication-support events are localized using signed-distance crossings. Tracking and estimation peaks are refined on the saved numerical interpolants.
 
+Fig. 2 displays 0–400 s. The reported main-run extrema, error budgets and reference-QP checks cover the complete 0–1200 s horizon.
+
 The local output grid includes logarithmically spaced initial times to resolve the fast layer. Its slow error is the norm of col{y_est−1⊗y*,v}; the fast error is the norm of col{u−u_nom,zeta_0,lambda_0}, with the retained local rows used in the Appendix. The full projected flow is integrated in equilibrium-error coordinates to resolve the small initial perturbation. The fast numerical floor is retained in Fig. 3.
 
 ## Geometry, graph and physical residuals
@@ -54,7 +56,11 @@ The nominal command produces verification/nominal_hb.json and, under results/nom
 
 For Theorem 2, the three tightening design expressions are approximately 0.431335, 0.656904 and 0.397298, below 0.5, 0.7 and 0.4. Dense tightened-trajectory peaks are approximately 0.0571577 for tracking and 0.00949398 for connectivity discrepancy.
 
-Regional uniform residence, feasibility and error bounds remain hypotheses of Theorem 2. Finite trajectory diagnostics are reported separately from these regional conditions; their classification is explicit in verification/theorem_checks_with_scope.csv.
+The applied-input peak at audited tightened-trajectory states is 13.4800990276 (13.48010 rounded), below the declared input-ball radius 15. The separate reference optimizer's input peak is 13.4802921635. These are trajectory diagnostics.
+
+The regional uniform connectivity-discrepancy bound, full slow-domain residence, region-wide QP feasibility and continuous-time uniform tracking bound are distinct retained hypotheses. The first takes a supremum over Theta_R × U_R; the reported input-ball discrepancy instead maximizes over U_R with each trajectory state fixed. Physical residence in D_R does not certify forward invariance of the full estimate-containing slow domain Theta_R. Likewise, the 138745/138745 valid pointwise reference solves and their maximum KKT component of approximately 1.86e-10 do not certify regional feasibility or dynamic tracking accuracy.
+
+The [Theorem 2 condition note](theorem2_conditions.md), verification/theorem2_conditions_with_scope.csv and verification/theorem2_audit.json provide these checks separately. `reproduce_paper('verify')` recomputes the report from model parameters and archived diagnostics and checks it against the committed record. The report explicitly retains regionalUniformCertificate=false and continuousTimeProof=false.
 
 Theorem 3 uses explicitly constructed local radii from the Appendix. The selected epsilon is 5e-6 < 9.31743406e-6; initial slow/fast errors are approximately 4.45854e-9 and 3.29491e-7, below radii 5.94472e-9 and 6.58982e-7. All multipliers start at zero, including the two rows of locally omitted pair (3,4). The construction and sufficient inequalities are evaluated in double precision; the derivation is in theorem3_local_certificate.md.
 

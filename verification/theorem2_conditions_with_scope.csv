@@ -1,0 +1,16 @@
+Condition,Required bound,Numerical value,Verification
+Collision tightening,"sqrt(2) a_int r_u <= 0.5",0.431335136524,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Obstacle tightening,"a_obs r_u <= 0.7",0.656904012471,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Connectivity tightening,"sqrt(5) a_c r_u + delta_c <= 0.4",0.397297868842,Analytic coefficient bound; sufficient inequality evaluated in double precision
+Tracking peak on tightened trajectory,"< r_u = 0.061",0.0571576535274,Recorded tightened-trajectory mesh/dense/interpolant diagnostics
+Input-ball connectivity-discrepancy peak,"< delta_c = 0.03",0.00949398359918,At each tightened-trajectory state maximize over ||u|| <= 15; not over Theta_R
+Regional uniform connectivity discrepancy,"sup over Theta_R x U_R of |q_c - sum_i qhat_i_c| <= delta_c",Retained assumption,Not certified over the region; trajectory peak does not replace this bound
+Input-set membership,"u(t) in U_R; U_R = {u: ||u|| <= 15}",13.4800990276,Input-norm peak at audited tightened-trajectory states; not a continuous-time certificate
+Full slow-domain residence,"vartheta(t) in Theta_R",Retained assumption,Full Theta_R forward invariance not established by physical D_R trajectory checks
+Region-wide QP feasibility,"QP feasible for every vartheta in Theta_R",Retained assumption,Pointwise reference-QP checks do not establish feasibility throughout Theta_R
+Continuous-time uniform tracking bound,"||u(t)-uhat_xi_star(vartheta(t))|| <= r_u",Retained assumption,Finite trajectory diagnostics do not certify a uniform continuous-time bound
+Physical-domain residence,"Position box; diameter <= 2.5; individual speed <= 0.5",Observed at checked states,Physical D_R check only; distinct from full slow-domain Theta_R invariance
+Pointwise reference-QP checks,"All audited states valid",138745/138745,Numerical reference solves and KKT diagnostics at recorded trajectory states
+Reference-QP KKT residual,"Diagnostic maximum of four saved coordinates",1.86351310666e-10,Solver accuracy; not filter tracking error or region-wide QP feasibility
+Original physical ECBF residuals,"q_int, q_obs, q_c <= 0",-0.496497894077; -0.697491627712; -0.384333083326,Recorded tightened-trajectory states; collision residuals apply to active rows
+Sensing-edge reactivation,"2 d_c v_pair <= alpha1 (d_c^2-dsafe^2)",4.4 <= 5.49624563444,Analytic sufficient inequality on the declared physical domain

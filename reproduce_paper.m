@@ -43,6 +43,7 @@ else
  cache=load(fullfile(repo,'data','paper_plot_data.mat'),'D');D=cache.D;
 end
 result=paper_verify_archive(repo,D);
+if strcmp(mode,'verify'),theorem2_condition_audit(fullfile(outputFolder,'verification'));end
 if strcmp(mode,'verify')
  result.figures=paper_check_figures(fullfile(repo,'figures'),D);
 else
