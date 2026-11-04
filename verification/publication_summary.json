@@ -1,5 +1,5 @@
 {
-  "source_manuscript_sha256": "fdf1f1230dcf9a07b20993bbaf5058a035adc55ef89582f385f8dbc07ae4e6b5",
+  "source_manuscript_sha256": "1fa9ffa53b889eea8b198de35a989a3ae725fb5c68c83efaba8b1e5e7207d533",
   "source_pdf_pages": 12,
   "exact_paper_figure_stems": [
     "figures/trajectory",
@@ -49,7 +49,7 @@
   },
   "native_editable_figures": 5,
   "credential_scan_pass": true,
-  "source_pdf_sha256": "fb42eb0dbd255b2f26d511927da7465a8dd6646981d07953014c9646b439cf87",
+  "source_pdf_sha256": "4368aff6f97497b3ce20a0ef6c0644a6f740c28803088e56191a4e8a23ad4028",
   "manuscript_alignment": "docs/manuscript_alignment.md",
   "documentation_sync": {
     "numerical_section_matches_source": true,
@@ -62,7 +62,10 @@
     "verification_modes_this_revision": [
       "verify",
       "figures"
-    ]
+    ],
+    "table_I_note_matches_current_source": true,
+    "latest_update_scope": "Source hashes and Table I note; numerical validation records retained from the preceding verified snapshot.",
+    "latest_update_reintegrated_ODE": false
   },
   "independent_nominal_experiments": 2,
   "nominal_hb_record": "verification/nominal_hb.json",

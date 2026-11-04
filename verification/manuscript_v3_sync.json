@@ -1,9 +1,9 @@
 {
   "revision_date": "2026-11-04",
   "version": "v1.0.1",
-  "prior_commit": "6efd97554ec9c5893babef69f8d8224b0e39b67a",
-  "source_manuscript_sha256": "fdf1f1230dcf9a07b20993bbaf5058a035adc55ef89582f385f8dbc07ae4e6b5",
-  "source_pdf_sha256": "fb42eb0dbd255b2f26d511927da7465a8dd6646981d07953014c9646b439cf87",
+  "prior_commit": "b71ae33ef804d29b670959f2021bccae9531c9b7",
+  "source_manuscript_sha256": "1fa9ffa53b889eea8b198de35a989a3ae725fb5c68c83efaba8b1e5e7207d533",
+  "source_pdf_sha256": "4368aff6f97497b3ce20a0ef6c0644a6f740c28803088e56191a4e8a23ad4028",
   "source_pdf_pages": 12,
   "visible_logo_removed": true,
   "numerical_section_matches_source": true,
@@ -32,13 +32,23 @@
   },
   "validation_log": "verification/manuscript_v3_validation.log",
   "response_v3_sha256": {
-    "response_yu_v3.tex": "f47d4ede3b7c0c6d3b1621a22d8c5fbb12f3ce79e6b1de1bd9438da3fbabbcb3",
-    "response_yu_v3.pdf": "4eff72c20b939ed088bbf52c44500fa1221d8afbba2b383688b3333112c5dc7f"
+    "response_yu_v3.tex": "4ebc8ee0e411ea3c40475081723b11135f2ba4ed097d9bb64a51070b06065a01",
+    "response_yu_v3.pdf": "66386d2fc6f728a7cfa7c9bab01130b027287e822d221ed9125ac012c7e4cb29"
   },
   "matlab_version": "24.1.0.2537033 (R2024a)",
   "archive_verification_pass": true,
   "redraw_verification_pass": true,
   "five_original_figure_data_checks_pass": true,
   "original_input_preservation_pass": true,
-  "full_ode_integration_this_revision": false
+  "full_ode_integration_this_revision": false,
+  "source_hash_resynchronization": {
+    "version": "v1.0.1",
+    "date": "2026-11-04",
+    "manuscript_change": "Only Table I note and adjacent blank lines differ from the preceding manuscript snapshot.",
+    "source_excerpt_matches_bytes": true,
+    "numerical_code_data_and_figures_unchanged": true,
+    "all_four_current_source_hashes_recomputed": true,
+    "source_files_modified_by_this_update": false,
+    "ODE_reintegration_performed": false
+  }
 }

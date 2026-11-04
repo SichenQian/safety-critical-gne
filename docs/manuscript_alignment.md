@@ -8,7 +8,7 @@ The archived [numerical section](numerical_section.tex) matches the current manu
 | --- | --- | --- |
 | p. 6, before Theorem 2 | The regional discrepancy is bounded by a Lipschitz expression; a budget at least that expression is sufficient | [Budget definitions and scope](theorem2_conditions.md#regional-discrepancy-budget) |
 | p. 7, numerical setup | Explicit local collision row with physical scale 0.06 and unscaled mismatch; reference QP uses the same adopted constraints | [Scaled-row coordinates](numerical_details.md#scaled-local-rows), audit_core.m and normalized_reference_rows.m |
-| p. 8, Table I note | Nominal and tightened trajectory statistics use their respective 0–1200 s runs; regional residence, QP feasibility and uniform error bounds remain premises | [Scoped condition table](../verification/theorem2_conditions_with_scope.csv) |
+| p. 8, Table I note | Nominal and tightened statistics use their respective 0–1200 s runs with numerical peak refinement; regional residence, QP feasibility, input boundedness, and uniform estimation/tracking-error bounds remain premises | [Scoped condition table](../verification/theorem2_conditions_with_scope.csv) |
 | p. 8, local initialization | Appendix-derived slow/fast budgets and zero multiplier initialization | [Local construction](theorem3_local_certificate.md), run_local.m and reference/local/initial.json |
 | pp. 8–9, Fig. 3 discussion/caption | Slow-error decay and fast transient reaching the numerical precision plateau | Compact data/paper_plot_data.mat and original figures/exp.fig |
 | p. 8, reproduction link | Fixed tree/v1.0.1; README distinguishes redraw, full integration, nominal integration and verification | [README](../README.md#run), reproduce_paper.m |

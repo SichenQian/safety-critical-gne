@@ -242,20 +242,22 @@ initialization conditions.
 		& $>0$\\
 		
 		\bottomrule
+
 \end{tabularx}
 \vspace{2pt}
 \parbox{\linewidth}{%
 \footnotesize\raggedright
 \emph{Note:}
-The connectivity minimum is computed along the
-nominal HB trajectory, while the tracking-error,
-connectivity-discrepancy, and input maxima are
-obtained along the tightened trajectory
-($t\in[0,1200]$).
-Regional residence, QP feasibility, and uniform
-error bounds are assumed in Theorem~\ref{thm:regional_safety}.
+The connectivity minimum is obtained from the nominal
+HB flow, while the tracking-error, connectivity-discrepancy,
+and input maxima are evaluated along the tightened flow
+over $t\in[0,1200]$, with numerical peak refinement.
+Regional residence, QP feasibility, input boundedness,
+and uniform estimation and tracking-error bounds
+remain assumptions of Theorem~\ref{thm:regional_safety}.
 }
 \end{table}
+
 To assess the effect of tightening, the untightened run is
 obtained by setting
 $

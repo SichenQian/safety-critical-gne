@@ -73,7 +73,7 @@ Fig. 3 shows slow-error decay and the fast initial transient on t/epsilon. The s
 
 ### Theorem 2 condition checks
 
-The condition table distinguishes design arithmetic, observations along the tightened trajectory, and retained hypotheses. The manuscript's Table I now states the corresponding trajectory sources, 0–1200 s window and regional premises in a table note.
+The condition table distinguishes design arithmetic, observations along the tightened trajectory, and retained hypotheses. Table I states the respective nominal/tightened trajectory sources and the 0–1200 s window with numerical peak refinement. Its note retains regional residence, QP feasibility, input boundedness, and uniform estimation and tracking-error bounds as premises. The current manuscript hashes are recorded in [figure_sources.json](docs/figure_sources.json).
 
 | Condition or quantity | Required bound | Numerical value | Verification |
 | --- | --- | --- | --- |
