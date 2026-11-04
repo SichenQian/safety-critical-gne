@@ -1,5 +1,5 @@
 {
-  "source_manuscript_sha256": "1fa9ffa53b889eea8b198de35a989a3ae725fb5c68c83efaba8b1e5e7207d533",
+  "source_manuscript_sha256": "563456a86a388440060e8ca8236e8134832532046d923eafbe0eb1d7b57de682",
   "source_pdf_pages": 12,
   "exact_paper_figure_stems": [
     "figures/trajectory",
@@ -49,7 +49,7 @@
   },
   "native_editable_figures": 5,
   "credential_scan_pass": true,
-  "source_pdf_sha256": "4368aff6f97497b3ce20a0ef6c0644a6f740c28803088e56191a4e8a23ad4028",
+  "source_pdf_sha256": "5f006dd444b7a507252fd7bc96b2616ca440fab9746e94ee50e11da003af83c6",
   "manuscript_alignment": "docs/manuscript_alignment.md",
   "documentation_sync": {
     "numerical_section_matches_source": true,
@@ -64,17 +64,20 @@
       "figures"
     ],
     "table_I_note_matches_current_source": true,
-    "latest_update_scope": "Source hashes and Table I note; numerical validation records retained from the preceding verified snapshot.",
+    "latest_update_scope": "R2: immutable release v1.0.2, paper link, V3 response and source provenance.",
     "latest_update_reintegrated_ODE": false
   },
   "independent_nominal_experiments": 2,
   "nominal_hb_record": "verification/nominal_hb.json",
   "fixed_release": {
-    "version": "v1.0.1",
-    "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1",
+    "version": "v1.0.2",
+    "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.2",
     "reference_data_version": "v1.0.0",
     "synchronized_on": "2026-11-04",
-    "updated_in_place_at_user_request": true
+    "updated_in_place_at_user_request": false,
+    "supersedes_version": "v1.0.1",
+    "immutable_release_required": true,
+    "snapshot_record": "https://github.com/SichenQian/safety-critical-gne/releases/download/v1.0.2/release_snapshot.json"
   },
   "theorem2_scope_alignment": {
     "scope_table": "verification/theorem2_conditions_with_scope.csv",
@@ -83,5 +86,6 @@
     "regional_uniform_certificate": false,
     "continuous_time_proof": false
   },
-  "revision_v3_alignment_record": "verification/manuscript_v3_sync.json"
+  "revision_v3_alignment_record": "verification/manuscript_v3_sync.json",
+  "release_policy": "docs/release_policy.md"
 }

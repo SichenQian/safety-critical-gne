@@ -11,7 +11,7 @@ The archived [numerical section](numerical_section.tex) matches the current manu
 | p. 8, Table I note | Nominal and tightened statistics use their respective 0–1200 s runs with numerical peak refinement; regional residence, QP feasibility, input boundedness, and uniform estimation/tracking-error bounds remain premises | [Scoped condition table](../verification/theorem2_conditions_with_scope.csv) |
 | p. 8, local initialization | Appendix-derived slow/fast budgets and zero multiplier initialization | [Local construction](theorem3_local_certificate.md), run_local.m and reference/local/initial.json |
 | pp. 8–9, Fig. 3 discussion/caption | Slow-error decay and fast transient reaching the numerical precision plateau | Compact data/paper_plot_data.mat and original figures/exp.fig |
-| p. 8, reproduction link | Fixed tree/v1.0.1; README distinguishes redraw, full integration, nominal integration and verification | [README](../README.md#run), reproduce_paper.m |
+| p. 8, reproduction link | tree/v1.0.2 is locked by an immutable release; the release snapshot records the full commit and asset hashes | [README](../README.md#run), reproduce_paper.m |
 | p. 7, Theorem 3; p. 11, Appendix H | Retained-error estimate plus zeta_om(t)=exp(−xi t/epsilon) zeta_om(0) | [Retained and omitted coordinates](theorem3_local_certificate.md#4-实验初始化与结论范围) |
 
 The manuscript also removes the visible first-page LOGO placeholder and remains 12 pages. The algorithm, parameters, archived figure files and six reference datasets are unchanged in this synchronization. The local radii are conservative sufficient neighborhoods, as specified in the construction; they do not estimate the largest region of attraction.
@@ -23,3 +23,5 @@ The independent local experiment initializes $u(0)=u_{\mathrm{nom}}(\mathbf y(0)
 This initialization agrees with [run_local.m](../matlab/run_local.m), [the saved initial-state record](../reference/local/initial.json), and Table I of the manuscript. The initial fast error is approximately $3.29491\times10^{-7}$.
 
 Table I reports the connectivity minimum of the nominal HB flow. The independent computation and precision repeat are recorded in [nominal_hb.json](../verification/nominal_hb.json) and reproduced with `reproduce_paper('nominal')`.
+
+The R2 update changes only the manuscript reproduction URL. The supplied manuscript already includes the Appendix D correction; the implemented dissipativity row and all numerical results remain unchanged. See [release_policy.md](release_policy.md) for the retained earlier commits.

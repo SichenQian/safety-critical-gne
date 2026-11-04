@@ -1,9 +1,9 @@
 {
   "revision_date": "2026-11-04",
-  "version": "v1.0.1",
-  "prior_commit": "b71ae33ef804d29b670959f2021bccae9531c9b7",
-  "source_manuscript_sha256": "1fa9ffa53b889eea8b198de35a989a3ae725fb5c68c83efaba8b1e5e7207d533",
-  "source_pdf_sha256": "4368aff6f97497b3ce20a0ef6c0644a6f740c28803088e56191a4e8a23ad4028",
+  "version": "v1.0.2",
+  "prior_commit": "641c4378a2e07b33ae4913775ae2d56b3cf42b06",
+  "source_manuscript_sha256": "563456a86a388440060e8ca8236e8134832532046d923eafbe0eb1d7b57de682",
+  "source_pdf_sha256": "5f006dd444b7a507252fd7bc96b2616ca440fab9746e94ee50e11da003af83c6",
   "source_pdf_pages": 12,
   "visible_logo_removed": true,
   "numerical_section_matches_source": true,
@@ -32,16 +32,15 @@
   },
   "validation_log": "verification/manuscript_v3_validation.log",
   "response_v3_sha256": {
-    "response_yu_v3.tex": "4ebc8ee0e411ea3c40475081723b11135f2ba4ed097d9bb64a51070b06065a01",
-    "response_yu_v3.pdf": "66386d2fc6f728a7cfa7c9bab01130b027287e822d221ed9125ac012c7e4cb29"
+    "response_yu_v3.tex": "a6d5dbf502dc473bcb4424377c49bde2aa3bd66ec7038850934bd1c7c4c2ea82",
+    "response_yu_v3.pdf": "25c321f4db7cc2cb493a9396056b62436e17ea6d34b382018da79f50ba78584b"
   },
   "matlab_version": "24.1.0.2537033 (R2024a)",
   "archive_verification_pass": true,
   "redraw_verification_pass": true,
   "five_original_figure_data_checks_pass": true,
-  "original_input_preservation_pass": true,
   "full_ode_integration_this_revision": false,
-  "source_hash_resynchronization": {
+  "previous_source_hash_resynchronization": {
     "version": "v1.0.1",
     "date": "2026-11-04",
     "manuscript_change": "Only Table I note and adjacent blank lines differ from the preceding manuscript snapshot.",
@@ -50,5 +49,19 @@
     "all_four_current_source_hashes_recomputed": true,
     "source_files_modified_by_this_update": false,
     "ODE_reintegration_performed": false
-  }
+  },
+  "R2_version_freeze": {
+    "new_version": "v1.0.2",
+    "immutable_release_required": true,
+    "publication_method": "Upload and verify all assets in a draft, then publish with immutable releases enabled.",
+    "full_commit_record": "release_snapshot.json attached to v1.0.2; also stated in the release notes.",
+    "asset_hash_record": "SHA256SUMS.txt attached to v1.0.2",
+    "old_v1_0_1_preserved_at": "641c4378a2e07b33ae4913775ae2d56b3cf42b06",
+    "subsequent_changes": "New version; never move the published v1.0.2 tag or replace its assets.",
+    "paper_change_this_task": "Only tree/v1.0.1 changes to tree/v1.0.2.",
+    "numerical_code_data_and_figures_unchanged": true,
+    "ODE_reintegration_performed": false
+  },
+  "pre_R2_inputs_backed_up": true,
+  "original_numerical_files_preserved": true
 }

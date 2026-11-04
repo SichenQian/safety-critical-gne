@@ -4,7 +4,9 @@ MATLAB code, data and editable figures for the manuscript **Distributed Safety-C
 
 This version reproduces the numerical section of the current manuscript: a five-agent planar game, a tightened-versus-untightened comparison with three obstacles, genuine communication-edge switching, and an independent local convergence experiment.
 
-The [v1.0.1 package](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1) is synchronized with the manuscript revised on 4 November 2026. [Manuscript alignment](docs/manuscript_alignment.md) records the numerical explanations and their implementation sources.
+The [v1.0.2 package](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.2) is synchronized with the manuscript revised on 4 November 2026. [Manuscript alignment](docs/manuscript_alignment.md) records the numerical explanations and their implementation sources.
+
+This release uses GitHub release immutability, which locks its tag and attached assets after publication. The full commit and asset digests are recorded in the attached `release_snapshot.json` and `SHA256SUMS.txt`. Later revisions use a new version. [Release policy and earlier snapshots](docs/release_policy.md).
 
 ## Run
 
@@ -100,7 +102,7 @@ Fig. 2 displays the first 400 s. Error peaks, physical-domain checks and referen
 
 Table I's nominal-flow connectivity minimum is reproduced independently by [matlab/run_nominal_hb.m](matlab/run_nominal_hb.m). It integrates the 60-state nominal HB equations with the same game, initial slow state and communication weights. Standard and refined runs give a minimum of 1.58616280459112 over 0–1200 s, reported as 1.58616 in the table. Parameters, solver settings and numerical checks are saved in [verification/nominal_hb.json](verification/nominal_hb.json).
 
-The current code and scoped condition checks are fixed in [v1.0.1](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1). The included data/paper_plot_data.mat is sufficient to redraw the five figures. The unchanged full trajectories, solver interpolants, dense diagnostic tables and refined-precision results remain in the [v1.0.0 reference-data release](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0).
+The current code and scoped condition checks are fixed in [v1.0.2](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.2). The included data/paper_plot_data.mat is sufficient to redraw the five figures. The unchanged full trajectories, solver interpolants, dense diagnostic tables and refined-precision results remain in the [v1.0.0 reference-data release](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.0).
 
 Download and verify all six full-data archives from MATLAB:
 

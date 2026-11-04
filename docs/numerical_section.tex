@@ -258,18 +258,20 @@ remain assumptions of Theorem~\ref{thm:regional_safety}.
 }
 \end{table}
 
-To assess the effect of tightening, the untightened run is
-obtained by setting
+For the tightened run, $(u(0),\zeta(0))$ is initialized
+at the optimizer of the scaled regularized QP,
+with $\lambda(0)$ given by its associated
+nonnegative multipliers.
+The untightened run uses the same complete initial
+state and parameters, except that
 $
 \Delta_{ij}^{\mathrm{int}}
 =
 \Delta_{i,k}^{\mathrm{obs}}
 =
 \Delta^{\mathrm c}
-=0,
+=0.
 $
-while keeping all remaining parameters and the complete
-initial state unchanged.
 Fig.~\ref{fig:trajectories} compares the resulting trajectories.
 The tightened flow avoids collisions and obstacles while
 approaching the prescribed target configuration. In contrast,
@@ -331,8 +333,10 @@ from $9$ to $10$ and back to $9$.
 	\label{fig:safety-margins}
 \end{figure}
 
-Finally, we test local convergence using initial conditions
-satisfying Theorem~\ref{thm:closed_loop_LES}.
+Finally, we test local convergence under the
+conservative sufficient bounds of
+Theorem~\ref{thm:closed_loop_LES}, as evaluated
+in Table~\ref{tab:numerical-checks}.
 We initialize $u(0)=u_{\mathrm{nom}}(\mathbf y(0))$,
 $\|\zeta_0(0)\|=r_f/2$, and all multipliers at zero,
 including those associated with the locally omitted
@@ -347,7 +351,7 @@ which reaches numerical precision on the
 time scale $t/\epsilon$.
 The implementation, reference-data links, and
 reproduction instructions are available at
-\url{https://github.com/SichenQian/safety-critical-gne/tree/v1.0.1}.
+\url{https://github.com/SichenQian/safety-critical-gne/tree/v1.0.2}.
 
 \begin{figure}[!h]
 	\centering
