@@ -1,0 +1,26 @@
+MATLAB manuscript v3 synchronization validation, 2026-11-04
+Version: 24.1.0.2537033 (R2024a)
+Scope: archive verification and redraw; no new ODE integration in this documentation revision.
+The six reference datasets, numerical model, parameters and original FIG files are unchanged.
+
+v3_archive_verification_20261104.log
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+PAPER_PARAMETER_ARCHIVE_VALIDATION_PASS
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+PAPER_FIGURE_DATA_VALIDATION_PASS
+REPRODUCTION_PASS mode=verify
+LOCAL_FAST_MIN 1.8389721958907303e-16 END 4.5091446014009603e-16
+
+v3_figure_redraw_20261104.log
+THEOREM2_CONDITION_AUDIT_PASS: design and recorded-trajectory checks; regional hypotheses remain assumptions.
+PAPER_PARAMETER_ARCHIVE_VALIDATION_PASS
+PAPER_FIGURES_RENDERED
+PAPER_FIGURE_DATA_VALIDATION_PASS
+REPRODUCTION_PASS mode=figures
+
+MANUSCRIPT_NUMERICAL_SECTION_SYNC_PASS
+ORIGINAL_INPUT_PRESERVATION_PASS: 7 inputs
+NUMERICAL_AND_FIGURE_PRESERVATION_PASS: 104 committed files
+RESPONSE_V3_COMPILE_AND_VISUAL_QA_PASS: 4 pages
+REGIONAL_UNIFORM_CERTIFICATE: false
+CONTINUOUS_TIME_PROOF: false

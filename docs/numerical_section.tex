@@ -70,10 +70,20 @@ $
 =
 (0.5,0.7,0.4).
 $
-The collision and obstacle rows
-and their margins are scaled by $0.06$,
-while the connectivity rows and their margins are scaled by
-$0.1$. The mismatch terms remain unscaled.
+The physical ECBF terms and tightening margins
+are scaled by $0.06$ for collision and obstacle
+constraints and by $0.1$ for connectivity constraints,
+while the mismatch terms remain unscaled.
+For instance, the scaled local collision row is
+$$
+g_{ij,\mathrm{sc}}^i
+=\chi_{ij}(y)\left[
+0.06\left(q_{ij,i}^{\mathrm{int}}
++\frac12\Delta_{ij}^{\mathrm{int}}\right)
++\zeta_{ij}^i-\zeta_{ij}^j
+\right]\leqslant0.
+$$
+The reference QP uses the same scaled constraints.
 We take
 $$
 \mathcal D_R=
@@ -128,13 +138,13 @@ q^{\mathrm c}(\vartheta_{\mathrm{tight}}(t),u)
 \hat q_i^{\mathrm c}(\vartheta_{\mathrm{tight}}(t),u_i)
 |.
 $
-Table~\ref{tab:numerical-checks} summarizes the design and
-initialization checks, with the connectivity minimum
-evaluated along the nominal flow and the tracking-error
-and connectivity-discrepancy maxima along the tightened flow.
+Table~\ref{tab:numerical-checks} summarizes
+the numerical checks of the design and
+initialization conditions.
 
 \begin{table}[!t]
-	\caption{Numerical Checks for Theorems~\ref{nominal_LES}--\ref{thm:closed_loop_LES}}
+\caption{Selected Numerical Checks for
+	Theorems~\ref{nominal_LES}--\ref{thm:closed_loop_LES}}
 	\label{tab:numerical-checks}
 	\centering
 	\footnotesize
@@ -232,9 +242,20 @@ and connectivity-discrepancy maxima along the tightened flow.
 		& $>0$\\
 		
 		\bottomrule
-	\end{tabularx}
+\end{tabularx}
+\vspace{2pt}
+\parbox{\linewidth}{%
+\footnotesize\raggedright
+\emph{Note:}
+The connectivity minimum is computed along the
+nominal HB trajectory, while the tracking-error,
+connectivity-discrepancy, and input maxima are
+obtained along the tightened trajectory
+($t\in[0,1200]$).
+Regional residence, QP feasibility, and uniform
+error bounds are assumed in Theorem~\ref{thm:regional_safety}.
+}
 \end{table}
-
 To assess the effect of tightening, the untightened run is
 obtained by setting
 $
@@ -318,22 +339,24 @@ The experiment is simulated using \texttt{ode15s}, with
 $\mathrm{RelTol}=2\times10^{-10}$,
 $\mathrm{AbsTol}=10^{-14}$, and
 $\mathrm{MaxStep}=0.1$s.
-Fig.~\ref{fig:local-exp} shows that both slow and fast
-errors converge to $0$, with the fast transient
-evolving on the rescaled time scale $t/\epsilon$.
+Fig.~\ref{fig:local-exp} illustrates the decay
+of the slow error and the rapid fast transient,
+which reaches numerical precision on the
+time scale $t/\epsilon$.
+The implementation, reference-data links, and
+reproduction instructions are available at
+\url{https://github.com/SichenQian/safety-critical-gne/tree/v1.0.1}.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=\linewidth]
 	{TCNS_final_revision_20261101/exp.eps}
-	\caption{Slow and fast error evolution in an independent
-		local experiment initialized within the convergence region
-		of Theorem~\ref{thm:closed_loop_LES}. The inset resolves
-		the initial fast transient on the rescaled time scale
-		$t/\epsilon$.}
+\caption{Slow and fast error evolution in an independent
+	local experiment satisfying the initial conditions of
+	Theorem~\ref{thm:closed_loop_LES}. The inset resolves
+	the fast transient on the time scale $t/\epsilon$;
+	the subsequent fast-error plateau reflects
+	numerical precision.}
 	\label{fig:local-exp}
 \end{figure}
-
-The complete specifications and numerical data are provided at
-\url{https://github.com/SichenQian/safety-critical-gne}.
 

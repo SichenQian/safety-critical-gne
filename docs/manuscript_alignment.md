@@ -2,6 +2,20 @@
 
 The archived [numerical section](numerical_section.tex) matches the current manuscript. Its TEX and PDF SHA-256 values are recorded in [figure_sources.json](figure_sources.json).
 
+## Revision of 4 November 2026
+
+| Manuscript location | Current statement | Reproduction source |
+| --- | --- | --- |
+| p. 6, before Theorem 2 | The regional discrepancy is bounded by a Lipschitz expression; a budget at least that expression is sufficient | [Budget definitions and scope](theorem2_conditions.md#regional-discrepancy-budget) |
+| p. 7, numerical setup | Explicit local collision row with physical scale 0.06 and unscaled mismatch; reference QP uses the same adopted constraints | [Scaled-row coordinates](numerical_details.md#scaled-local-rows), audit_core.m and normalized_reference_rows.m |
+| p. 8, Table I note | Nominal and tightened trajectory statistics use their respective 0–1200 s runs; regional residence, QP feasibility and uniform error bounds remain premises | [Scoped condition table](../verification/theorem2_conditions_with_scope.csv) |
+| p. 8, local initialization | Appendix-derived slow/fast budgets and zero multiplier initialization | [Local construction](theorem3_local_certificate.md), run_local.m and reference/local/initial.json |
+| pp. 8–9, Fig. 3 discussion/caption | Slow-error decay and fast transient reaching the numerical precision plateau | Compact data/paper_plot_data.mat and original figures/exp.fig |
+| p. 8, reproduction link | Fixed tree/v1.0.1; README distinguishes redraw, full integration, nominal integration and verification | [README](../README.md#run), reproduce_paper.m |
+| p. 7, Theorem 3; p. 11, Appendix H | Retained-error estimate plus zeta_om(t)=exp(−xi t/epsilon) zeta_om(0) | [Retained and omitted coordinates](theorem3_local_certificate.md#4-实验初始化与结论范围) |
+
+The manuscript also removes the visible first-page LOGO placeholder and remains 12 pages. The algorithm, parameters, archived figure files and six reference datasets are unchanged in this synchronization. The local radii are conservative sufficient neighborhoods, as specified in the construction; they do not estimate the largest region of attraction.
+
 Table I includes the applied-input peak 13.480099 below the input-ball radius 15. The scoped Theorem 2 records distinguish this trajectory observation from the all-time input-membership premise and the four retained regional/tracking hypotheses; see [theorem2_conditions.md](theorem2_conditions.md).
 
 The independent local experiment initializes $u(0)=u_{\mathrm{nom}}(\mathbf y(0))$ and $\|\zeta_0(0)\|=r_f/2$. The perturbation is applied to the first retained mismatch coordinate; all other mismatch coordinates and all multipliers start at zero, including the multipliers of the locally omitted pair $(3,4)$.

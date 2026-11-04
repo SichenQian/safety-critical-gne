@@ -4,6 +4,8 @@ MATLAB code, data and editable figures for the manuscript **Distributed Safety-C
 
 This version reproduces the numerical section of the current manuscript: a five-agent planar game, a tightened-versus-untightened comparison with three obstacles, genuine communication-edge switching, and an independent local convergence experiment.
 
+The [v1.0.1 package](https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1) is synchronized with the manuscript revised on 4 November 2026. [Manuscript alignment](docs/manuscript_alignment.md) records the numerical explanations and their implementation sources.
+
 ## Run
 
 Use MATLAB R2024a. Optimization Toolbox is required for safety-filter simulations and QP diagnostics.
@@ -63,13 +65,15 @@ with B = 1.15 I − 0.03 11ᵀ and p = y*B. All agents start at rest with exact 
 
 The untightened run sets only the three tightening margins to zero and uses the same complete initial state. The tightened graph has 9→10→9 active edges: (2,5) activates at approximately 5.59002 s, and (3,4) deactivates at approximately 313.17490 s.
 
-The local experiment uses a separately certified near-equilibrium initial condition, with u(0)=u_nom, a mismatch perturbation of norm 0.5 r_f, and all multipliers (including the locally omitted pair (3,4)) initialized at zero.
+The local experiment uses initial conditions checked against the Appendix's sufficient inequalities, with u(0)=u_nom, a mismatch perturbation of norm 0.5 r_f, and all multipliers (including the locally omitted pair (3,4)) initialized at zero. The constructed radius r_Theta1≈5.94472×10⁻⁹ is a conservative sufficient neighborhood; it does not estimate the largest region of attraction.
+
+Fig. 3 shows slow-error decay and the fast initial transient on t/epsilon. The subsequent fast-error plateau, near 10⁻¹⁵, reflects numerical precision. The retained error estimate and the separate decay zeta_om(t)=exp(−xi t/epsilon) zeta_om(0) follow the statement and proof of Theorem 3; [the local-certificate note](docs/theorem3_local_certificate.md) defines both sets of coordinates.
 
 ## Numerical data and checks
 
 ### Theorem 2 condition checks
 
-The condition table distinguishes design arithmetic, observations along the tightened trajectory, and retained hypotheses. It follows comment 03 of the revision memo.
+The condition table distinguishes design arithmetic, observations along the tightened trajectory, and retained hypotheses. The manuscript's Table I now states the corresponding trajectory sources, 0–1200 s window and regional premises in a table note.
 
 | Condition or quantity | Required bound | Numerical value | Verification |
 | --- | --- | --- | --- |
@@ -85,6 +89,8 @@ The condition table distinguishes design arithmetic, observations along the tigh
 | Continuous-time uniform tracking bound | ‖u(t)−uhat_xi_star(vartheta(t))‖≤r_u | Retained assumption | Numerical peaks do not establish the all-time bound |
 
 The three remaining tightening margins are approximately 0.0686649, 0.0430960 and 0.00270213. Physical-state residence in D_R is checked separately from full slow-state residence in Theta_R. All 138745 audited tightened-trajectory states have valid reference QPs; the largest recorded KKT component is about 1.86×10⁻¹⁰. This residual measures reference-solver accuracy, separately from dynamic filter tracking error.
+
+The regional discrepancy budget and its Lipschitz sufficient bound are distinguished in [the condition note](docs/theorem2_conditions.md#regional-discrepancy-budget): if E_R≤B_R, choosing delta_c≥B_R is sufficient. The numerical value delta_c=0.03 retains its stated regional-bound premise.
 
 Fig. 2 displays the first 400 s. Error peaks, physical-domain checks and reference-QP diagnostics use the complete 0–1200 s runs.
 
@@ -105,7 +111,7 @@ The download checks archive and extracted-file SHA-256 values from [data/referen
 
 All experiments use ode15s. The main runs cover 1200 s with RelTol=2×10⁻⁹, AbsTol=10⁻¹² and MaxStep=0.25 s. The independent local run covers 200 s with 2×10⁻¹⁰, 10⁻¹⁴ and 0.1 s. Refined repeats use tighter tolerances and smaller maximum steps.
 
-The checks cover gain inequalities, tightening arithmetic, local initialization, physical barriers, ECBF residuals, graph connectivity, QP/KKT residuals and precision repeats. [docs/numerical_details.md](docs/numerical_details.md) gives the solver settings, residual definitions and verification scope. [verification/theorem_checks_with_scope.csv](verification/theorem_checks_with_scope.csv) separates analytic design checks from trajectory diagnostics.
+The checks cover gain inequalities, tightening arithmetic, local initialization, physical barriers, ECBF residuals, graph connectivity, QP/KKT residuals and precision repeats. [docs/numerical_details.md](docs/numerical_details.md) gives the solver settings, residual definitions, the scaled local constraint used by the controller and reference QP, and verification scope. [verification/theorem_checks_with_scope.csv](verification/theorem_checks_with_scope.csv) separates analytic design checks from trajectory diagnostics.
 
 ## Repository layout
 

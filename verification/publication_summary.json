@@ -1,5 +1,5 @@
 {
-  "source_manuscript_sha256": "8d70441e5f45422dc4bcf8648ea0dc7c69ab5b6789917d76ad847c26f53a8439",
+  "source_manuscript_sha256": "fdf1f1230dcf9a07b20993bbaf5058a035adc55ef89582f385f8dbc07ae4e6b5",
   "source_pdf_pages": 12,
   "exact_paper_figure_stems": [
     "figures/trajectory",
@@ -49,7 +49,7 @@
   },
   "native_editable_figures": 5,
   "credential_scan_pass": true,
-  "source_pdf_sha256": "0593e423ac757d7a41253bc55b7d0db10449a71e416328d6eb3d69c6d9243e5f",
+  "source_pdf_sha256": "fb42eb0dbd255b2f26d511927da7465a8dd6646981d07953014c9646b439cf87",
   "manuscript_alignment": "docs/manuscript_alignment.md",
   "documentation_sync": {
     "numerical_section_matches_source": true,
@@ -57,22 +57,28 @@
     "existing_dynamics_and_safety_filter_unchanged": true,
     "paper_figures_and_reference_data_unchanged": true,
     "nominal_hb_runs": 2,
-    "existing_six_experiments_rerun": false
+    "existing_six_experiments_rerun": false,
+    "revision_date": "2026-11-04",
+    "verification_modes_this_revision": [
+      "verify",
+      "figures"
+    ]
   },
   "independent_nominal_experiments": 2,
   "nominal_hb_record": "verification/nominal_hb.json",
   "fixed_release": {
     "version": "v1.0.1",
     "url": "https://github.com/SichenQian/safety-critical-gne/releases/tag/v1.0.1",
-    "reference_data_version": "v1.0.0"
+    "reference_data_version": "v1.0.0",
+    "synchronized_on": "2026-11-04",
+    "updated_in_place_at_user_request": true
   },
-  "response_comment_03": {
-    "source_memo_tex_sha256": "c4f97ce5f1e19ee29b42b67fb3ff94133ae07e7475886a3ef0e3443299d5ae15",
-    "source_memo_pdf_sha256": "de42333cc6c3680703ade10838f2f007c3a77ed61ee4f0ab9b3374eafbd906f3",
+  "theorem2_scope_alignment": {
     "scope_table": "verification/theorem2_conditions_with_scope.csv",
     "machine_readable_report": "verification/theorem2_audit.json",
     "generator": "matlab/theorem2_condition_audit.m",
     "regional_uniform_certificate": false,
     "continuous_time_proof": false
-  }
+  },
+  "revision_v3_alignment_record": "verification/manuscript_v3_sync.json"
 }

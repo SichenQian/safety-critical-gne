@@ -1,0 +1,44 @@
+{
+  "revision_date": "2026-11-04",
+  "version": "v1.0.1",
+  "prior_commit": "6efd97554ec9c5893babef69f8d8224b0e39b67a",
+  "source_manuscript_sha256": "fdf1f1230dcf9a07b20993bbaf5058a035adc55ef89582f385f8dbc07ae4e6b5",
+  "source_pdf_sha256": "fb42eb0dbd255b2f26d511927da7465a8dd6646981d07953014c9646b439cf87",
+  "source_pdf_pages": 12,
+  "visible_logo_removed": true,
+  "numerical_section_matches_source": true,
+  "paper_figure_includes": [
+    "TCNS_final_revision_20261101/trajectory.eps",
+    "TCNS_final_revision_20261101/safety.eps",
+    "TCNS_final_revision_20261101/connectivity.eps",
+    "TCNS_final_revision_20261101/edge.eps",
+    "TCNS_final_revision_20261101/exp.eps"
+  ],
+  "unchanged_numerical_and_figure_files": 104,
+  "dynamics_parameters_reference_and_figures_unchanged": true,
+  "local_radius_scope": "Conservative sufficient construction; not the largest region of attraction.",
+  "local_fast_plateau_scope": "Numerical precision; decay interpretation uses the resolved transient.",
+  "regional_uniform_certificate": false,
+  "continuous_time_proof": false,
+  "full_data_release": "v1.0.0",
+  "full_data_descriptor": "data/reference_archives.json",
+  "default_mode": "Redraw compact saved data",
+  "full_mode": "Reintegrate nominal HB and six filtered/local experiments",
+  "nominal_mode": "Independently integrate nominal HB",
+  "verify_mode": "Check saved records, inequalities and figure data",
+  "review_comment_coverage": {
+    "paper_annotations": 9,
+    "response_v2_annotations": 5
+  },
+  "validation_log": "verification/manuscript_v3_validation.log",
+  "response_v3_sha256": {
+    "response_yu_v3.tex": "f47d4ede3b7c0c6d3b1621a22d8c5fbb12f3ce79e6b1de1bd9438da3fbabbcb3",
+    "response_yu_v3.pdf": "4eff72c20b939ed088bbf52c44500fa1221d8afbba2b383688b3333112c5dc7f"
+  },
+  "matlab_version": "24.1.0.2537033 (R2024a)",
+  "archive_verification_pass": true,
+  "redraw_verification_pass": true,
+  "five_original_figure_data_checks_pass": true,
+  "original_input_preservation_pass": true,
+  "full_ode_integration_this_revision": false
+}

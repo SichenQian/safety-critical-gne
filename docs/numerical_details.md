@@ -17,7 +17,7 @@ All use ode15s. Main saved outputs are spaced by 0.1 s; diagnostics combine thos
 
 Fig. 2 displays 0–400 s. The reported main-run extrema, error budgets and reference-QP checks cover the complete 0–1200 s horizon.
 
-The local output grid includes logarithmically spaced initial times to resolve the fast layer. Its slow error is the norm of col{y_est−1⊗y*,v}; the fast error is the norm of col{u−u_nom,zeta_0,lambda_0}, with the retained local rows used in the Appendix. The full projected flow is integrated in equilibrium-error coordinates to resolve the small initial perturbation. The fast numerical floor is retained in Fig. 3.
+The local output grid includes logarithmically spaced initial times to resolve the fast layer. Its slow error is the norm of col{y_est−1⊗y*,v}; the fast error is the norm of col{u−u_nom,zeta_0,lambda_0}, with the retained local rows used in the Appendix. The full projected flow is integrated in equilibrium-error coordinates to resolve the small initial perturbation. Fig. 3 displays slow-error decay and the fast transient above the numerical floor; the subsequent fast-error plateau near 10⁻¹⁵ reflects numerical precision. Its caption states this interpretation, and the inset retains t/epsilon as its time axis.
 
 ## Geometry, graph and physical residuals
 
@@ -32,6 +32,18 @@ The original physical ECBF residual is q = −h_ddot − K2 h_dot − K1 h; its 
 The declared physical domain is the position box [−3.1,3.1]×[−1.3,1.3], intersected with pairwise diameter ≤2.5 and individual speed ≤0.5. It gives coefficient bounds (a_int,a_obs,a_c) = (5,10.7689182372,2.69279673023).
 
 Collision/obstacle physical rows and margins use scale 0.06; connectivity rows and margins use scale 0.1. Mismatch terms are unscaled and cancel upon aggregation. The connectivity discrepancy on the declared input ball ||u||≤15 is |db|+15||da||; actual-input discrepancy is recorded separately.
+
+### Scaled local rows
+
+The local collision row in the manuscript is
+
+$$g_{ij,\mathrm{sc}}^i=\chi_{ij}(y)\left[0.06\left(q_{ij,i}^{\mathrm{int}}+\frac12\Delta_{ij}^{\mathrm{int}}\right)+\zeta_{ij}^i-\zeta_{ij}^j\right]\leq0.$$
+
+In [audit_core.m](../matlab/audit_core.m), the input coefficients and physical offset include `P.barrierScale=0.06`, while the two mismatch coefficients are `+chi_ij` and `−chi_ij`. The opposite local row reverses the mismatch difference, so summing the two rows cancels mismatch and gives `0.06 chi_ij (q_ij^int+Delta_ij^int)`. Obstacle rows have scale 0.06 and no pairwise mismatch difference; connectivity rows use scale 0.1 with their original mismatch allocation.
+
+Scaling physical terms while leaving mismatch unchanged specifies the adopted regularized problem and primal–dual dynamics at fixed xi. It is not a uniform multiplication of the whole local inequality and need not preserve the regularized optimizer relative to a different physical scaling.
+
+The offline reference starts from the same adopted constraints. [normalized_reference_rows.m](../matlab/normalized_reference_rows.m) cancels a strictly positive chi_ij from an active collision row before the solve, leaving the same physical scale 0.06 and mismatch coefficients ±1. Support is tested by distance < d_c; an exactly inactive pair is kept as a zero row. Subsequent positive whole-row conditioning in [audit_qp.m](../matlab/audit_qp.m) preserves this QP and maps multipliers to the stated reference-row coordinates. This conditioning is separate from the adopted physical-term scaling.
 
 ## QP references and KKT residuals
 
@@ -62,12 +74,14 @@ The regional uniform connectivity-discrepancy bound, full slow-domain residence,
 
 The [Theorem 2 condition note](theorem2_conditions.md), verification/theorem2_conditions_with_scope.csv and verification/theorem2_audit.json provide these checks separately. `reproduce_paper('verify')` recomputes the report from model parameters and archived diagnostics and checks it against the committed record. The report explicitly retains regionalUniformCertificate=false and continuousTimeProof=false.
 
-Theorem 3 uses explicitly constructed local radii from the Appendix. The selected epsilon is 5e-6 < 9.31743406e-6; initial slow/fast errors are approximately 4.45854e-9 and 3.29491e-7, below radii 5.94472e-9 and 6.58982e-7. All multipliers start at zero, including the two rows of locally omitted pair (3,4). The construction and sufficient inequalities are evaluated in double precision; the derivation is in theorem3_local_certificate.md.
+Theorem 3 uses explicitly constructed local radii from the Appendix. The selected epsilon is 5e-6 < 9.31743406e-6; initial slow/fast errors are approximately 4.45854e-9 and 3.29491e-7, below radii 5.94472e-9 and 6.58982e-7. These radii are conservative sufficient neighborhoods, not estimates of the largest region of attraction. All multipliers start at zero, including the two rows of locally omitted pair (3,4). The construction and sufficient inequalities are evaluated in double precision; the derivation is in theorem3_local_certificate.md.
 
 The local slow perturbation is the normalized deterministic vector sin(k sqrt(2)), k=1,...,60, with norm 0.75 r_Theta1. The control starts at u_nom; the first retained mismatch coordinate is perturbed by 0.5 r_f, and all other fast mismatch coordinates and multipliers start at zero. Thus the nonzero initial fast error resolves the initial layer while remaining inside the checked local budget.
 
+The stated slow/fast norm estimate concerns the retained errors e_vartheta and e_f. With zero omitted-row multipliers, the omitted mismatch coordinates satisfy `zeta_om(t)=exp(−xi t/epsilon) zeta_om(0)`. Their norm bound therefore includes `||zeta_om(0)||`; these coordinates are kept in the full 140-state ODE. In the archived local experiment their initial value is zero.
+
 ## Reproduction and archive
 
-The quick redraw reads the compact plot data and fills the final editable layout templates. Full mode regenerates trajectories, dense diagnostics, local initializations and data-derived plots in a new run folder. The paper EPS/FIG files remain the source archive; regenerated exports can differ in file metadata and renderer encoding.
+The quick redraw (`reproduce_paper`) reads the compact plot data and fills the final editable layout templates. Full mode (`reproduce_paper('full')`) reintegrates nominal HB and the six standard/refined filtered or local experiments, then regenerates dense diagnostics, local initializations and data-derived plots in a new run folder. The `nominal` mode independently integrates nominal HB; `verify` checks saved records, local inequalities and figure data and regenerates the scoped condition reports. The paper EPS/FIG files remain the source archive; regenerated exports can differ in file metadata and renderer encoding.
 
-The full-data release contains six experiment folders: selected, selected_refined, untightened, untightened_refined, local and local_refined. Each includes trajectory.mat, diagnostic tables and per-run summaries. Archive checksums and per-file checksums are recorded in data/reference_archives.json.
+The v1.0.1 code-and-figures package includes the compact plotting data. Six unchanged full-data archives remain attached to the v1.0.0 reference-data release: selected, selected_refined, untightened, untightened_refined, local and local_refined. Each includes trajectory.mat, diagnostic tables and per-run summaries. The v1.0.1 file data/reference_archives.json binds their fixed v1.0.0 URLs, archive checksums and per-file checksums.

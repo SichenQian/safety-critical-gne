@@ -1,6 +1,6 @@
 # Theorem 2: condition checks and evidence scope
 
-This note corresponds to comment 03 of the revision memo. Theorem 2 transfers specified tracking and connectivity-estimation error budgets into sufficient tightening margins for the original ECBF constraints. Its regional hypotheses remain explicit conditions of the safety result.
+Theorem 2 transfers specified tracking and connectivity-estimation error budgets into sufficient tightening margins for the original ECBF constraints. Its regional hypotheses remain explicit conditions of the safety result. The manuscript revised on 4 November 2026 includes the same scope distinction in the Table I note.
 
 Run `reproduce_paper('verify')` to regenerate the four-column tables and machine-readable report in the run's `verification/` folder. The committed copies are [theorem2_conditions_with_scope.csv](../verification/theorem2_conditions_with_scope.csv), [theorem2_audit.json](../verification/theorem2_audit.json), and the combined [theorem_checks_with_scope.csv](../verification/theorem_checks_with_scope.csv). The generator is [theorem2_condition_audit.m](../matlab/theorem2_condition_audit.m); full simulation mode also calls it when building the tables.
 
@@ -15,6 +15,14 @@ The declared physical domain D_R uses the position box [-3.1,3.1] × [-1.3,1.3],
 | sqrt(5) a_c r_u + delta_c | ≤0.4 | 0.397297868842 | 0.00270213115808 |
 
 These are analytic coefficient bounds and sufficient inequalities evaluated in double precision. The boundary-reactivation condition gives 4.4 ≤5.49624563 from the declared relative-speed bound 1.
+
+## Regional discrepancy budget
+
+Define the regional discrepancy and a Lipschitz sufficient bound by
+
+$$E_R=\sup_{(\vartheta,u)\in\Theta_R\times\mathcal U_R^u}\left|q^{\mathrm c}(\vartheta,u)-\sum_i\hat q_i^{\mathrm c}(\vartheta,u_i)\right|,\qquad B_R=\sum_i(C_i\bar e_i^y+D_i\bar e_i^v).$$
+
+The gradient/Hessian and input bounds yield `E_R≤B_R`. Thus choosing `delta_c≥B_R` gives a sufficient budget for `E_R≤delta_c`. A tighter regional estimate could support a different valid budget. The current numerical value `delta_c=0.03` retains the regional-bound premise stated below; the trajectory maximum 0.00949398 does not evaluate B_R or certify E_R. The numerical condition records and their false regional/continuous-time certificate flags remain unchanged.
 
 ## Tightened-trajectory observations
 
